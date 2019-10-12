@@ -51,7 +51,6 @@ a {
 }
 a:hover {
     font-weight: bold;
-    font-style: italic;
     background-color: blue;
     color: white;
     border-radius: 3px;
