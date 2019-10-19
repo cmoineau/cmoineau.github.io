@@ -1,9 +1,9 @@
 # cmoineau.github.io
-Creation of my peronnal web site.
+A repository for my web site.
 
 
 
-Reminder : command to launch the jekyll server :
+Reminder : command to launch the jekyll server on Linux :
 
 ```bash
 jekyll serve --host=localhost --trace
