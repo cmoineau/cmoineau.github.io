@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-	<html lang="en">
+	<html lang="en" data-theme='dark'>
 		<head>
 			<title>{{ page.title }}</title>
 			<!-- link to the French version -->
@@ -10,15 +10,43 @@
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 			<!-- link for icon -->
 			 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- <script type="text/javascript">
+				var checkbox = document.querySelector('input[name=theme]');
+
+        		checkbox.addEventListener('change', function() {
+		            if(this.checked) {
+		                trans()
+		                document.documentElement.setAttribute('data-theme', 'dark')
+		            } else {
+		                trans()
+		                document.documentElement.setAttribute('data-theme', 'light')
+		            }
+        		})
+
+		        let trans = () => {
+		            document.documentElement.classList.add('transition');
+		            window.setTimeout(() => {
+		                document.documentElement.classList.remove('transition')
+		            }, 1000)
+		        }
+
+			</script> -->
 		</head>
 		<body>
 			<nav>
 	    		<ul>
 	        		<li><a href="/">Home</a></li>
 	        		<li><a href="/internship">My work experiences</a></li>
-	        		<li><a href="/project">My completed project</a></li>
+	        		<li><a href="/project">My completed projects</a></li>
 	        		<a href="/fr"> <img id="flag" src="/ressources/fr_flag.png" title="Vers le mode Français"> </a>
+
+	        	<!--	<div class="toggle-container">
+						<input type="checkbox" id="switch" name="theme"/><label for="switch">Toggle</label>
+        			</div> -->
 	    		</ul>
+	    		
+	    		
 			</nav>
 
 			<div class="container">
@@ -38,7 +66,7 @@
 	        			<i class="fa fa-github fa-lg" aria-hidden="true"></i>
 	        			<a href="https://github.com/cmoineau"> github.com/cmoineau</a>
 	        		</li>
-	        		<p style="float : right; font-size: 0.8em">Last edition : 16 Dec. 2019</p>
+	        		<p style="float : right; font-size: 0.8em">Last edition : 17 Dec. 2019</p>
 				</ul>
 
 			</footer>
