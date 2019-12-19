@@ -3,26 +3,32 @@
 }
 html{
     font-size: 0.5vw + 0.5em;
-    --bg: white;
-    --color-text: blue;
-    --bg-nav: #232222;
+    --bg: #f6f8fa;
+    --color-text: #24292e;
+    --bg-nav: #24292e;
     --nav-a-c: #ffcc00;
-    --nav-a-bh: #383838;
+    --nav-a-bh: #2a3035;
     --nav-a-h: #ffcc00;
     --footer-a: gray;
     --footer-ah: #3f3f3f;
     --footer-abh: gray;
+    --shadow: white;
+    --a-bh: #eaebed;
+    --a-c: #ffcc00;
 }
 html[data-theme='dark']{
     --bg: #333333;
     --color-text: #dddddd;
     --bg-nav: #232222;
-    --nav-a-c: #ffcc00;
+    --nav-a-c: #00e59b;
     --nav-a-bh: #383838;
-    --nav-a-h: #ffcc00;
+    --nav-a-h: #00e59b;
     --footer-a: gray;
     --footer-ah: #3f3f3f;
     --footer-abh: gray;
+    --shadow: black;
+    --a-bh: #383838;
+    --a-c: #00e59b;
 }
 
 body {
@@ -46,7 +52,7 @@ nav ul, footer ul {
 
 nav ul li, footer ul li {
     display: inline-block;
-    margin-right: 1em;
+    margin-right: 1em;0px
 }
 nav a{
     color: var(--nav-a-c);
@@ -59,40 +65,43 @@ nav a{
 }
 nav a:hover{
     background-color: var(--nav-a-bh);
+    text-shadow: 2px 0px 6px var(--nav-a-bh);
     color: var(--nav-a-h);
 }
 nav li{
     display: inline-block;
+    text-shadow: 2px 0px 6px var(--bg-nav);
 }
 nav li:hover {
     text-decoration: none;
 }
 a {
     text-decoration: none;
-    color: var(--nav-a-c);
+    color: var(--a-c);
 }
 a:hover {
-    background-color: var(--nav-a-bh);
-    color: var(--nav-a-h);
+    text-shadow: 2px 0px 6px var(--a-bh);
+    background-color: var(--a-bh);
+    color: var(--a-c);
     border-radius: 3px;
 }
 h1 {
     font-size: 3em;
     font-family:'Noto Sans', 'Helvetica', 'Arial', 'Sans-Serif';
     text-align: center;
-    text-shadow: 2px 0px 6px black;
+    text-shadow: 2px 0px 6px var(--shadow);
 }
 h2 {
     font-size: 2em;
     font-family:'Noto Sans', 'Helvetica', 'Arial', 'Sans-Serif';
     border-bottom: 1px solid --color-text;
-    text-shadow: 2px 0px 6px black;
+    text-shadow: 2px 0px 6px var(--shadow);
 
 }
 h3 {
     font-size: 1.3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    text-shadow: 2px 0px 6px black;
+    text-shadow: 2px 0px 6px var(--shadow);
 }
 p {
     font-family: 'Noto Sans', 'Sans-Serif';
@@ -100,10 +109,10 @@ p {
     line-height: 1.4em;
     color: --color-text;
     text-align: justify;
-    text-shadow: 2px 0px 6px black;
+    text-shadow: 2px 0px 6px var(--shadow);
 }
 li{
-    text-shadow: 2px 0px 6px black;
+    text-shadow: 2px 0px 6px var(--shadow);
     font-family: 'Noto Sans', 'Sans-Serif';
 }
 
@@ -191,7 +200,7 @@ label:after {
 }
 
 input:checked + label {
-    background: red;
+    background: orange;
 }
 
 input:checked + label:after {

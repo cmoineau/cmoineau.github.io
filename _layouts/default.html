@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-	<html lang="en" data-theme='dark'>
+	<html lang="en" data-theme='dark'> <!--Change to light later ?-->
 		<head>
 			<title>{{ page.title }}</title>
 			<!-- link to the French version -->
@@ -11,27 +11,6 @@
 			<!-- link for icon -->
 			 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-			<!-- <script type="text/javascript">
-				var checkbox = document.querySelector('input[name=theme]');
-
-        		checkbox.addEventListener('change', function() {
-		            if(this.checked) {
-		                trans()
-		                document.documentElement.setAttribute('data-theme', 'dark')
-		            } else {
-		                trans()
-		                document.documentElement.setAttribute('data-theme', 'light')
-		            }
-        		})
-
-		        let trans = () => {
-		            document.documentElement.classList.add('transition');
-		            window.setTimeout(() => {
-		                document.documentElement.classList.remove('transition')
-		            }, 1000)
-		        }
-
-			</script> -->
 		</head>
 		<body>
 			<nav>
@@ -40,15 +19,14 @@
 	        		<li><a href="/internship">My work experiences</a></li>
 	        		<li><a href="/project">My completed projects</a></li>
 	        		<a href="/fr"> <img id="flag" src="/ressources/fr_flag.png" title="Vers le mode Français"> </a>
-
-	        	<!--	<div class="toggle-container">
-						<input type="checkbox" id="switch" name="theme"/><label for="switch">Toggle</label>
-        			</div> -->
 	    		</ul>
-	    		
-	    		
 			</nav>
+			<!--
+			<div class="toggle-container">
+					<input type="checkbox" id="switch" position='fixed' name="theme"/><label for="switch">Toggle</label>
 
+    		</div>
+    		-->
 			<div class="container">
 			
 				{{ content }}
@@ -72,4 +50,35 @@
 			</footer>
 
 		</body>
+			<script type="text/javascript">
+				let trans = () => {
+		            document.documentElement.classList.add('transition');
+		            window.setTimeout(() => {
+		                document.documentElement.classList.remove('transition')
+		            }, 1000)
+		        }
+
+
+				var checkbox = document.getElementById('switch');
+        		checkbox.addEventListener('change', function() {
+		            if(this.checked) {
+		                trans()
+		                document.documentElement.setAttribute('data-theme', 'dark')
+		                localStorage.setItem("data-theme", 1);
+		            } else {
+		                trans()
+		                document.documentElement.setAttribute('data-theme', 'light')
+		                localStorage.setItem("data-theme", 0);
+		            }
+        		})
+
+        		if(!("data-theme" in localStorage)){
+					localStorage.setItem("data-theme", 0);
+				}else{
+					if (localStorage.getItem('data-theme') != 0){
+						document.documentElement.setAttribute('data-theme', 'dark')
+						checkbox.checked = true
+					}
+				}
+			</script>
 	</html>
