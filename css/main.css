@@ -150,17 +150,10 @@ div.blurb{
     width: 80%;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
-}
 #presentation{
     padding-bottom: 50px;
 }
+
 #flag {
     border-radius: 4px;
     -moz-border-radius: 4px;
@@ -168,6 +161,15 @@ ul.posts li {
     width: 3em;
     height: 2em;
     float:right;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#flag_link {
+    background-color: var(--background-color);
+    float:right;
+    padding: 0em 1.5em;
+    border-radius: 11px;
 }
 
 input[type=checkbox]{

@@ -3,9 +3,7 @@
 		<head>
 			<title>{{ page.title }}</title>
 			<!-- link to the English version -->
-			<link rel="alternate" hreflang="en"
-        	href="/"/>
-
+			<link rel="alternate" hreflang="en" href="/"/>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 			<!-- link for icon -->
@@ -17,10 +15,15 @@
 	        		<li><a href="/fr">Accueil</a></li>
 	        		<li><a href="/internship/fr">Expériences</a></li>
 	        		<li><a href="/project/fr">Mes projets</a></li>
-	        		<a href="/"> <img id="flag" src="/ressources/en_flag.png" title="Go to English mode"> </a>
+	        		<a href="/" id="flag_link"> <img id="flag" src="/ressources/en_flag.png" title="Go to English mode"> </a>
 	    		</ul>
 			</nav>
+			<!--
+			<div class="toggle-container">
+					<input type="checkbox" id="switch" position='fixed' name="theme"/><label for="switch">Toggle</label>
 
+    		</div>
+    		-->
 			<div class="container">
 			
 				{{ content }}
@@ -38,9 +41,40 @@
 	        			<i class="fa fa-github fa-lg" aria-hidden="true"></i>
 	        			<a href="https://github.com/cmoineau"> github.com/cmoineau</a>
 	        		</li>
-	        		<p style="float : right; font-size: 0.8em">Dernière édition :  17 Dec. 2019</p>
+	        		<p style="float : right; font-size: 0.8em">Dernière édition :  19 Dec. 2019</p>
 				</ul>
 			</footer>
 
 		</body>
+		<script type="text/javascript">
+			let trans = () => {
+	            document.documentElement.classList.add('transition');
+	            window.setTimeout(() => {
+	                document.documentElement.classList.remove('transition')
+	            }, 1000)
+	        }
+
+
+			var checkbox = document.getElementById('switch');
+    		checkbox.addEventListener('change', function() {
+	            if(this.checked) {
+	                trans()
+	                document.documentElement.setAttribute('data-theme', 'dark')
+	                localStorage.setItem("data-theme", 1);
+	            } else {
+	                trans()
+	                document.documentElement.setAttribute('data-theme', 'light')
+	                localStorage.setItem("data-theme", 0);
+	            }
+    		})
+
+    		if(!("data-theme" in localStorage)){
+				localStorage.setItem("data-theme", 0);
+			}else{
+				if (localStorage.getItem('data-theme') != 0){
+					document.documentElement.setAttribute('data-theme', 'dark')
+					checkbox.checked = true
+				}
+			}
+		</script>		
 	</html>
