@@ -9,3 +9,6 @@ Reminder : command to launch the jekyll server on Linux :
 jekyll serve --host=localhost --trace
 ```
 
+##TODO :
+- [ ] Rajouter mon parcours scolaire
+- [ ] Rajouter les langues parlé

@@ -14,7 +14,7 @@ html{
     --footer-abh: gray;
     --shadow: white;
     --a-bh: #eaebed;
-    --a-c: #ffcc00;
+    --a-c: orange;
 }
 html[data-theme='dark']{
     --bg: #333333;
@@ -52,7 +52,7 @@ nav ul, footer ul {
 
 nav ul li, footer ul li {
     display: inline-block;
-    margin-right: 1em;0px
+    margin-right: 1em;
 }
 nav a{
     color: var(--nav-a-c);
@@ -150,8 +150,21 @@ div.blurb{
     width: 80%;
 }
 
+#flex-container{
+    margin-top: 5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    width: 100%;
+}
+
 #presentation{
-    padding-bottom: 50px;
+    padding: 5px;
+}
+#wai{
+    padding: 1em;
+}
+#cur{
+    padding: 1em;
 }
 
 #flag {
@@ -202,7 +215,7 @@ label:after {
 }
 
 input:checked + label {
-    background: orange;
+    background: #00e59b;
 }
 
 input:checked + label:after {
