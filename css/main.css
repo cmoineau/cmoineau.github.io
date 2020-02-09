@@ -96,6 +96,7 @@ h2 {
     font-family:'Noto Sans', 'Helvetica', 'Arial', 'Sans-Serif';
     border-bottom: 1px solid --color-text;
     text-shadow: 2px 0px 6px var(--shadow);
+    text-align: center;
 
 }
 h3 {

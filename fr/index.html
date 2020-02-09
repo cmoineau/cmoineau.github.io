@@ -28,7 +28,12 @@ title: Cyril MOINEAU
 				</p>
 			</div>
 		</div>
-		<h2>Listes des cours que j'ai suivi dans ma scolarité :</h2>
+		
+		<h2>Cours que j'ai suivi dans ma scolarité  
+			<i id="b_show" class="fa fa-arrow-circle-down" aria-hidden="true" onclick="document.getElementById('course_taken').style.display='initial';document.getElementById('b_hide').style.display='initial';document.getElementById('b_show').style.display='none';"></i> 
+
+			<i id="b_hide" class="fa fa-arrow-circle-up" aria-hidden="true" onclick="document.getElementById('course_taken').style.display='none';document.getElementById('b_hide').style.display='none';document.getElementById('b_show').style.display='initial';" style="display:none;"></i></h2>
+		<div id="course_taken" style="display:none;">
 		<p>
 		<h3>M2SIF Rennes 1 (2019-2020)</h3>
 				<ul>
@@ -121,5 +126,6 @@ title: Cyril MOINEAU
 						</ul>
     		</ul>
 		</p>
+	</div>
 	</div><!-- /.blurb -->
 
