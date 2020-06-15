@@ -56,7 +56,7 @@ nav ul li, footer ul li {
 }
 nav a{
     color: var(--nav-a-c);
-    text-decoration: : none;
+    text-decoration: none;
     font-size: 1em;
     padding: 5px 15px;
     -webkit-border-radius: 11px;
@@ -174,7 +174,7 @@ div.blurb{
     -webkit-border-radius: 4px;
     width: 3em;
     height: 2em;
-    float:right;
+
     vertical-align: middle;
     display: inline-block;
 }

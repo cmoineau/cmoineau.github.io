@@ -1,4 +1,28 @@
 <!DOCTYPE html>
+	<script>
+		function httpGet(theUrl){
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open("GET", theUrl, false); // false for synchronous request
+			xmlHttp.send(null);
+			return xmlHttp.response;
+		}
+		function getLastCommit(){
+			months = [null, "January","February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Décember"]
+
+			commits = httpGet("https://api.github.com/repos/cmoineau/cmoineau.github.io/commits");
+			date = JSON.parse(commits)[1].commit.author.date;
+			year = date[0] + date[1] + date[2] + date[3]
+			month = date[5] + date[6]
+			day = date[8] + date[9]
+			str_date = "Last edition : " + day + " " + months[parseInt(month)] + " " + year
+			return str_date
+		}
+		function setLastCommit(){
+			var p = document.getElementById("lastchange");
+			p.innerHTML = getLastCommit()
+		}
+		
+	</script>
 	<html lang="en" data-theme='dark'> <!--Change to light later ?-->
 		<head>
 			<title>{{ page.title }}</title>
@@ -12,7 +36,7 @@
 			 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		</head>
-		<body>
+		<body onload="setLastCommit()">
 			<nav>
 	    		<ul>
 	        		<li><a href="/">Home</a></li>
@@ -45,12 +69,14 @@
 	        			<i class="fa fa-github fa-lg" aria-hidden="true"></i>
 	        			<a href="https://github.com/cmoineau"> github.com/cmoineau</a>
 	        		</li>
-	        		<p style="float : right; font-size: 0.8em; padding-right: 1em;"; >Last edition : 16 March. 2020</p>
+	        		<p id="lastchange"; style="float : right; font-size: 0.8em; padding-right: 1em;";></p>
 				</ul>
 
 			</footer>
 
 		</body>
+
+
 		<script type="text/javascript">
 			let trans = () => {
 	            document.documentElement.classList.add('transition');
@@ -82,4 +108,6 @@
 				}
 			}
 		</script>
+
+
 	</html>
