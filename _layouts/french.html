@@ -10,7 +10,7 @@
 			months = [null, "Janvier","Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
 
 			commits = httpGet("https://api.github.com/repos/cmoineau/cmoineau.github.io/commits");
-			date = JSON.parse(commits)[1].commit.author.date;
+			date = JSON.parse(commits)[0].commit.author.date;
 			year = date[0] + date[1] + date[2] + date[3]
 			month = date[5] + date[6]
 			day = date[8] + date[9]
