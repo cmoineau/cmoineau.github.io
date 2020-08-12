@@ -4,11 +4,41 @@ title: Cyril MOINEAU
 ---
 	<div class="blurb">        
 		<h1>My work experiences</h1>
+
 		<h2 style="text-align: left">Summary :</h2>
 		<ul>
+			<li><a href="#irisa">Internship in the team SHAMAN of the IRISA 2020</a></li>
 			<li><a href="#NCTU">Internship at the NCTU 2019</a></li>
     		<li><a href="#Metropole">Orléans Métropole 2018</a></li>
-    	</ul>
+		</ul>
+		
+		<h2 id="irisa">Internship in the team SHAMAN of the IRISA 2020</h2>
+		<h3>Description of the internship :</h3>
+		<p>
+			As part of my final year internship, I worked at <a href="http://www.irisa.fr/"></a>'IRISA</a>'s laboratory in the team <a href="http://www-shaman.irisa.fr/">SHAMAN</a>.
+			The goal of the internship was to improve a method to generate linguistic summaries of a big database.
+			A linguistic summary is a set of fuzzy properties such as "most crow are black".
+			To generate such a summary, the classic approach requires to go through the whole database, which results in a linear complexity depending of the size of the database. 
+			The complexity is also exponential depending of the size of the vocabulary. 
+		</p>
+		<p>
+			The team <a href="http://www-shaman.irisa.fr/">SHAMAN</a> had written two papers for a method that uses metadata which are stored in the database management system.
+			While their method has a perfect precision for atomic properties, it has some flaw for conjonctive properties (for example: "Most crow are black and tall").
+			First, I conducted a bibliographic study in order to understand what caused this flaw. 
+			Among the several solutions that I suggested, the used of multidimensionnal histogram was chosen. 
+			From this point onwards, I implemented three multidimensionnal histograms (<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.45.75">MHIST</a>, 
+			<a href="https://www.researchgate.net/publication/2459804_Approximating_Multi-Dimensional_Aggregate_Range_Queries_Over_Real_Attributes">GENHIST</a> et 
+			<a href="https://www.microsoft.com/en-us/research/publication/stholes-a-multidimensional-workload-aware-histogram/">STHOLES</a>) using Python (3.6.9) and I compared them with one another. 
+			In order to make it easy to carry on with my work, I created a dockerized API using <a href="https://www.docker.com/">Docker</a> and <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> before ending my internship.
+		</p>
+
+		<h3>Conclusion :</h3>
+		<p>
+			This internship has allowed me to improve my scientific papers reading and analyzing skills.
+			Due to the COVID-19 epidemy, I had to work mostly from home. This gave me the opportunity to develop my autonomy and to telecommute for the first time.
+			I have also discovered some underlying problematics of the reasearch world, such as the reproductiblity of the results of scientific papers.
+		</p>
+
     	<h2 id="NCTU">Internship at the NCTU 2019</h2>
     		<h3>Description of the internship :</h3>
     		<p>

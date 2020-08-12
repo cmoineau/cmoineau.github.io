@@ -6,11 +6,55 @@ title: Cyril MOINEAU
 		<h1>Mon expérience professionnelle</h1>
 		<h2 style="text-align: left">Sommaire :</h2>
 		<ul>
+			<li><a href="#irisa">Stage dans l'équipe SHAMAN de l'IRISA 2020</a></li>
 			<li><a href="#NCTU">Stage à la NCTU 2019</a></li>
-    		<li><a href="#Metropole">Orléans Métropole 2018</a></li>
-    	</ul>
-    	<h2 id="NCTU">Stage à la NCTU 2019</h2>
-    		<h3>Description du stage :</h3>
+			<li><a href="#Metropole">Orléans Métropole 2018</a></li>
+			
+		</ul>
+		<!--
+			Mettre un format
+			- date de début
+			- date de fin
+			- entreprise
+			- lieux
+			- description du poste
+			- conclusion
+			--->
+		
+		<h2 id="irisa">Stage au sein de l'équipe SHAMAN de l'IRISA 2020</h2>
+			<h3>Description du poste :</h3>
+			<p>
+
+				Dans le cadre de mon stage de fin d'étude, j'ai travaillé dans les laboratoires de <a href="http://www.irisa.fr/"></a>l'IRISA</a>, au sein de l'équipe <a href="http://www-shaman.irisa.fr/">SHAMAN</a>.
+				L'objectif de ce stage était d'améliorer une méthode de génération de résumés linguistiques d'une base de données massive. 
+				Un résumé linguistique correspond à un ensemble de propriétés floues, par exemple : "La plupart des corbeaux sont noirs". 
+				Pour générer ce genre de résumé, les approches classiques ont une complexité linéaire en fonction de la taille de la 
+				base de données et exponentielle en fonction de la taille du vocabulaire. L'équipe <a href="http://www-shaman.irisa.fr/">SHAMAN</a> a proposé de s'appuyer sur 
+				des méta-données stockées par les Systèmes de Gestion de Base de Données pour éviter le parcours séquentiel de la base de 
+				données. Leur méthode est parfaite dans le cas où les propriétés à étudier sont atomique, mais perfectible dans le cas d'une 
+				cononction de propriété (par exemple: "La plupart des corbeaux sont noirs et grands").
+			</p>
+			<p>
+
+				Dans un premier temps, j'ai réalisé une étude bibliographique afin d'étudier la cause des erreurs d'estimation et j'ai proposé plusieurs solutions.
+				Lors de mon stage; l'utilisation d'histogrammes multidimensionnels ayant été la solution retenue. 
+				Ensuite, j'ai travaillé sur l'implémentation de 3 histogrammes multidimensionnels (<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.45.75">MHIST</a>, 
+				<a href="https://www.researchgate.net/publication/2459804_Approximating_Multi-Dimensional_Aggregate_Range_Queries_Over_Real_Attributes">GENHIST</a> et 
+				<a href="https://www.microsoft.com/en-us/research/publication/stholes-a-multidimensional-workload-aware-histogram/">STHOLES</a>) 
+				en Python (3.6.9). 
+				Enfin, j'ai utilisé <a href="https://www.docker.com/">Docker</a> et <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> afin de créer une API dockerisé pour qu'il soit plus facile de reprendre le travail que j'ai réalisé en stage.
+			</p>
+
+			<h3>Conclusion :</h3>
+			<p>
+				Ce stage m'a permis d'améliorer mes capacités de lecture et de synthèse d'articles scientifiques. 
+				Il s'est déroulé majoritairement à distance à cause de l'épidémie de COVID-19. 
+				Ces conditions de travail m'ont permis de développer mon autonomie et de découvrir le monde du télé-travail. 
+				J'ai aussi découvert de nouvelles problèmatiques inhérentes au travail de chercheur telles que la reproductibilité des résultats d'un article scientifique. 
+			</p>
+
+		<h2 id="NCTU">Stage à la NCTU 2019</h2>
+    		<h3>Description du poste :</h3>
     		<p>
     			Pendant l'été 2019, j'ai passé 2 mois à la <a href="https://www.nctu.edu.tw/en/">National Chiao Tung University</a> (NCTU) à Taïwan dans le laboratoire <a href="http://soc.ee.nctu.edu.tw/">Intelligent Electronics and System-On-Chip</a> (IESOC).
     		</p>
@@ -21,12 +65,16 @@ title: Cyril MOINEAU
 
     		<h3>Conclusion :</h3>
     		<p>
-    			Ce stage a été riche et une très bonne expérience dans le monde de la recherche. Je ne pourrais pas suffisament remercier les personnes qui m'ont accueilli à la NCTU et qui m'ont permi de passer deux mois très bénéfiques. J'ai pu comprendre les difficultés de travailler dans un laboratoire de recherche. Même si la thématique du stage ne tombait pas dans celle que j'ai pu aborder lors de mes études, j'étais avide d'apprendre et d'appréhender ce sujet. Ces deux mois ont confirmé mon désir de faire de la recherche.
+				Ce stage a été riche en expérience et fut une expérience du monde de la recherche très positive. 
+				Je ne pourrais pas suffisament remercier les personnes qui m'ont accueilli à la NCTU et qui m'ont permi de passer deux mois très bénéfiques. 
+				J'ai pu comprendre les difficultés de travailler dans un laboratoire de recherche. 
+				Même si la thématique du stage ne tombait pas dans celle que j'ai pu aborder lors de mes études, j'étais avide d'apprendre et d'appréhender ce sujet. 
+				Ces deux mois ont confirmé mon désir de faire de la recherche.
     		</p>
 
 
     	<h2 id="Metropole">Orléans Métropole 2018</h2>
-    	    <h3>Description du stage :</h3>
+    	    <h3>Description du poste :</h3>
     		<p>J'ai passé 2 mois lors de l'été 2018 à la <a href="http://www.orleans-metropole.fr/">Métropole d'Orléans</a> dans la direction des systèmes d'information (DSI). Pendant cet été, j'ai pu travailler sur les deux sujets suivants.
     		</p>
     		<p>
@@ -37,6 +85,10 @@ title: Cyril MOINEAU
     		</p>
     		<h3>Conclusion :</h3>
     		<p>
-    			C'était mon premier stage technique. J'ai découvert beaucoup dans la gestion de réseau. On m'a par ailleurs donné de nombreuses responsabilités, notamment lors du nettoyage de l'AD. Effectivemment la suppression d'un utilisateur actif aurait été pénalisant et ce type d'erreur aurait donné une mauvaise image du service.  
-    		</p>
+				Ce fut mon premier stage technique, il m'a permis de découvrir beaucoups dans le domaine de la gestion de réseau et de découvrir le monde du travail. 
+				On m'a par ailleurs donné de nombreuses responsabilités, notamment lors du nettoyage de l'Active Directory. 
+				Où la suppression d'un utilisateur actif aurait été pénalisante pour l'entreprise.  
+			</p>
+			
+
 	</div><!-- /.blurb -->
