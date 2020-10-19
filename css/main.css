@@ -73,7 +73,7 @@ nav a:hover{
     color: var(--nav-a-h);
 }
 nav li{
-    display: inline-block;
+    margin-top: 0.2em;
     text-shadow: 2px 0px 6px var(--bg-nav);
 }
 nav li:hover {
@@ -164,29 +164,15 @@ div.blurb{
 #presentation{
     padding: 5px;
 }
-#wai{
-    padding: 1em;
-}
-#cur{
-    padding: 1em;
-}
 
 #flag {
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
+    border-radius: 5px;
     width: 3em;
     height: 2em;
-
     vertical-align: middle;
-    display: inline-block;
-}
-
-#flag_link {
-    background-color: var(--background-color);
     float:right;
-    padding: 0em 1.5em;
-    border-radius: 11px;
+    margin-bottom: 1em;
+    margin-right: 1em;
 }
 
 input[type=checkbox]{

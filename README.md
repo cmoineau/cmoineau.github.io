@@ -10,8 +10,7 @@ jekyll serve --host=localhost --trace
 
 ## TODO :
 - [X] Bouger les scripts dans un fichier script pour séparer HTML et JS;
-- [ ] Tester l'effet typing
-- [ ] Changer la langue sans revenir à l'accueil
+- [X] Changer la langue sans revenir à l'accueil
 - [X] Rédiger stage dans l'équipe shaman de l'IRISA;
     - [X] FR;
     - [X] EN.
@@ -22,7 +21,8 @@ jekyll serve --host=localhost --trace
     - description du poste
     - conclusion
 - [ ] Liste de mes capacités technologiques;
-- [ ] Faire des tests au lancement du site ? 
+- [ ] Faire des tests au lancement du site ?;
+- [X] Faire une page 404 plus "propre";
 - [ ] Liste des softs skills.
 
 ## Fonctionnalitées optionelles :
