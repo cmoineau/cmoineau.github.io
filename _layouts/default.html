@@ -1,28 +1,4 @@
 <!DOCTYPE html>
-	<script>
-		function httpGet(theUrl){
-			var xmlHttp = new XMLHttpRequest();
-			xmlHttp.open("GET", theUrl, false); // false for synchronous request
-			xmlHttp.send(null);
-			return xmlHttp.response;
-		}
-		function getLastCommit(){
-			months = [null, "January","February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Décember"]
-
-			commits = httpGet("https://api.github.com/repos/cmoineau/cmoineau.github.io/commits");
-			date = JSON.parse(commits)[0].commit.author.date;
-			year = date[0] + date[1] + date[2] + date[3]
-			month = date[5] + date[6]
-			day = date[8] + date[9]
-			str_date = "Last edition : " + day + " " + months[parseInt(month)] + " " + year
-			return str_date
-		}
-		function setLastCommit(){
-			var p = document.getElementById("lastchange");
-			p.innerHTML = getLastCommit()
-		}
-		
-	</script>
 	<html lang="en" data-theme='dark'> <!--Change to light later ?-->
 		<head>
 			<title>{{ page.title }}</title>
@@ -33,16 +9,15 @@
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 			<!-- link for icon -->
-			 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<script src="../script/last_edition.js"></script>
 		</head>
-		<body onload="setLastCommit()">
+		<body onload="setLastCommit('english')">
 			<nav>
 	    		<ul>
 	        		<li><a href="/">Home</a></li>
 	        		<li><a href="/internship">Work experiences</a></li>
 	        		<li><a href="/project">Completed projects</a></li>
-	        		
 	        		<a href="/fr" id="flag_link"> <img id="flag" src="/ressources/fr_flag.png" title="Vers le mode Français"> </a>
 	    		</ul>
 	    		
