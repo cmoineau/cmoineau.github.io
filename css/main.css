@@ -20,6 +20,7 @@ html{
 }
 html[data-theme='dark']{
     --bg: #333333;
+    --bg-box: #3d3c3c;
     --color-text: #dddddd;
     --bg-nav: #232222;
     --nav-a-c: #00e59b;
@@ -173,6 +174,15 @@ div.blurb{
     float:right;
     margin-bottom: 1em;
     margin-right: 1em;
+}
+
+
+.box {
+    padding: 2em; 
+    background-color: var(--bg-box);
+    box-shadow: 2px 3px 6px var(--shadow);
+    margin-bottom: 2em;
+    border-radius: 2px;
 }
 
 input[type=checkbox]{
