@@ -4,19 +4,19 @@ title: Cyril MOINEAU
 ---
 	<div class="blurb">
 		<div id="presentation">
-			<img src="/ressources/Cyril.jpg" alt="A photo of me"  style="float:right; width: 8em; height: 9.5em; margin-left: 30px; margin-right: 15%; border-radius: 5%; box-shadow: 2px 0px 6px black;">
+			<img src="/ressources/Cyril.jpg" alt="Une photo de moi"  style="float:right; width: 8em; height: 9.5em; margin-left: 30px; margin-right: 15%; border-radius: 5%; box-shadow: 2px 0px 6px black;">
 			<h1 style="float: left;">Cyril MOINEAU</h1>
 		</div>
 		<div id="flex-container">
-			<div>
+			<div class="box" style="margin: 1em;">
 				<h2>Qui suis je ?</h2>
 				<p>
 					Je suis un élève ingénieur en informatique français né en 1997. J'ai développé un intérêt pour le monde de la recherche depuis que je suis en classe préparatoire. Je veux que mon travail soit utile et je suis passioné par la recherche de solutions.
 					</br>
-					De par ma formation d'ingénieur, le monde de l'entreprise et la recherche appliquée sont mes objectifs professionnels.
-					</br>
 					Je suis passionné par l'apprentissage automatique et l'exploration de données, mais je suis aussi interressé par la physique et curieux de manière générale.			
 				</p>
+			</div>
+			<div class="box" style="margin: 1em;">
 				<h2>Actuellement</h2>
 				<p>
 					J'étudie à <a href="http://www.enssat.fr/">l'ENSSAT Lannion</a>, une école d'ingénieur française. 
@@ -26,14 +26,20 @@ title: Cyril MOINEAU
 		</div>
 
 		<h2>Formation</h2>
-		<h3>Master Recherche en informatique Rennes 1 (2019-2020)</h3>
-			<ul>
+		<h3>Master Recherche en informatique Rennes 1 (2019-2020)
+		<i id="1_show" class="fa fa-arrow-circle-down" aria-hidden="true" onclick="document.getElementById('msif').style.display='block';document.getElementById('1_hide').style.display='initial';document.getElementById('1_show').style.display='none';"></i> 
+		<i id="1_hide" class="fa fa-arrow-circle-up" aria-hidden="true" onclick="document.getElementById('msif').style.display='none';document.getElementById('1_hide').style.display='none';document.getElementById('1_show').style.display='initial';" style="display:none;"></i></h3>
+			<ul id="msif" style="display:none;">
 				<li>Fouille de données massives et visualisation</li>
 				<li>Analyse de données et modélisation probabilistique</li>
 				<li>Rédaction d'article scientifique</li>
 			</ul>
-		<h3>ENSSAT école d'ingénieur (2017-2020)</h3>
-			<ul>
+		<h3>ENSSAT école d'ingénieur (2017-2020)
+
+			<i id="2_show" class="fa fa-arrow-circle-down" aria-hidden="true" onclick="document.getElementById('enssat').style.display='block';document.getElementById('2_hide').style.display='initial';document.getElementById('2_show').style.display='none';"></i> 
+
+			<i id="2_hide" class="fa fa-arrow-circle-up" aria-hidden="true" onclick="document.getElementById('enssat').style.display='none';document.getElementById('2_hide').style.display='none';document.getElementById('2_show').style.display='initial';" style="display:none;"></i></h3>
+			<ul id="enssat" style="display:none;">
 				<li><strong>Mathématiques :</strong>
 					<ul>
 						<li>Logique Mathématiques</li>
@@ -77,8 +83,10 @@ title: Cyril MOINEAU
 						<li>Bases des systèmes  numériques</li>
 					</ul>
 			</ul>
-		<h3>Classe préparatoire (2015-2017) </h3>
-			<ul>
+		<h3>Classe préparatoire (2015-2017)
+		<i id="3_show" class="fa fa-arrow-circle-down" aria-hidden="true" onclick="document.getElementById('prep').style.display='block';document.getElementById('3_hide').style.display='initial';document.getElementById('3_show').style.display='none';"></i> 
+		<i id="3_hide" class="fa fa-arrow-circle-up" aria-hidden="true" onclick="document.getElementById('prep').style.display='none';document.getElementById('3_hide').style.display='none';document.getElementById('3_show').style.display='initial';" style="display:none;"></i></h3>
+			<ul id="prep" style="display:none;">
 				<li><strong>Mathematiques :</strong></li>
 					<ul>
 						<li>Algèbre linéaire</li>

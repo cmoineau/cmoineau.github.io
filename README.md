@@ -9,13 +9,12 @@ jekyll serve --host=localhost --trace
 ```
 
 ## TODO :
-- [ ] Sur les expériences mettre un format
+- [X] Sur les expériences mettre un format
     - durée 
     - entreprise
     - lieux
     - description du poste
 - [ ] Liste de mes capacités technologiques;
-- [ ] Faire des tests au lancement du site ?;
 - [ ] Liste des softs skills;
 - [ ] Faire une version mobile;
 - [ ] Rédiger README;
