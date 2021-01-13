@@ -9,21 +9,21 @@ jekyll serve --host=localhost --trace
 ```
 
 ## TODO :
-- [X] Bouger les scripts dans un fichier script pour séparer HTML et JS;
-- [X] Changer la langue sans revenir à l'accueil
-- [X] Rédiger stage dans l'équipe shaman de l'IRISA;
-    - [X] FR;
-    - [X] EN.
 - [ ] Sur les expériences mettre un format
     - durée 
     - entreprise
     - lieux
     - description du poste
-    - conclusion
 - [ ] Liste de mes capacités technologiques;
 - [ ] Faire des tests au lancement du site ?;
-- [X] Faire une page 404 plus "propre";
-- [ ] Liste des softs skills.
+- [ ] Liste des softs skills;
+- [ ] Faire une version mobile;
+- [ ] Rédiger README;
+- [ ] Ajouter CEA;
+- [ ] Changer info de la bio;
+- [ ] Changer la police; 
+- [ ] Améliorer la barre pour mettre le bouton light mode;
+- [ ] Ajout d'une barre verticale pour sommaire ?
 
 ## Fonctionnalitées optionelles :
 
