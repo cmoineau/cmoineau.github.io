@@ -9,20 +9,12 @@ jekyll serve --host=localhost --trace
 ```
 
 ## TODO :
-- [X] Sur les expériences mettre un format
-    - durée 
-    - entreprise
-    - lieux
-    - description du poste
+
 - [ ] Liste de mes capacités technologiques;
 - [ ] Liste des softs skills;
-- [ ] Faire une version mobile;
-- [ ] Rédiger README;
 - [ ] Ajouter CEA;
 - [ ] Changer info de la bio;
 - [ ] Changer la police; 
-- [ ] Améliorer la barre pour mettre le bouton light mode;
-- [ ] Ajout d'une barre verticale pour sommaire ?
 
 ## Fonctionnalitées optionelles :
 
