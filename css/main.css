@@ -1,10 +1,9 @@
 @font-face {
-    font-family: "Open Sans";
-    src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-           url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+    font-family: Jost;
+    src: url("/font/Jost-400-Book.otf");
    }
 html{
-    font-size: 0.5vw + 0.5em;
+    font-family: Jost;
     --bg: #f5f5f5;
     --color-text: #24292e;
     --bg-nav: #24292e;
@@ -19,6 +18,7 @@ html{
     --a-c: #be3523;
 }
 html[data-theme='dark']{
+    font-family: Jost;
     --bg: #333333;
     --bg-box: #3d3c3c;
     --color-text: #dddddd;
@@ -33,7 +33,9 @@ html[data-theme='dark']{
     --a-bh: #383838;
     --a-c: #00e59b;
 }
-
+::selection{
+    background-color: var(--bg);
+}
 body {
     margin: 0px auto;
     background-color: var(--bg);
@@ -43,6 +45,7 @@ body ul{
     margin-bottom: 20px;
 }
 nav{
+    font-family: Jost;
     position: fixed;
     width: 100%;
     border-top: 1px solid black;
@@ -50,7 +53,6 @@ nav{
     background-color: var(--bg-nav);
 }
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     list-style: none;
     font-weight: bold;
 }
@@ -62,7 +64,7 @@ nav ul li, footer ul li {
 nav a{
     color: var(--nav-a-c);
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.1em;
     padding: 5px 15px;
     -webkit-border-radius: 11px;
     -moz-border-radius: 11px;
@@ -92,19 +94,16 @@ a:hover {
 }
 h1 {
     font-size: 3em;
-    font-family:'Noto Sans', 'Helvetica', 'Arial', 'Sans-Serif';
     text-align: center;
     text-shadow: 2px 0px 6px var(--shadow);
 }
 h2 {
     font-size: 2em;
-    font-family:'Noto Sans', 'Helvetica', 'Arial', 'Sans-Serif';
     text-shadow: 2px 0px 6px var(--shadow);
     text-align: center;
 }
 h3 {
-    font-size: 1.3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1.8em;
     text-shadow: 2px 0px 6px var(--shadow);
     border-bottom: 1px solid;
 }
@@ -114,8 +113,7 @@ h3 a:hover{
     background-color: var(--bg);
 }
 p {
-    font-family: 'Noto Sans', 'Sans-Serif';
-    font-size: 1em;
+    font-size: 1.3em;
     line-height: 1.4em;
     color: --color-text;
     text-align: justify;
@@ -123,30 +121,30 @@ p {
 }
 li{
     text-shadow: 2px 0px 6px var(--shadow);
-    font-family: 'Noto Sans', 'Sans-Serif';
+    font-size: 1.3em;
 }
 
 footer {
     border-top: 1px solid;
-    font-size: .8em;
+}
+footer li{
+    font-size: 1em;
 }
 footer a{
     color: var(--footer-a);
-    font-size: .8em;
     display: inline-block;
 }
 footer a:hover{
     color: var(--footer-abh);
     background-color: var(--footer-ah);
     font-weight:bold; 
-    font-size: .8em;
     display: inline-block;
 }
 
 figure {
     text-align: center;
     font-style: italic;
-    font-size: smaller;
+    font-size: 1.3em;
 }
 
 .center {
