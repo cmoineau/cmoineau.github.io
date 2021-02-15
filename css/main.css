@@ -20,6 +20,7 @@ html{
 html[data-theme='dark']{
     font-family: Jost;
     --bg: #333333;
+    --highlight: #2d2d2d;
     --bg-box: #3d3c3c;
     --color-text: #dddddd;
     --bg-nav: #232222;
@@ -34,7 +35,7 @@ html[data-theme='dark']{
     --a-c: #00e59b;
 }
 ::selection{
-    background-color: var(--bg);
+    background-color: var(--highlight);
 }
 body {
     margin: 0px auto;
