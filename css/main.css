@@ -19,9 +19,10 @@ html{
 }
 html[data-theme='dark']{
     font-family: Jost;
-    --bg: #333333;
-    --highlight: #2d2d2d;
-    --bg-box: #3d3c3c;
+    --bg: #303030;
+    --bg1: #161616;
+    --highlight: #00e59b;
+    --bg-box: #3d3d3d;
     --color-text: #dddddd;
     --bg-nav: #232222;
     --nav-a-c: #00e59b;
