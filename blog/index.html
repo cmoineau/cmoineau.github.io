@@ -1,0 +1,13 @@
+---
+layout: default
+---
+	<h1>Blog</h1>
+
+    <p>Here you will find various articles I wrote in french.</p>
+
+	<ul class="posts">
+
+	  {% for post in site.posts %}
+	    <li><span>{{ post.label }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
