@@ -3,11 +3,17 @@ layout: default
 ---
 	<h1>Blog</h1>
 
-    <p>Here you will find various articles I wrote in french.</p>
-
-	<ul class="posts">
-
-	  {% for post in site.posts %}
-	    <li><span>{{ post.label }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+	<div class=articles>
+		{% for post in site.posts %}
+		<div class=article>
+			<a href="{{ post.url }}" title="{{ post.title }}">
+			<div class=article_container>
+				<img class=post_image src="{{ post.image }}">
+				<div class=post_text>
+					<p class=post_title>{{ post.title }}</p>
+				</div> 
+			</div>
+			</a>
+		</div>		
+		{% endfor %}
+	</div>

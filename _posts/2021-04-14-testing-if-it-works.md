@@ -2,10 +2,15 @@
 layout: post
 title: "Testing if it works"
 label: Lorem
+image: /ressources/python.png
 ---
 
 ## Is this working fine ?
 
+
+<p align="center">
+  <img src="/favicon.ico" alt="website_icon">
+</p>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat leo ac nibh pretium interdum. Nullam egestas, sapien et cursus ornare, odio tortor luctus magna, vitae efficitur tellus justo at massa. Sed ut efficitur sapien. Quisque leo dui, dignissim at accumsan nec, sollicitudin quis augue. Aliquam sed erat vitae quam auctor lacinia. Duis vitae nibh vehicula, facilisis lorem sed, consequat nibh. Pellentesque ut pretium ex. Morbi lacus risus, rhoncus sed suscipit quis, pellentesque sed mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec pulvinar massa vitae odio congue facilisis. Duis molestie sodales nibh in consequat. Curabitur vestibulum orci nec eros tempus, quis semper ex aliquam. Vestibulum efficitur volutpat congue.
 

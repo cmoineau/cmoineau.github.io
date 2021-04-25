@@ -21,7 +21,7 @@ html[data-theme='dark']{
     font-family: Jost;
     --bg: #303030;
     --bg1: #161616;
-    --highlight: #00e59b;
+    --highlight: #109267;
     --bg-box: #3d3d3d;
     --color-text: #dddddd;
     --bg-nav: #232222;
@@ -49,6 +49,7 @@ body ul{
 nav{
     font-family: Jost;
     position: fixed;
+    z-index: 10;
     width: 100%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -165,6 +166,10 @@ div.blurb{
     margin: 0px auto;
     width: 80%;
 }
+div.post{
+    margin: 0px auto;
+    width: 90%;
+}
 
 #flex-container{
     display: flex;
@@ -195,52 +200,52 @@ div.blurb{
     border-radius: 2px;
 }
 
-input[type=checkbox]{
-    height: 0;
-    width: 0;
-    visibility: hidden;
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin-left:auto;
 }
 
-label {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 52px;
-    height: 27px;
-    background: grey;
-    float: right;
-    border-radius: 100px;
-    position: relative;
+.article{
+    position:relative; 
+    height:15em;
+    width: 25em;
+    padding: 1em;
+    margin:auto;
 }
 
-label:after {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border-radius: 90px;
-    transition: 0.3s;
+.article_container{
+    position:relative;  
 }
 
-input:checked + label {
-    background: #00e59b;
+.post_image{
+    position:absolute;
+    height:15em;
+    width: 25em;
+    z-index: 1;
+    box-shadow: 2px 0px 6px black;
 }
-
-input:checked + label:after {
-    left: calc(100% - 5px);
-    transform: translateX(-100%);
+.article_container:hover{
+    opacity:0.5;
+    -moz-transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    }
+.post_text{
+    z-index: 2;
+    position:absolute;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 25%;
+    font-size:150%;
 }
+.post_title{
+    text-align: center;
+    color: black;
 
-label:active:after {
-    width: 45px;
-}
-
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-  transition: all 750ms !important;
-  transition-delay: 0 !important;
+    text-shadow: 0px 0px 0px;
+    font-weight: bold;
+    font-size: 1.1em;
 }

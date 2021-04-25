@@ -1,9 +1,7 @@
 
 
 <p align="center">
-  <a href="https://getbootstrap.com/">
     <img src="/favicon.ico" alt="website_icon">
-  </a>
 </p>
 <h1 align="center">cmoineau.github.io</h1>
 
