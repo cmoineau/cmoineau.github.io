@@ -1,8 +1,20 @@
 ---
 layout: french
 ---
+<div class="blurb">
 	<h1>Blog</h1>
 
+	<div class="box">
+	<h2>Synopsis</h2>
+		<p  style="text-align: center;">
+		Jeune ingénieur chercheur en intelligence artificielle, je suis passionné depuis longtemps par ce domaine. 
+		Cela en est devenu le cœur de mon métier et je ressens l'envie d’en parler aux personnes qui sont intéressées 
+		mais qui n'ont ni les bagages mathématiques ni les bagages informatique pour comprendre comment l'intelligence artificielle fonctionne.
+		J'espère réussir à partager mes connaissances sur ce sujet et à m'adresser à un public le plus large  possible.  
+		Mon objectif est de démystifier l'intelligence artificielle et de vous montrer le dessous de cette boîte bien souvent opaque.
+		</p>
+	</div>
+	<h2>Liste des articles</h2>
 	<div class=articles>
 		{% for post in site.posts %}
 		<div class=article>
@@ -17,3 +29,4 @@ layout: french
 		</div>		
 		{% endfor %}
 	</div>
+</div>

@@ -217,11 +217,12 @@ div.post{
 }
 
 .article_container{
-    position:relative;  
+    position:relative; 
 }
 
 .post_image{
     position:absolute;
+    opacity:0.3;
     height:15em;
     width: 25em;
     z-index: 1;
@@ -229,10 +230,7 @@ div.post{
 }
 .article_container:hover{
     opacity:0.5;
-    -moz-transition: opacity 0.2s;
-    -webkit-transition: opacity 0.2s;
-    -o-transition: opacity 0.2s;
-    }
+}
 .post_text{
     z-index: 2;
     position:absolute;
@@ -243,7 +241,7 @@ div.post{
 }
 .post_title{
     text-align: center;
-    color: black;
+    color: white;
 
     text-shadow: 0px 0px 0px;
     font-weight: bold;

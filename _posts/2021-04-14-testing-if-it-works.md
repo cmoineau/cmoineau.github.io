@@ -2,7 +2,7 @@
 layout: post
 title: "Testing if it works"
 label: Lorem
-image: /ressources/python.png
+image: /ressources/blog/01/intro.jpg
 ---
 
 ## Is this working fine ?

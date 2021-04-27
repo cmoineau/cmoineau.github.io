@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "no_more_name_idea"
+title: "More name ideas !"
 label: label2 label1
 image: /ressources/cea.jpg
 ---
