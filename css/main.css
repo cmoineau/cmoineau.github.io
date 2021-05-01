@@ -109,6 +109,10 @@ h3 {
     text-shadow: 2px 0px 6px var(--shadow);
     border-bottom: 1px solid;
 }
+h4 {
+    font-size: 1.5em;
+    text-shadow: 2px 0px 6px var(--shadow);
+}
 /* Ugly way to remove the bg color change for the banners 
 TODO : Find a better alternative ... */
 h3 a:hover{
