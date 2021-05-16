@@ -168,7 +168,7 @@ div.blurb{
 }
 div.post{
     margin: 0px auto;
-    width: 90%;
+    width: 70%;
 }
 
 #flex-container{
@@ -247,3 +247,43 @@ div.post{
     font-weight: bold;
     font-size: 1.1em;
 }
+
+/* .share_butons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 10%;
+    height: 10em;
+    position: fixed;
+    left: 2%;
+    top: 25%;    
+}
+.share_container{
+    display: flex;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+.share_container i{
+    color: var(--highlight);
+}
+
+.share_buton{
+    text-align: center;
+    border-radius: 5px;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: var(--nav-a-bh);
+    cursor: pointer;
+}
+.share_info{
+    position: fixed;
+    display: none;
+}
+.share_info p{
+    font-size: 1em;
+}
+
+.share_container:hover .share_info{
+    display: block;
+    transform:  translateX(1.7em) translateY(-1em);
+} */
