@@ -2,6 +2,7 @@
 layout: post
 title: "And another one with a quite long title !"
 image: /ressources/js.png
+lang: "en"
 ---
 
 ## Yet another article

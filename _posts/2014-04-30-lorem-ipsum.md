@@ -2,7 +2,7 @@
 layout: post
 title: "Lorem Ipsum"
 image: /ressources/blog/01/intro.jpg
-date: 2014-04-30
+lang: "fr"
 ---
 
 # TEST
