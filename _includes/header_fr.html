@@ -7,6 +7,19 @@
         <li><a href="/work_experiences/fr">Expériences</a></li>
         <li><a href="/projects/fr">Mes projets</a></li>
         <li><a href="/blog/fr">Blog</a></li>
-        <img id="flag" src="/ressources/en_flag.png" title="Go to English mode" onclick="change_language()" style="cursor: pointer">
+
+
+        {% assign pages=site.pages | where:"ref", page.ref%}
+        {% for page in pages %}
+            {% if page.lang == "en" %}
+            <img id="flag" src="/ressources/en_flag.png" title="Go to English mode" onclick="go_to('{{ page.url }}')">
+            {% endif %}
+        {% endfor %}
+        {% assign posts=site.posts | where:"ref", page.ref%}
+        {% for post in posts %}
+            {% if post.lang == "en" %}
+            <img id="flag" src="/ressources/en_flag.png" title="Go to English mode" onclick="go_to('{{ post.url }}')">
+            {% endif %}
+        {% endfor %}
     </ul>
 </nav>

@@ -1,8 +1,9 @@
 ---
-layout: post_fr
+layout: post_en
 title: "Lorem Ipsum"
 image: /ressources/blog/01/intro.jpg
-lang: "fr"
+lang: "en"
+ref: lorem_ipsum
 ---
 
 # TEST
