@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_en
 title: "And another one with a quite long title !"
 image: /ressources/js.png
 lang: "en"

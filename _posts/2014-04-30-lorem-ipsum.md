@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_fr
 title: "Lorem Ipsum"
 image: /ressources/blog/01/intro.jpg
 lang: "fr"

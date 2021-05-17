@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+	<html lang="en" data-theme='dark'>
+		<head>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<!-- link for icon -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60a105a3a99fbf0011744211&product=sticky-share-buttons' async='async'></script>
+		</head>
+		<body >
+			
+		{% include header_en.html %}
+
+			
+        <div class="post" style="padding-bottom: 1.5em; padding-top: 5em;">
+          {{ content }}
+        </div>
+
+		<div class="sharethis-inline-reaction-buttons"></div>
+
+		{% include footer_en.html %}
+
+		</body>
+
+	</html>
