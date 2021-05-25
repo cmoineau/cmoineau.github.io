@@ -7,18 +7,8 @@
         <li><a href="/work_experiences">Work experiences</a></li>
         <li><a href="/projects">My projects</a></li>
         <li><a href="/blog">Blog</a></li>
-        {% assign pages=site.pages | where:"ref", page.ref %}
-        {% for page in pages %}
-            {% if page.lang == "fr" %}
-            <img id="flag" src="/ressources/fr_flag.png" title="Vers le mode Français" onclick="go_to('{{ page.url }}')">
-            {% endif %}
-        {% endfor %}
-        {% assign posts=site.posts | where:"ref", page.ref %}
-        {% for post in posts %}
-            {% if post.lang == "fr" %}
-            <img id="flag" src="/ressources/fr_flag.png" title="Vers le mode Français" onclick="go_to('{{ post.url }}')">
-            {% endif %}
-        {% endfor %}
+        
+        {% include lang_switcher.html %}
         
     </ul>
 </nav>

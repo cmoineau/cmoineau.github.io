@@ -283,3 +283,49 @@ div.post{
     box-shadow: none;
     background: transparent;
 }
+
+
+ /* Dropdown Button */
+ .langbtn {
+    background-color: transparent;
+    color: var(--highlight);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .lang_switcher {
+    position: fixed;
+    display: inline-block;
+    right: 1em;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .lang_switcher-content {
+    display: none;
+    position: absolute;
+    right: 0em;
+    background-color: var(--bg1);
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .lang_switcher-content a {
+    color: var(--color-text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .lang_switcher-content a:hover {
+      background-color: var(--bg1);
+      text-decoration: none;
+}
+  
+  /* Show the dropdown menu on hover */
+  .lang_switcher:hover .lang_switcher-content {display: block;}

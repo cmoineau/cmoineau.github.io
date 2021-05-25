@@ -9,17 +9,6 @@
         <li><a href="/blog/fr">Blog</a></li>
 
 
-        {% assign pages=site.pages | where:"ref", page.ref%}
-        {% for page in pages %}
-            {% if page.lang == "en" %}
-            <img id="flag" src="/ressources/en_flag.png" title="Go to English mode" onclick="go_to('{{ page.url }}')">
-            {% endif %}
-        {% endfor %}
-        {% assign posts=site.posts | where:"ref", page.ref%}
-        {% for post in posts %}
-            {% if post.lang == "en" %}
-            <img id="flag" src="/ressources/en_flag.png" title="Go to English mode" onclick="go_to('{{ post.url }}')">
-            {% endif %}
-        {% endfor %}
+        {% include lang_switcher.html %}
     </ul>
 </nav>
