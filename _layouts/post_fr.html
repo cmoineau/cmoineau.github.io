@@ -14,10 +14,39 @@
 
 			
         <div class="post" style="padding-bottom: 1.5em; padding-top: 5em;">
-          {{ content }}
-        </div>
+			<h1>{{ page.title }}</h1>
+			<div class="description">
+				<div style="margin: auto;">
+					<i class="fa fa-clock-o" aria-hidden="true"></i> Date de publication :
+					{% assign m = page.date | date: "%-m" %}
+					{{ page.date | date: "%-d" }}
+					{% case m %}
+					{% when '1' %}Janvier
+					{% when '2' %}Février
+					{% when '3' %}Mars
+					{% when '4' %}Avril
+					{% when '5' %}Mai
+					{% when '6' %}Juin
+					{% when '7' %}Juillet
+					{% when '8' %}Août
+					{% when '9' %}Septembre
+					{% when '10' %}Octobre
+					{% when '11' %}Novembre
+					{% when '12' %}Decembre
+					{% endcase %}
+					{{ page.date | date: "%Y" }}
+				</div>
+				<div style="margin: auto;">
+					<i class="fa fa-tags" aria-hidden="true"></i> Tags : |
+					{% for tag in page.tags %}
+							{{ tag }} |
+					{% endfor %}
+				</div>	
+			</div>
 
-		<div class="sharethis-inline-reaction-buttons"></div>
+
+          	{{ content }}
+        </div>
 
 		{% include header_fr.html %}
 

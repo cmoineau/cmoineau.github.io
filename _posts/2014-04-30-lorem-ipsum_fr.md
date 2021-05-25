@@ -4,10 +4,8 @@ title: "Lorem Ipsum"
 image: /ressources/blog/01/intro.jpg
 lang: "fr"
 ref: lorem_ipsum
+tags: [débutant, réseau]
 ---
-
-# TEST
-
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum turpis augue, pellentesque tempus neque auctor nec. Mauris blandit quam nibh, tristique aliquam urna porta quis. Nullam ac sem nec felis maximus pretium ac id ipsum. Duis efficitur risus et lorem euismod, quis efficitur est aliquam. Nulla ullamcorper mattis tortor vel efficitur. In vitae malesuada risus. Nunc commodo maximus quam. Pellentesque vitae tristique magna, venenatis maximus risus. Vivamus scelerisque malesuada commodo. Vestibulum euismod eleifend justo id venenatis. Nulla orci dolor, eleifend vitae turpis ac, dignissim faucibus felis. Curabitur sodales aliquet elit nec tristique. Pellentesque non arcu nec libero placerat fermentum at at neque. Donec justo sapien, dapibus sit amet placerat sed, interdum et libero. Nullam nec vestibulum lorem. Sed in nisi ac nunc imperdiet suscipit.
 
