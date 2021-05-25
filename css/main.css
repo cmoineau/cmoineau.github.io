@@ -244,7 +244,7 @@ div.post{
 }
 .post_title{
     text-align: center;
-    color: white;
+    color: var(--color-text);
     text-shadow: 0px 0px 0px;
     font-weight: bold;
     font-size: 1.1em;
@@ -258,4 +258,28 @@ div.post{
     border-top: 1px solid;
     display: flex; 
     flex-direction: column;
+}
+
+.scroll_top{
+    position: fixed; 
+    bottom: 3em; 
+    right: 1em;
+    box-shadow: none;
+    background: transparent;
+}
+
+.scroll_top a{
+    font-size: 3em;
+    cursor: pointer;
+    color: var(--color-text);
+    box-shadow: none;
+}
+.scroll_top:hover a{
+    box-shadow: none;
+    background: transparent;
+}
+
+.scroll_top:hover{
+    box-shadow: none;
+    background: transparent;
 }
