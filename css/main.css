@@ -69,15 +69,8 @@ nav a{
     text-decoration: none;
     font-size: 1.1em;
     padding: 5px 15px;
-    -webkit-border-radius: 11px;
-    -moz-border-radius: 11px;
-    border-radius: 11px;
 }
-nav a:hover{
-    background-color: var(--nav-a-bh);
-    text-shadow: 2px 0px 6px var(--nav-a-bh);
-    color: var(--nav-a-h);
-}
+
 nav li{
     margin-top: 0.2em;
     text-shadow: 2px 0px 6px var(--bg-nav);
@@ -85,15 +78,21 @@ nav li{
 nav li:hover {
     text-decoration: none;
 }
+
+
 a {
+    background-image: linear-gradient(120deg, #109267 0%, #00e59b 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: 0 100%;
+    transition: background-size 0.25s ease-in;
     text-decoration: none;
     color: var(--a-c);
 }
 a:hover {
-    text-shadow: 2px 0px 6px var(--a-bh);
-    background-color: var(--a-bh);
-    color: var(--a-c);
-    border-radius: 3px;
+    text-emphasis: none;
+    background-size: 100% 100%;
+    color: white;
 }
 h1 {
     font-size: 3em;
@@ -118,9 +117,10 @@ h4 {
 
 /* Ugly way to remove the bg color change for the banners 
 TODO : Find a better alternative ... */
-h3 a:hover{
-    background-color: var(--bg);
+h3 a{
+    background: none;
 }
+
 p {
     font-size: 1.3em;
     line-height: 1.4em;
@@ -138,16 +138,7 @@ footer {
 }
 footer li{
     font-size: 1em;
-}
-footer a{
-    color: var(--footer-a);
-    display: inline-block;
-}
-footer a:hover{
-    color: var(--footer-abh);
-    background-color: var(--footer-ah);
-    font-weight:bold; 
-    display: inline-block;
+    color: --a-c;
 }
 
 figure {
@@ -199,8 +190,11 @@ div.post{
     box-shadow: 2px 3px 6px var(--shadow);
     margin-bottom: 2em;
     border-radius: 2px;
+    transition: transform ease-in-out 0.3s;
 }
-
+.box:hover {
+    transform: scale(1.01);
+}
 .articles{
     display: flex;
     flex-wrap: wrap;
@@ -228,10 +222,11 @@ div.post{
     width: 25em;
     z-index: 1;
     box-shadow: 2px 0px 6px black;
+    transition: transform ease-in-out 0.3s;
 }
 
 .article_container:hover .post_image{
-    filter: blur(1px);
+    transform: scale(1.1);
 }
 
 .post_text{
@@ -273,59 +268,68 @@ div.post{
     cursor: pointer;
     color: var(--color-text);
     box-shadow: none;
+    background-image: none;
+}
+
+@keyframes bounce{
+    from {transform: translateY(0);}
+    to   {transform: translateY(-20px);}
 }
 .scroll_top:hover a{
-    box-shadow: none;
+    border: none;
     background: transparent;
 }
 
 .scroll_top:hover{
     box-shadow: none;
-    background: transparent;
+    animation: bounce 0.35s ease infinite alternate;
 }
 
 
- /* Dropdown Button */
- .langbtn {
-    background-color: transparent;
-    color: var(--highlight);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    margin-left: auto;
-    cursor: pointer;
-  }
+/* Dropdown Button */
+.langbtn {
+background-color: transparent;
+color: var(--highlight);
+padding: 16px;
+font-size: 16px;
+border: none;
+margin-left: auto;
+cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.lang_switcher {
+position: fixed;
+display: inline-block;
+right: 1em;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.lang_switcher-content {
+display: none;
+position: absolute;
+right: 0em;
+background-color: var(--bg1);
+min-width: 160px;
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.lang_switcher-content a {
+padding: 12px 16px;
+/* text-decoration: none; */
+display: block;
+}
   
-  /* The container <div> - needed to position the dropdown content */
-  .lang_switcher {
-    position: fixed;
-    display: inline-block;
-    right: 1em;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .lang_switcher-content {
-    display: none;
-    position: absolute;
-    right: 0em;
-    background-color: var(--bg1);
-    min-width: 160px;
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .lang_switcher-content a {
-    color: var(--color-text);
-    padding: 12px 16px;
-    text-decoration: none;
+.lang_switcher:hover .lang_switcher-content {
     display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .lang_switcher-content a:hover {
-      background-color: var(--bg1);
-      text-decoration: none;
 }
-  
-  /* Show the dropdown menu on hover */
-  .lang_switcher:hover .lang_switcher-content {display: block;}
+@keyframes fadein {
+    0% { opacity: 0%;}
+    100% { opacity: 100%}
+    
+}
+@keyframes fadeout {
+    0% { opacity: 100%;}
+    100% { opacity: 0%}
+}

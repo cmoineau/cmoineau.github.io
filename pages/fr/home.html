@@ -48,15 +48,17 @@ permalink: /fr
 		<i id="1_show" class="fa fa-arrow-circle-down" aria-hidden="true" style="margin-left: 0.5em; cursor:pointer;"
 		title="Cliquez pour voir la liste des cours"
 		onclick="document.getElementById('msif').style.display='block';
+				 document.getElementById('msif').style.animation='fadein 1s ease';
 				 document.getElementById('1_hide').style.display='initial';
 				 document.getElementById('1_show').style.display='none';"></i> 
 		<i id="1_hide" class="fa fa-arrow-circle-up" aria-hidden="true" style="display:none; margin-left: 0.5em; cursor:pointer;"
 		title="Cliquez pour cacher la liste des cours"
-		onclick="document.getElementById('msif').style.display='none';
+		onclick="document.getElementById('msif').style.animation='fadeout 1s ease';
+				 setTimeout(function(){document.getElementById('msif').style.display='none';}, 1000);
 				 document.getElementById('1_hide').style.display='none';
 				 document.getElementById('1_show').style.display='initial';">
 		</i></h4>
-			<ul id="msif" style="display:none;">
+			<ul id="msif" class="reveal" style="display:none;">
 				<li>Fouille de données massives et visualisation</li>
 				<li>Analyse de données et modélisation probabilistique</li>
 				<li>Rédaction d'articles scientifiques</li>
@@ -76,16 +78,18 @@ permalink: /fr
 			<i id="2_show" class="fa fa-arrow-circle-down" aria-hidden="true" style="margin-left: 0.5em; cursor:pointer;"
 			title="Cliquez pour voir la liste des cours"
 			onclick="document.getElementById('enssat').style.display='block';
+					 document.getElementById('enssat').style.animation='fadein 1s ease';
 					 document.getElementById('2_hide').style.display='initial';
 					 document.getElementById('2_show').style.display='none';"></i> 
 			<i id="2_hide" class="fa fa-arrow-circle-up" aria-hidden="true" style="display:none; margin-left: 0.5em; cursor:pointer;"
 			title="Cliquez pour cacher la liste des cours"
-			onclick="document.getElementById('enssat').style.display='none';
+			onclick="document.getElementById('enssat').style.animation='fadeout 1s ease';
+					 setTimeout(function(){document.getElementById('enssat').style.display='none';}, 1000);
 					 document.getElementById('2_hide').style.display='none';
 					 document.getElementById('2_show').style.display='initial';"></i></h4>
 				
 
-			<ul id="enssat" style="display:none;">
+			<ul id="enssat" class="reveal" style="display:none;">
 				<li><strong style="font-size: 1.5em;">Mathématiques :</strong></li>
 					<ul>
 						<li>Logique Mathématiques</li>
@@ -138,17 +142,24 @@ permalink: /fr
 		<h4 style="text-align: center;">Liste des cours suivis
 		<i id="3_show" class="fa fa-arrow-circle-down" aria-hidden="true" style="margin-left: 0.5em; cursor:pointer;"
 		title="Cliquez pour voir la liste des cours"
-		onclick="document.getElementById('prep').style.display='block';
+		onclick="
+		document.getElementById('prep').style.display='block'
+		document.getElementById('prep').style.animation='fadein 1s ease';
 		document.getElementById('3_hide').style.display='initial';
 		document.getElementById('3_show').style.display='none';"></i> 
 		<i id="3_hide" class="fa fa-arrow-circle-up" aria-hidden="true" style="display:none; margin-left: 0.5em; cursor:pointer;"
 		title="Cliquez pour cacher la liste des cours"
-		onclick="document.getElementById('prep').style.display='none'; 
+		onclick="
+		setTimeout(
+			function(){
+				document.getElementById('prep').style.display='none';
+			}, 1000);
+		document.getElementById('prep').style.animation='fadeout 1s ease';
 		document.getElementById('3_hide').style.display='none';
 		document.getElementById('3_show').style.display='initial';"></i>
 		</h4>
 
-		<ul id="prep" style="display:none;">
+		<ul id="prep" class="reveal" style="display:none;">
 				<li><strong style="font-size: 1.5em;">Mathématiques :</strong></li>
 					<ul>
 						<li>Algèbre linéaire</li>
