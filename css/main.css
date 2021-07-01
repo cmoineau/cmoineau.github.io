@@ -21,7 +21,7 @@ html[data-theme='dark']{
     font-family: Jost;
     --bg: #303030;
     --bg1: #161616;
-    --highlight: #00e59b;
+    --highlight: #109267;
     --bg-box: #3d3d3d;
     --color-text: #dddddd;
     --bg-nav: #232222;
@@ -49,6 +49,7 @@ body ul{
 nav{
     font-family: Jost;
     position: fixed;
+    z-index: 10;
     width: 100%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -68,15 +69,8 @@ nav a{
     text-decoration: none;
     font-size: 1.1em;
     padding: 5px 15px;
-    -webkit-border-radius: 11px;
-    -moz-border-radius: 11px;
-    border-radius: 11px;
 }
-nav a:hover{
-    background-color: var(--nav-a-bh);
-    text-shadow: 2px 0px 6px var(--nav-a-bh);
-    color: var(--nav-a-h);
-}
+
 nav li{
     margin-top: 0.2em;
     text-shadow: 2px 0px 6px var(--bg-nav);
@@ -84,15 +78,21 @@ nav li{
 nav li:hover {
     text-decoration: none;
 }
+
+
 a {
+    background-image: linear-gradient(120deg, #109267 0%, #00e59b 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: 0 100%;
+    transition: background-size 0.25s ease-in;
     text-decoration: none;
     color: var(--a-c);
 }
 a:hover {
-    text-shadow: 2px 0px 6px var(--a-bh);
-    background-color: var(--a-bh);
-    color: var(--a-c);
-    border-radius: 3px;
+    text-emphasis: none;
+    background-size: 100% 100%;
+    color: white;
 }
 h1 {
     font-size: 3em;
@@ -110,14 +110,17 @@ h3 {
     border-bottom: 1px solid;
 }
 h4 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     text-shadow: 2px 0px 6px var(--shadow);
+    margin-left: 2em;
 }
+
 /* Ugly way to remove the bg color change for the banners 
 TODO : Find a better alternative ... */
-h3 a:hover{
-    background-color: var(--bg);
+h3 a{
+    background: none;
 }
+
 p {
     font-size: 1.3em;
     line-height: 1.4em;
@@ -135,16 +138,7 @@ footer {
 }
 footer li{
     font-size: 1em;
-}
-footer a{
-    color: var(--footer-a);
-    display: inline-block;
-}
-footer a:hover{
-    color: var(--footer-abh);
-    background-color: var(--footer-ah);
-    font-weight:bold; 
-    display: inline-block;
+    color: --a-c;
 }
 
 figure {
@@ -163,6 +157,10 @@ div.blurb{
     margin: 0px auto;
     width: 80%;
 }
+div.post{
+    margin: 0px auto;
+    width: 60%;
+}
 
 #flex-container{
     display: flex;
@@ -174,71 +172,177 @@ div.blurb{
     padding: 5px;
 }
 
-#flag {
-    border-radius: 5px;
-    width: 3em;
-    height: 2em;
-    vertical-align: middle;
-    float:right;
-    margin-bottom: 1em;
-    margin-right: 1em;
-}
-
-
 .box {
     padding: 2em; 
     background-color: var(--bg-box);
     box-shadow: 2px 3px 6px var(--shadow);
     margin-bottom: 2em;
     border-radius: 2px;
+    transition: transform ease-in-out 0.3s;
+}
+.box:hover {
+    transform: scale(1.01);
 }
 
-input[type=checkbox]{
-    height: 0;
-    width: 0;
-    visibility: hidden;
+.fun_fact{
+    display: flex;
+    flex-wrap: row;
+    padding: 2em; 
+    background-color: var(--bg-box);
+    box-shadow: 2px 3px 6px var(--shadow);
+    margin-bottom: 2em;
+    border-radius: 2px;
+    transition: transform ease-in-out 0.3s;
+}
+.fun_fact:hover {
+    
+    transform: scale(1.01);
+}
+.bulb{
+    margin: auto;
+    padding-right: 1em;
+    font-size: 2em;
 }
 
-label {
+.fun_fact:hover .bulb{
+    text-shadow: 0px 0px 6px yellow;
+}
+
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin-left:auto;
+}
+
+.article{
+    position:relative; 
+    height:15em;
+    width: 25em;
+    padding: 1em;
+    margin:auto;
+}
+
+.article_container{
+    position:relative; 
+}
+
+.post_image{
+    position:absolute;
+    opacity:0.6;
+    height:15em;
+    width: 25em;
+    z-index: 1;
+    box-shadow: 2px 0px 6px black;
+    transition: transform ease-in-out 0.3s;
+}
+
+.article_container:hover .post_image{
+    transform: scale(1.1);
+}
+
+.post_text{
+    z-index: 2;
+    position:absolute;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 25%;
+    font-size:150%;
+}
+.post_title{
+    text-align: center;
+    color: var(--color-text);
+    text-shadow: 0px 0px 0px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.description{
+    margin-left: 20em; 
+    margin-right: 20em; 
+    margin-bottom: 3em; 
+    border-bottom: 1px solid; 
+    border-top: 1px solid;
+    display: flex; 
+    flex-direction: column;
+}
+
+.scroll_top{
+    position: fixed; 
+    bottom: 3em; 
+    right: 1em;
+    box-shadow: none;
+    background: transparent;
+}
+
+.scroll_top a{
+    font-size: 3em;
     cursor: pointer;
-    text-indent: -9999px;
-    width: 52px;
-    height: 27px;
-    background: grey;
-    float: right;
-    border-radius: 100px;
-    position: relative;
+    color: var(--color-text);
+    box-shadow: none;
+    background-image: none;
 }
 
-label:after {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border-radius: 90px;
-    transition: 0.3s;
+@keyframes bounce{
+    from {transform: translateY(0);}
+    to   {transform: translateY(-20px);}
+}
+.scroll_top:hover a{
+    border: none;
+    background: transparent;
 }
 
-input:checked + label {
-    background: #00e59b;
+.scroll_top:hover{
+    box-shadow: none;
+    animation: bounce 0.35s ease infinite alternate;
 }
 
-input:checked + label:after {
-    left: calc(100% - 5px);
-    transform: translateX(-100%);
+
+/* Dropdown Button */
+.langbtn {
+background-color: transparent;
+color: var(--highlight);
+padding: 16px;
+font-size: 16px;
+border: none;
+margin-left: auto;
+cursor: pointer;
 }
 
-label:active:after {
-    width: 45px;
+/* The container <div> - needed to position the dropdown content */
+.lang_switcher {
+position: fixed;
+display: inline-block;
+right: 1em;
 }
 
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-  transition: all 750ms !important;
-  transition-delay: 0 !important;
+/* Dropdown Content (Hidden by Default) */
+.lang_switcher-content {
+display: none;
+position: absolute;
+right: 0em;
+background-color: var(--bg1);
+min-width: 160px;
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.lang_switcher-content a {
+padding: 12px 16px;
+/* text-decoration: none; */
+display: block;
+}
+  
+.lang_switcher:hover .lang_switcher-content {
+    display: block;
+}
+@keyframes fadein {
+    0% { opacity: 0%;}
+    100% { opacity: 100%}
+    
+}
+@keyframes fadeout {
+    0% { opacity: 100%;}
+    100% { opacity: 0%}
 }

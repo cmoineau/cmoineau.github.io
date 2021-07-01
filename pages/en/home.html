@@ -1,6 +1,9 @@
 ---
-layout: default
+layout: en
 title: Cyril MOINEAU
+lang: en
+ref: home
+permalink: /
 ---
 	<div class="blurb">    
 		<div id="presentation">
@@ -31,15 +34,45 @@ title: Cyril MOINEAU
 		My well-rounded educational background made me gain knowledge on various topics, which I believe made me a more versatile engineer. 
 		</p>
 
-		<h3><a href="http://www.enssat.fr/"><img src="/ressources/logo_enssat.png" style="height: 2em; width: 5em; margin-right: 0.5em;"></a>
-			Engineering diploma in Computer Science (AI) - ENSSAT Lannion (2017-2020)
+		
+		<h3><a href="https://international.univ-rennes1.fr/en"><img src="/ressources/logo_ur1.png" style="height: 2em; width: 5em; margin-right: 0.5em;"></a>
+			Master degree in research in computer science Rennes 1 (2019-2020)
 		</h3>
 			<p>
-			I graduated from ENSSAT Lannion, a French engineering school, with a <b>Software and Computing engineering diploma</b> specializing in AI.
+			I got a second diploma in <b>research in computer science</b>, in order to expand my knowledge in the field of research.
+			During this formation, I attended various colloquia on topics such as paper writing and crisis reproductivity.
 			</p><p>
-			At this engineering school, I studied computer science, electronics, network, web programation, cyber security, AI and many other topics.
-			The goal of the curriculum was to acquire a large skill set. 
-			The strength of this approach is that not only am I specialized in AI but I can also understand the issues at stake in other engineering fields.
+			This formation in conjunction with my major in AI have allowed me to get more in-depth courses in the field of data science.
+			</p>
+
+			<h4 style="text-align: center;">List of courses
+			<i id="1_show" class="fa fa-arrow-circle-down" aria-hidden="true" style="margin-left: 0.5em; cursor:pointer;"
+			title="Click to show the list of courses"
+			onclick="document.getElementById('msif').style.display='block';
+					 document.getElementById('msif').style.animation='fadein 1s ease';
+					 document.getElementById('1_hide').style.display='initial';
+					 document.getElementById('1_show').style.display='none';"></i> 
+			<i id="1_hide" class="fa fa-arrow-circle-up" aria-hidden="true" style="display:none; margin-left: 0.5em; cursor:pointer;"
+			title="Click to hide the list of courses"
+			onclick="document.getElementById('msif').style.animation='fadeout 1s ease';
+					 setTimeout(function(){document.getElementById('msif').style.display='none';}, 1000);
+					 document.getElementById('1_hide').style.display='none';
+					 document.getElementById('1_show').style.display='initial';"></i>
+			</h4>
+			<ul id="msif" class="reveal" style="display:none;">
+				<li>Data mining and visualisation</li>
+				<li>Data analysis and probabilistic modeling</li>
+				<li>Writting of scientific publications</li>
+			</ul>
+		<h3><a href="http://www.enssat.fr/"><img src="/ressources/logo_enssat.png" style="height: 2em; width: 5em; margin-right: 0.5em;"></a>
+			Engineering diploma in computer science (AI) at ENSSAT Lannion (2017-2020)
+		</h3>
+			<p>
+			I graduated from ENSSAT Lannion, a French engineering school, with a <b>Software and Computing engineering diploma</b> with a major in AI.
+			</p><p>
+			In this engineering school, I studied computer science, electronics, network, web programation, cyber security, AI and many other topics.
+			The goal of the curriculum was to acquire a large tool-set. 
+			The strength of this approach is that not only am I specialized in AI but I can also understand the issues at stake in the other engineering branches.
 			</p>
 			</p>
 			<h4 style="text-align: center;">List of courses
@@ -47,15 +80,17 @@ title: Cyril MOINEAU
 			<i id="2_show" class="fa fa-arrow-circle-down" aria-hidden="true" style="margin-left: 0.5em; cursor:pointer;"
 			title="Click to show the list of courses"
 			onclick="document.getElementById('enssat').style.display='block';
+					 document.getElementById('enssat').style.animation='fadein 1s ease';
 					 document.getElementById('2_hide').style.display='initial';
 					 document.getElementById('2_show').style.display='none';"></i> 
 			<i id="2_hide" class="fa fa-arrow-circle-up" aria-hidden="true" style="display:none; margin-left: 0.5em; cursor:pointer;"
 			title="Click to hide the list of courses"
-			onclick="document.getElementById('enssat').style.display='none';
+			onclick="document.getElementById('enssat').style.animation='fadeout 1s ease';
+					 setTimeout(function(){document.getElementById('enssat').style.display='none';}, 1000);
 					 document.getElementById('2_hide').style.display='none';
 					 document.getElementById('2_show').style.display='initial';"></i>
 			</h4>
-			<ul id="enssat" style="display:none;">
+			<ul id="enssat" class="reveal" style="display:none;">
 				<li><strong style="font-size: 1em;">Mathematics :</strong></li>
 					<ul>
 						<li>Mathematical logic</li>
@@ -99,53 +134,26 @@ title: Cyril MOINEAU
 						<li>Basic digital systems</li>
 					</ul>
 			</ul>
-
-		<h3><a href="https://international.univ-rennes1.fr/en"><img src="/ressources/logo_ur1.png" style="height: 2em; width: 5em; margin-right: 0.5em;"></a>
-			Master's degree in Computer Science Research - Rennes 1 (2019-2020)
-		</h3>
-			<p>
-			I got a second diploma in <b>computer science research</b> in order to expand my knowledge in the field of research.
-			During this time, I attended various academic conferences on topics such as paper writing and reproducibility crisis.
-			</p><p>
-			This degree along with my specialization in AI allowed me to gain more in-depth insight into the field of data science.
-			</p>
-
-			<h4 style="text-align: center;">List of courses
-			<i id="1_show" class="fa fa-arrow-circle-down" aria-hidden="true" style="margin-left: 0.5em; cursor:pointer;"
-			title="Click to show the list of courses"
-			onclick="document.getElementById('msif').style.display='block';
-						document.getElementById('1_hide').style.display='initial';
-						document.getElementById('1_show').style.display='none';"></i> 
-			<i id="1_hide" class="fa fa-arrow-circle-up" aria-hidden="true" style="display:none; margin-left: 0.5em; cursor:pointer;"
-			title="Click to hide the list of courses"
-			onclick="document.getElementById('msif').style.display='none';
-						document.getElementById('1_hide').style.display='none';
-						document.getElementById('1_show').style.display='initial';"></i>
-			</h4>
-			<ul id="msif" style="display:none;">
-				<li>Data mining and visualisation</li>
-				<li>Data analysis and probabilistic modeling</li>
-				<li>Writting of scientific publications</li>
-			</ul>
-
 		<h3><a href="http://www.lycee-pothier.com/"><img src="/ressources/pothier.jpg" style="height: 3em; width: 3.5em; margin-right: 0.5em;"></a>
-			Preparatory classes - Lycée Pothier Orléans (2015-2017)</h3>
+			Preparatory classes at Lycée Pothier Orléans(2015-2017)</h3>
 			<p>
-			Intensive Mathematics and Physics program in preparation for French engineering schools.
+			Intensive Mathematics and Physics program for engineering schools in France.
 			</p>
 			<h4 style="text-align: center;">List of courses
 			<i id="3_show" class="fa fa-arrow-circle-down" aria-hidden="true" style="margin-left: 0.5em; cursor:pointer;"
 			title="Click to show the list of courses"
 			onclick="document.getElementById('prep').style.display='block';
+					 document.getElementById('prep').style.animation='fadein 1s ease';
 					 document.getElementById('3_hide').style.display='initial';
 					 document.getElementById('3_show').style.display='none';"></i> 
 			<i id="3_hide" class="fa fa-arrow-circle-up" aria-hidden="true" style="display:none; margin-left: 0.5em; cursor:pointer;"
 			title="Click to hide the list of courses"
-			onclick="document.getElementById('prep').style.display='none';
+			onclick="document.getElementById('prep').style.animation='fadeout 1s ease';
+					 setTimeout(function(){document.getElementById('prep').style.display='none';}, 1000);
 					 document.getElementById('3_hide').style.display='none';
 					 document.getElementById('3_show').style.display='initial';"></i>
 			</h4>
-			<ul id="prep" style="display:none;">
+			<ul id="prep" class="reveal" style="display:none;">
 				<li><strong style="font-size: 1em;">Mathematics :</strong></li>
 					<ul>
 						<li>Linear algebra</li>
