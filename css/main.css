@@ -81,7 +81,7 @@ nav li:hover {
 
 
 a {
-    background-image: linear-gradient(120deg, #109267 0%, #00e59b 100%);
+    background-image: linear-gradient(120deg, #109267 0%, rgb(28, 158, 117) 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.1em;
     background-position: 0 100%;
@@ -312,7 +312,6 @@ cursor: pointer;
 
 .lang_switcher {
 position: fixed;
-: 1em;
 display: inline-block;
 right: 1em;
 }
