@@ -9,7 +9,7 @@
 
 
 
-![last_commit](https://img.shields.io/github/last-commit/cmoineau/cmoineau.github.io) ![w3c_validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fcmoineau.github.io%2F)![GitHub deployments](https://img.shields.io/github/deployments/cmoineau/cmoineau.github.io/github-pages)
+![last_commit](https://img.shields.io/github/last-commit/cmoineau/cmoineau.github.io) ![w3c_validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fcmoineau.github.io%2F) ![GitHub deployments](https://img.shields.io/github/deployments/cmoineau/cmoineau.github.io/github-pages)
 
 ## Description
 
