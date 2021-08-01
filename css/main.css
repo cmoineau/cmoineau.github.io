@@ -212,7 +212,10 @@ div.post{
 .fun_fact:hover .bulb{
     text-shadow: 0px 0px 6px yellow;
 }
-.box:hover .bulb{
+.box:hover .bulb h3{
+    text-shadow: 0px 0px 6px var(--highlight);
+}
+.box:hover .bulb h2{
     text-shadow: 0px 0px 6px var(--highlight);
 }
 
