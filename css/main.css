@@ -118,7 +118,7 @@ h4 {
 
 /* Ugly way to remove the bg color change for the banners 
 TODO : Find a better alternative ... */
-h3 a{
+h2 a{
     background: none;
 }
 
