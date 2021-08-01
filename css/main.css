@@ -223,7 +223,7 @@ div.post{
 .main_title {
     text-shadow: 0px 0px 6px var(--highlight);
     width: 7em;
-    animation: typing 1.5s steps(15), blink .5s step-end infinite alternate;
+    animation: typing 2s steps(15), blink 1s infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
