@@ -228,11 +228,11 @@ div.post{
     overflow: hidden;
     border-right: 3px solid;
     text-align: left;
-  }
+}
   
 @keyframes typing {
-    from {
-      width: 0
+    0%{
+        width: 0%;
     }
 }
 
