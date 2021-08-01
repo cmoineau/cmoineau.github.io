@@ -17,7 +17,7 @@
         <div class="post" style="padding-bottom: 1.5em; padding-top: 5em;">
 			<h1>{{ page.title }}</h1>
 			<div class="description">
-				<div style="margin: auto;">
+				<div>
 					<i class="fa fa-clock-o" aria-hidden="true"></i> Date :
 					{% assign m = page.date | date: "%-m" %}
 					{{ page.date | date: "%-d" }}
@@ -37,7 +37,7 @@
 					{% endcase %}
 					{{ page.date | date: "%Y" }}
 				</div>
-				<div style="margin: auto;">
+				<div>
 					<i class="fa fa-tags" aria-hidden="true"></i> Tags : |
 					{% for tag in page.tags %}
 							{{ tag }} |
@@ -45,7 +45,7 @@
 				</div>	
 			</div>
 			<figure>
-				<img src="{{ page.image }}" alt="Project illustration" style="width: 36em; height: 18em;">
+				<img src="{{ page.image }}" alt="Project illustration" style="width: 75%;">
 			</figure>
 
           	{{ content }}
