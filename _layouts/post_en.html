@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+	<html lang="en" data-theme='dark'>
+		<head>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<!-- link for icon -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		</head>
+		<body >
+			
+		{% include scroll_to_top.html%}
+
+		{% include header_en.html %}
+
+		
+        <div class="post" style="padding-bottom: 1.5em; padding-top: 5em;">
+			<h1>{{ page.title }}</h1>
+			<div class="description">
+				<div style="margin: auto;">
+					<i class="fa fa-clock-o" aria-hidden="true"></i> Date :
+					{% assign m = page.date | date: "%-m" %}
+					{{ page.date | date: "%-d" }}
+					{% case m %}
+					{% when '1' %}January
+					{% when '2' %}February
+					{% when '3' %}March
+					{% when '4' %}April
+					{% when '5' %}Mai
+					{% when '6' %}June
+					{% when '7' %}July
+					{% when '8' %}August
+					{% when '9' %}September
+					{% when '10' %}October
+					{% when '11' %}November
+					{% when '12' %}December
+					{% endcase %}
+					{{ page.date | date: "%Y" }}
+				</div>
+				<div style="margin: auto;">
+					<i class="fa fa-tags" aria-hidden="true"></i> Tags : |
+					{% for tag in page.tags %}
+							{{ tag }} |
+					{% endfor %}
+				</div>	
+			</div>
+			<figure>
+				<img src="{{ page.image }}" alt="Project illustration" style="width: 36em; height: 18em;">
+			</figure>
+
+          	{{ content }}
+        </div>
+
+		{% include footer_en.html %}
+
+		</body>
+
+	</html>

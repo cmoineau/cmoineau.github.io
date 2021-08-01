@@ -199,17 +199,21 @@ div.post{
     transition: transform ease-in-out 0.3s;
 }
 .fun_fact:hover {
-    
     transform: scale(1.01);
 }
 .bulb{
     margin: auto;
-    padding-right: 1em;
-    font-size: 2em;
+    font-size: 1em;
 }
-
+.fun_fact .bulb{
+    font-size: 2em;
+    padding-right: 1em;
+}
 .fun_fact:hover .bulb{
     text-shadow: 0px 0px 6px yellow;
+}
+.box:hover .bulb{
+    text-shadow: 0px 0px 6px var(--highlight);
 }
 
 .articles{
@@ -274,7 +278,7 @@ div.post{
 
 .scroll_top{
     position: fixed; 
-    bottom: 3em; 
+    bottom: 3.5em; 
     right: 1em;
     box-shadow: none;
     background: transparent;
@@ -318,7 +322,7 @@ cursor: pointer;
 position: fixed;
 display: inline-block;
 right: 1em;
-}
+top: 0.5em}
 
 /* Dropdown Content (Hidden by Default) */
 .lang_switcher-content {
