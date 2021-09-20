@@ -1,0 +1,11 @@
+<h3>Informations générales</h3>
+<ul style="list-style-type: none;">
+    <li><i class="fa fa-calendar" aria-hidden="true"></i><b> Date :</b> {{include.date}}</li>
+    {% if include.duration %}
+    <li><i class="fa fa-clock-o" aria-hidden="true"></i><b> Durée :</b> {{include.duration}}</li>
+    {% endif %}
+    <li><i class="fa fa-building-o" aria-hidden="true"></i><b> Entreprise :</b> {{include.company}}</li>
+    <li><i class="fa fa-map-marker" aria-hidden="true"></i><b> Lieux :</b> {{include.location}}</li>
+    <li><i class="fa fa-search" aria-hidden="true"></i><b> Aptitudes développées :</b> {{include.skill}}</li>
+    
+</ul>

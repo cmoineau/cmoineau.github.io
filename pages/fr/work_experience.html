@@ -20,14 +20,12 @@ permalink: /work_experiences/fr
 		<div class="box">
 			<div class="bulb"><h2 id="cea">CEA LIST</h2></div>
 			<img class="center" src="/ressources/cea.jpg" alt="Logo CEA" style="width: 8em; height: 8em; box-shadow: 2px 0px 6px black;">
-	
-			<h3>General informations</h3>
-			<ul style="list-style-type: none;">
-				<li><i class="fa fa-calendar" aria-hidden="true"></i><b> Date :</b> November 2020 - Now</li>
-				<li><i class="fa fa-building-o" aria-hidden="true"></i><b> Entreprise :</b> <a href="http://www-list.cea.fr/">CEA</a></li>
-				<li><i class="fa fa-map-marker" aria-hidden="true"></i><b> Lieux :</b> Paris, France</li>
-				<li><i class="fa fa-graduation-cap" aria-hidden="true"></i><b> Aptitudes développées :</b> Python, C++, Réseaux de Neuronnes profonds </li>
-			</ul>
+			{% include we_info_fr.html 
+				date='November 2020 - Maintenant' 
+				company='<a href="http://www-list.cea.fr/">CEA</a>' 
+				location='Paris, France' 
+				skill='Python, C++, Réseaux de Neuronnes profonds'
+			%}
 		
 			<h3>Description de l'entreprise :</h3>
 			<p>
@@ -41,98 +39,98 @@ permalink: /work_experiences/fr
 	<div class="box">
 		<div class="bulb"><h2 id="irisa">Stage dans l'équipe SHAMAN de l'IRISA 2020</h2></div>
 		<img class="center" src="/ressources/irisa.jpg" alt="Logo IRISA" style="width: 14em; height: 4em; box-shadow: 2px 0px 6px black;">
-			<h3>Informations générales</h3>
-			<ul style="list-style-type: none;">
-				<li><i class="fa fa-calendar" aria-hidden="true"></i><b> Date :</b> Novembre 2019 - Juillet 2020</li>
-				<li><i class="fa fa-clock-o" aria-hidden="true"></i><b> Durée :</b> 8 mois</li>
-				<li><i class="fa fa-building-o" aria-hidden="true"></i><b> Entreprise :</b> <a href="http://www.irisa.fr/">IRISA</a></li>
-				<li><i class="fa fa-map-marker" aria-hidden="true"></i><b> Lieux :</b> Lannion, France</li>
-				<li><i class="fa fa-graduation-cap" aria-hidden="true"></i><b> Aptitudes développées :</b> Python, Recherche, Rédaction, Logique Floue, IA Symbolique, Flask, Docker</li>
-			</ul>
-			<h3>Description du poste :</h3>
-			<p>
+			
+		{% include we_info_fr.html 
+			date='Novembre 2019 - Juillet 2020' 
+			duration='8 mois'
+			company='<a href="http://www.irisa.fr/">IRISA</a>'
+			location='Lannion, France' 
+			skill='Python, Recherche, Rédaction, Logique Floue, IA Symbolique, Flask, Docker'
+		%}
 
-				Dans le cadre de mon stage de fin d'étude, j'ai travaillé dans les laboratoires de <a href="http://www.irisa.fr/">l'Institut de Recherche en Informatique et Systèmes Aléatoires</a> (IRISA), au sein de l'équipe <a href="http://www-shaman.irisa.fr/">SHAMAN</a>.
-				L'objectif de ce stage était d'améliorer une méthode de génération de résumés linguistiques d'une base de données massive. 
-				Un résumé linguistique correspond à un ensemble de propriétés floues, par exemple : "La plupart des corbeaux sont noirs". 
-				Pour générer ce genre de résumé, les approches classiques ont une complexité linéaire en fonction de la taille de la 
-				base de données et exponentielle en fonction de la taille du vocabulaire. L'équipe <a href="http://www-shaman.irisa.fr/">SHAMAN</a> a proposé de s'appuyer sur 
-				des méta-données stockées par les Systèmes de Gestion de Base de Données pour éviter le parcours séquentiel de la base de 
-				données. Leur méthode est parfaite dans le cas où les propriétés à étudier sont atomiques, mais perfectible dans le cas d'une 
-				conjonction de propriétés (par exemple: "La plupart des corbeaux sont noirs <b>et</b> grands").
-			</p>
-			<p>
+		<h3>Description du poste :</h3>
+		<p>
 
-				Dans un premier temps, j'ai réalisé une étude bibliographique afin d'étudier la cause des erreurs d'estimation et j'ai proposé plusieurs solutions.
-				Lors de mon stage; l'utilisation d'histogrammes multidimensionnels ayant été la solution retenue. 
-				Ensuite, j'ai travaillé sur l'implémentation de 3 histogrammes multidimensionnels (<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.45.75">MHIST</a>, 
-				<a href="https://www.researchgate.net/publication/2459804_Approximating_Multi-Dimensional_Aggregate_Range_Queries_Over_Real_Attributes">GENHIST</a> et 
-				<a href="https://www.microsoft.com/en-us/research/publication/stholes-a-multidimensional-workload-aware-histogram/">STHOLES</a>) 
-				en Python (3.6.9). 
-				Enfin, j'ai utilisé <a href="https://www.docker.com/">Docker</a> et <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> afin de créer une API dockerisée pour qu'il soit plus facile de reprendre le travail que j'ai réalisé en stage.
-			</p>
+			Dans le cadre de mon stage de fin d'étude, j'ai travaillé dans les laboratoires de <a href="http://www.irisa.fr/">l'Institut de Recherche en Informatique et Systèmes Aléatoires</a> (IRISA), au sein de l'équipe <a href="http://www-shaman.irisa.fr/">SHAMAN</a>.
+			L'objectif de ce stage était d'améliorer une méthode de génération de résumés linguistiques d'une base de données massive. 
+			Un résumé linguistique correspond à un ensemble de propriétés floues, par exemple : "La plupart des corbeaux sont noirs". 
+			Pour générer ce genre de résumé, les approches classiques ont une complexité linéaire en fonction de la taille de la 
+			base de données et exponentielle en fonction de la taille du vocabulaire. L'équipe <a href="http://www-shaman.irisa.fr/">SHAMAN</a> a proposé de s'appuyer sur 
+			des méta-données stockées par les Systèmes de Gestion de Base de Données pour éviter le parcours séquentiel de la base de 
+			données. Leur méthode est parfaite dans le cas où les propriétés à étudier sont atomiques, mais perfectible dans le cas d'une 
+			conjonction de propriétés (par exemple: "La plupart des corbeaux sont noirs <b>et</b> grands").
+		</p>
+		<p>
 
-			<h3>Expérience acquise :</h3>
-			<p>
-				Ce stage m'a permis d'améliorer mes capacités de lecture et de synthèse d'articles scientifiques. 
-				Il s'est déroulé majoritairement à distance à cause de l'épidémie de COVID-19. 
-				Ces conditions de travail m'ont permis de développer mon autonomie et de découvrir le monde du télé-travail. 
-				J'ai aussi découvert de nouvelles problèmatiques inhérentes au travail de chercheur telles que la reproductibilité des résultats d'un article scientifique. 
-			</p>
+			Dans un premier temps, j'ai réalisé une étude bibliographique afin d'étudier la cause des erreurs d'estimation et j'ai proposé plusieurs solutions.
+			Lors de mon stage; l'utilisation d'histogrammes multidimensionnels ayant été la solution retenue. 
+			Ensuite, j'ai travaillé sur l'implémentation de 3 histogrammes multidimensionnels (<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.45.75">MHIST</a>, 
+			<a href="https://www.researchgate.net/publication/2459804_Approximating_Multi-Dimensional_Aggregate_Range_Queries_Over_Real_Attributes">GENHIST</a> et 
+			<a href="https://www.microsoft.com/en-us/research/publication/stholes-a-multidimensional-workload-aware-histogram/">STHOLES</a>) 
+			en Python (3.6.9). 
+			Enfin, j'ai utilisé <a href="https://www.docker.com/">Docker</a> et <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> afin de créer une API dockerisée pour qu'il soit plus facile de reprendre le travail que j'ai réalisé en stage.
+		</p>
+
+		<h3>Expérience acquise :</h3>
+		<p>
+			Ce stage m'a permis d'améliorer mes capacités de lecture et de synthèse d'articles scientifiques. 
+			Il s'est déroulé majoritairement à distance à cause de l'épidémie de COVID-19. 
+			Ces conditions de travail m'ont permis de développer mon autonomie et de découvrir le monde du télé-travail. 
+			J'ai aussi découvert de nouvelles problèmatiques inhérentes au travail de chercheur telles que la reproductibilité des résultats d'un article scientifique. 
+		</p>
 	</div>
 	<div class="box">
 		<div class="bulb"><h2 id="NCTU">Stage à la NCTU 2019</h2></div>
 		<img class="center" src="/ressources/NCTU.jpg" alt="Logo NCTU" style="width: 8em; height: 8em; border-radius: 50%; box-shadow: 2px 0px 6px black;">
+		{% include we_info_fr.html 
+			date='Juin 2019 - Août 2019' 
+			duration='2 mois'
+			company='<a href="https://www.nctu.edu.tw/en/">National Chiao Tung University</a>'
+			location='Hsinchu, Taïwan' 
+			skill='Python, Keras, Anglais'
+		%}
 
-			<h3>Informations générales</h3>
-			<ul style="list-style-type: none;">
-				<li><i class="fa fa-calendar" aria-hidden="true"></i><b> Date :</b> Juin 2019 - Août 2019</li>
-				<li><i class="fa fa-clock-o" aria-hidden="true"></i><b> Durée :</b> 2 mois</li>
-				<li><i class="fa fa-building-o" aria-hidden="true"></i><b> Entreprise :</b> <a href="https://www.nctu.edu.tw/en/">National Chiao Tung University</a></li>
-				<li><i class="fa fa-map-marker" aria-hidden="true"></i><b> Lieux :</b> Hsinchu, Taïwan</li>
-				<li><i class="fa fa-graduation-cap" aria-hidden="true"></i><b> Aptitudes développées :</b> Python, Keras, Anglais</li>
-			</ul>
-    		<h3>Description du poste :</h3>
-    		<p>
-    			Pendant l'été 2019, j'ai passé 2 mois à la <a href="https://www.nctu.edu.tw/en/">National Chiao Tung University</a> (NCTU) à Taïwan dans le laboratoire <a href="http://soc.ee.nctu.edu.tw/">Intelligent Electronics and System-On-Chip</a> (IESOC).
-    		</p>
+		<h3>Description du poste :</h3>
+		<p>
+			Pendant l'été 2019, j'ai passé 2 mois à la <a href="https://www.nctu.edu.tw/en/">National Chiao Tung University</a> (NCTU) à Taïwan dans le laboratoire <a href="http://soc.ee.nctu.edu.tw/">Intelligent Electronics and System-On-Chip</a> (IESOC).
+		</p>
 
-    		<p>
-    			Tout au long de ces 2 mois, j'ai travaillé sur la détection d'émotions en utilisant les signaux ECG (électrocardiogramme) et PPG (photoplethysmogramme). Pour cela, j'ai utilisé un CNN (Réseau de neurones par convolution) avec la librairie <a href="https://keras.io/">Keras</a> (v2.24). J'ai aussi pu travailler sur des problèmatiques telles que la détection de pics et l'implémentation d'un système temps réel. En effet, l'objectif final du stage était d'implémenter le CNN sur la carte <a href="https://developer.nvidia.com/embedded/jetson-nano-developer-kit">JetSon Nano</a> de NVIDIA. 
-    		</p>
+		<p>
+			Tout au long de ces 2 mois, j'ai travaillé sur la détection d'émotions en utilisant les signaux ECG (électrocardiogramme) et PPG (photoplethysmogramme). Pour cela, j'ai utilisé un CNN (Réseau de neurones par convolution) avec la librairie <a href="https://keras.io/">Keras</a> (v2.24). J'ai aussi pu travailler sur des problèmatiques telles que la détection de pics et l'implémentation d'un système temps réel. En effet, l'objectif final du stage était d'implémenter le CNN sur la carte <a href="https://developer.nvidia.com/embedded/jetson-nano-developer-kit">JetSon Nano</a> de NVIDIA. 
+		</p>
 
-    		<h3>Expérience acquise :</h3>
-    		<p>
-				Ce stage a été riche en expériences et fut une découverte du monde de la recherche très positive. 
-				J'ai pu comprendre les difficultés de travailler dans un laboratoire de recherche. 
-				Même si la thématique du stage ne tombait pas dans celle que j'ai pu aborder lors de mes études, j'étais avide d'apprendre et d'appréhender ce sujet. 
-				Ces deux mois ont confirmé mon désir de faire de la recherche.
-    		</p>
+		<h3>Expérience acquise :</h3>
+		<p>
+			Ce stage a été riche en expériences et fut une découverte du monde de la recherche très positive. 
+			J'ai pu comprendre les difficultés de travailler dans un laboratoire de recherche. 
+			Même si la thématique du stage ne tombait pas dans celle que j'ai pu aborder lors de mes études, j'étais avide d'apprendre et d'appréhender ce sujet. 
+			Ces deux mois ont confirmé mon désir de faire de la recherche.
+		</p>
 	</div>		
 	<div class="box">
 		<div class="bulb"><h2 id="Metropole">Stage à Orléans Métropole 2018</h2></div>
 		<img class="center" src="/ressources/orleans_metropole.jpg" alt="Logo Orléans Métropole" style="width: 8em; height: 8em; box-shadow: 2px 0px 6px black;">
+		
+		{% include we_info_fr.html 
+			date='Juillet 2018 - Août 2018' 
+			duration='2 mois'
+			company='<a href="http://www.orleans-metropole.fr/">Orléans Métropole</a>'
+			location='Orléans, France' 
+			skill='Shell Script, Réseaux, Linux'
+		%}
 
-			<h3>Informations générales</h3>
-			<ul style="list-style-type: none;">
-				<li><i class="fa fa-calendar" aria-hidden="true"></i><b> Date :</b> Juillet 2018 - Août 2018</li>
-				<li><i class="fa fa-clock-o" aria-hidden="true"></i><b> Durée :</b> 2 mois</li>
-				<li><i class="fa fa-building-o" aria-hidden="true"></i><b> Entreprise :</b> <a href="http://www.orleans-metropole.fr/">Orléans Métropole</a></li>
-				<li><i class="fa fa-map-marker" aria-hidden="true"></i><b> Lieux :</b> Orléans, France</li>
-				<li><i class="fa fa-graduation-cap" aria-hidden="true"></i><b> Aptitudes développées :</b> Shell Script, Réseaux, Linux</li>
-			</ul>
-    	    <h3>Description du poste :</h3>
-    		<p>J'ai passé 2 mois lors de l'été 2018 à la <a href="http://www.orleans-metropole.fr/">Métropole d'Orléans</a> dans la direction des systèmes d'information (DSI). Pendant cet été, j'ai pu travailler sur les deux sujets suivants.
-    		</p>
-			<ol>
-				<li>La mise en place d'un service de supervision en utilisant l'OS <a href="https://www.centreon.com/en/solutions/centreon/">Centreon</a>. Je suis arrivé au moment de la fusion des services de DSI de chaque commune. Dans ce contexte, la DSI d'Orléans a décidé de mettre à jour son système de supervision. Pendant mon stage, j'ai pu observer un vrai réseau et développer mes connaissances sur les réseaux et la virtualisation.</li>
-				<li>Gestion de l'Active Directory (AD). L'AD était composé d'utilisateurs qui n'avaient pas été supprimés. Ce projet était très intéressant puisque je devais trouver un faisceau d'indices me permettant de discriminer les utilisateurs actifs des inactifs. Pour cela j'ai développé des scripts Power Shell.</li>
-			</ol>
-    		<h3>Expérience acquise :</h3>
-    		<p>
-				Ce fut mon premier stage technique, il m'a permis de découvrir beaucoup dans le domaine de la gestion de réseaux et de découvrir le monde du travail. 
-				On m'a par ailleurs donné de nombreuses responsabilités, notamment lors du nettoyage de l'Active Directory. 
-				Où la suppression d'un utilisateur actif aurait été pénalisante pour l'entreprise.  
-			</p>		
+		<h3>Description du poste :</h3>
+		<p>J'ai passé 2 mois lors de l'été 2018 à la <a href="http://www.orleans-metropole.fr/">Métropole d'Orléans</a> dans la direction des systèmes d'information (DSI). Pendant cet été, j'ai pu travailler sur les deux sujets suivants.
+		</p>
+		<ol>
+			<li>La mise en place d'un service de supervision en utilisant l'OS <a href="https://www.centreon.com/en/solutions/centreon/">Centreon</a>. Je suis arrivé au moment de la fusion des services de DSI de chaque commune. Dans ce contexte, la DSI d'Orléans a décidé de mettre à jour son système de supervision. Pendant mon stage, j'ai pu observer un vrai réseau et développer mes connaissances sur les réseaux et la virtualisation.</li>
+			<li>Gestion de l'Active Directory (AD). L'AD était composé d'utilisateurs qui n'avaient pas été supprimés. Ce projet était très intéressant puisque je devais trouver un faisceau d'indices me permettant de discriminer les utilisateurs actifs des inactifs. Pour cela j'ai développé des scripts Power Shell.</li>
+		</ol>
+		<h3>Expérience acquise :</h3>
+		<p>
+			Ce fut mon premier stage technique, il m'a permis de découvrir beaucoup dans le domaine de la gestion de réseaux et de découvrir le monde du travail. 
+			On m'a par ailleurs donné de nombreuses responsabilités, notamment lors du nettoyage de l'Active Directory. 
+			Où la suppression d'un utilisateur actif aurait été pénalisante pour l'entreprise.  
+		</p>
 	</div>
 	</div><!-- /.blurb -->

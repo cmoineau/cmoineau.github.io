@@ -20,15 +20,13 @@ permalink: /work_experiences
 			<div class="bulb"><h2 id="cea">CEA list</h2></div>
 			<img class="center" src="/ressources/cea.jpg" alt="CEA Logo" style="width: 8em; height: 8em; box-shadow: 2px 0px 6px black;">
 	
-			<h3>General informations</h3>
-			<ul style="list-style-type: none;">
-				<li><i class="fa fa-calendar" aria-hidden="true"></i><b> Date :</b> November 2020 - Now</li>
-				<li><i class="fa fa-building-o" aria-hidden="true"></i><b> Company :</b> <a href="http://www-list.cea.fr/en/">CEA</a></li>
-				<li><i class="fa fa-map-marker" aria-hidden="true"></i><b> Location :</b> Paris, France</li>
-				<li><i class="fa fa-graduation-cap" aria-hidden="true"></i><b> Skills developed :</b> Python, C++, Deep Neural Network </li>
-				
-			</ul>
-		
+			{% include we_info_en.html 
+				date='November 2020 - Now' 
+				company='<a href="http://www-list.cea.fr/en/">CEA</a>' 
+				location='Paris, France' 
+				skill='Python, C++, Deep Neural Network' 
+			%}
+
 			<h3>Description of the company :</h3>
 			<p>
 				Atomic Energy Commission (CEA) is one of the principal numeric actor in the France and Europe.
@@ -40,16 +38,13 @@ permalink: /work_experiences
 		<div class="box">
 			<div class="bulb"><h2 id="irisa">Internship in the team SHAMAN of the IRISA 2020</h2></div>
 			<img class="center" src="/ressources/irisa.jpg" alt="IRISA Logo" style="width: 14em; height: 4em; box-shadow: 2px 0px 6px black;">
-
-			<h3>General informations</h3>
-			<ul style="list-style-type: none;">
-				<li><i class="fa fa-calendar" aria-hidden="true"></i><b> Date :</b> November 2019 - July 2020</li>
-				<li><i class="fa fa-clock-o" aria-hidden="true"></i></i><b> Duration :</b> 6 months</li>
-				<li><i class="fa fa-building-o" aria-hidden="true"></i><b> Company :</b> <a href="http://www.irisa.fr/">IRISA</a></li>
-				<li><i class="fa fa-map-marker" aria-hidden="true"></i><b> Location :</b> Lannion, France</li>
-				<li><i class="fa fa-search" aria-hidden="true"></i><b> Skills developed :</b> Python, Research, Redaction, Fuzzy Logic, Symbolic AI</li>
-				
-			</ul>
+			{% include we_info_en.html 
+				date='November 2019 - July 2020' 
+				duration='6 months' 
+				company='<a href="http://www.irisa.fr/">IRISA</a>' 
+				location='Lannion, France' 
+				skill='Python, Research, Redaction, Fuzzy Logic, Symbolic AI'
+			%}
 		
 			<h3>Description of the internship :</h3>
 			<p>
@@ -80,16 +75,14 @@ permalink: /work_experiences
 		<div class="box">
 			<div class="bulb"><h2 id="NCTU">Internship at the NCTU 2019</h2></div>
 			<img class="center" src="/ressources/NCTU.jpg" alt="NCTU Logo" style="width: 8em; height: 8em; border-radius: 50%; box-shadow: 2px 0px 6px black;">
-
-			<h3>General informations</h3>
-			<ul style="list-style-type: none;">
-				<li><i class="fa fa-calendar" aria-hidden="true"></i><b> Date :</b> June 2019 - August 2019</li>
-				<li><i class="fa fa-clock-o" aria-hidden="true"></i><b> Duration :</b> 2 months</li>
-				<li><i class="fa fa-building-o" aria-hidden="true"></i><b> Company :</b> <a href="https://www.nctu.edu.tw/en/">National Chiao Tung University</a></li>
-				<li><i class="fa fa-map-marker" aria-hidden="true"></i><b> Location :</b> Hsinchu, Taïwan</li>
-				<li><i class="fa fa-search" aria-hidden="true"></i><b> Skills developed :</b> Python, Keras, English</li>
-				
-			</ul>
+			
+			{% include we_info_en.html 
+				date='June 2019 - August 2019' 
+				duration='2 months' 
+				company='<a href="https://www.nctu.edu.tw/en/">National Chiao Tung University</a>' 
+				location='Hsinchu, Taïwan' 
+				skill='Python, Keras, CNN, English'
+			%}
 
 			<h3>Description of the internship :</h3>
 			<p>
@@ -108,15 +101,14 @@ permalink: /work_experiences
 		<div class="box">
 			<div class="bulb"><h2 id="Metropole">Orléans Métropole 2018</h2></div>
 			<img class="center" src="/ressources/orleans_metropole.jpg" alt="Orleans Metropole Logo" style="width: 8em; height: 8em; box-shadow: 2px 0px 6px black;">
-
-			<h3>General informations</h3>
-			<ul style="list-style-type: none;">
-				<li><i class="fa fa-calendar" aria-hidden="true"></i><b> Date :</b> July 2018 - August 2018</li>
-				<li><i class="fa fa-clock-o" aria-hidden="true"></i><b> Duration :</b> 2 months</li>
-				<li><i class="fa fa-building-o" aria-hidden="true"></i><b> Company :</b> <a href="http://www.orleans-metropole.fr/">Orléans Métropole</a></li>
-				<li><i class="fa fa-map-marker" aria-hidden="true"></i><b> Location :</b> Orléans, France</li>
-				<li><i class="fa fa-search" aria-hidden="true"></i><b> Skills developed :</b> Shell Script, Network, Centreon, Linux</li>
-			</ul>
+			
+			{% include we_info_en.html 
+				date='July 2018 - August 2018' 
+				duration='2 months' 
+				company='<a href="http://www.orleans-metropole.fr/">Orléans Métropole</a>' 
+				location='Orléans, France' 
+				skill='Shell Script, Network, Centreon, Linux'
+			%}
 
 			<h3>Description of the internship :</h3>
 			<p>I spend 2 months during summer 2018 at the <a href="http://www.orleans-metropole.fr/">Orléans Métropole</a> at the Information Systems Division (ISD). This summer, I worked on two different topics.
