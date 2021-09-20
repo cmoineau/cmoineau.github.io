@@ -4,96 +4,45 @@
    }
 html{
     font-family: Jost;
-    --bg: #f5f5f5;
+    --bg: white;
+    --bg-box: white;
+    --highlight: #f5cece;
     --color-text: #24292e;
     --bg-nav: #24292e;
-    --nav-a-c: #be3523;
-    --nav-a-bh: #2a3035;
-    --nav-a-h:#be3523;
-    --footer-a: #24292e;
-    --footer-ah: #3f3f3f;
-    --footer-abh: #2a3035;
-    --shadow: white;
-    --a-bh: #eaebed;
-    --a-c: #be3523;
+    --shadow: none;
+    --a-color: #be3523;
+    --a-grad1: #af3b2c;
+    --a-grad2: #c02712;
+    
 }
 html[data-theme='dark']{
     font-family: Jost;
     --bg: #303030;
-    --bg1: #161616;
-    --highlight: #109267;
+    --highlight: #00a16e;
     --bg-box: #3d3d3d;
     --color-text: #dddddd;
     --bg-nav: #232222;
-    --nav-a-c: #00e59b;
-    --nav-a-bh: #383838;
-    --nav-a-h: #00e59b;
-    --footer-a: gray;
-    --footer-ah: #3f3f3f;
-    --footer-abh: gray;
     --shadow: black;
-    --a-bh: #383838;
-    --a-c: #00e59b;
+    --a-color: #00e59b;
+    --a-grad1: #10996e;
+    --a-grad2: #097450;
 }
 ::selection{
     background-color: var(--highlight);
 }
-body {
-    margin: 0px auto;
-    background-color: var(--bg);
-    color: var(--color-text);
-}
-body ul{
-    margin-bottom: 20px;
-}
-nav{
-    font-family: Jost;
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    background-color: var(--bg-nav);
-}
-nav ul, footer ul {
-    list-style: none;
-    font-weight: bold;
-}
-
-nav ul li, footer ul li {
-    display: inline-block;
-    margin-right: 1em;
-}
-nav a{
-    color: var(--nav-a-c);
-    text-decoration: none;
-    font-size: 1.1em;
-    padding: 5px 15px;
-}
-
-nav li{
-    margin-top: 0.2em;
-    text-shadow: 2px 0px 6px var(--bg-nav);
-}
-nav li:hover {
-    text-decoration: none;
-}
-
 
 a {
-    background-image: linear-gradient(120deg, #109267 0%, rgb(28, 158, 117) 100%);
+    color: var(--a-color);
+    text-decoration: none;
+    background-image: linear-gradient(120deg, var(--a-grad1) 100%, var(--a-grad1) 100%);
     background-repeat: no-repeat;
-    background-size: 100% 0.1em;
+    background-size: 0.0em 0.0em;
     background-position: 0 100%;
     transition: background-size 0.25s ease-in;
-    text-decoration: none;
-    /* text-shadow: 0px 0px 3px var(--nav-a-c); */
-    color: var(--a-c);
 }
-a:hover {
+a:hover{
     text-emphasis: none;
-    background-size: 100% 100%;
-    color: white;
+    background-size: 100% 0.1em;
 }
 h1 {
     font-size: 3em;
@@ -125,7 +74,7 @@ h2 a{
 p {
     font-size: 1.3em;
     line-height: 1.4em;
-    color: --color-text;
+    color: var(--color-text);
     text-align: justify;
     text-shadow: 2px 0px 6px var(--shadow);
 }
@@ -138,14 +87,71 @@ ul li ul li{
     font-size: 1em;
 }
 
+body {
+    margin: 0px auto;
+    background-color: var(--bg);
+    color: var(--color-text);
+}
+body ul{
+    margin-bottom: 20px;
+}
+nav{
+    font-family: Jost;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: var(--bg-nav);
+}
+
+nav ul, footer ul {
+    list-style: none;
+    font-weight: bold;
+}
+
+nav ul li, footer ul li {
+    display: inline-block;
+    margin-right: 1em;
+}
+nav a {
+    background-image: linear-gradient(120deg, var(--a-grad1) 0%, var(--a-grad2) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: 0 100%;
+    transition: background-size 0.25s ease-in;
+    text-decoration: none;
+    color: var(--a-color);
+    font-size: 1.1em;
+    padding: 5px 15px;
+}
+nav a:hover {
+    text-emphasis: none;
+    background-size: 100% 100%;
+    color: var(--a-hover-color);
+}
+
+
+nav li{
+    margin-top: 0.2em;
+    text-shadow: 2px 0px 6px var(--shadow);
+}
+
+nav li:hover {
+    text-decoration: none;
+}
+
 footer {
     border-top: 1px solid;
 }
+
 footer li{
     font-size: 1em;
-    color: --a-c;
+    color: var(--text-color);
 }
-
+footer a{
+    color: var(--text-color);
+}
 figure {
     text-align: center;
     font-style: italic;
@@ -219,15 +225,8 @@ div.post{
 .fun_fact:hover .bulb{
     text-shadow: 0px 0px 6px yellow;
 }
-.box:hover .bulb h3{
-    text-shadow: 0px 0px 6px var(--highlight);
-}
-.box:hover .bulb h2{
-    text-shadow: 0px 0px 6px var(--highlight);
-}
  
 .main_title {
-    text-shadow: 0px 0px 6px var(--highlight);
     width: 7em;
     animation: typing 2s steps(15), blink 1s infinite alternate;
     white-space: nowrap;
@@ -354,7 +353,7 @@ div.post{
 /* Dropdown Button */
 .langbtn {
 background-color: transparent;
-color: var(--a-c);
+color: var(--a-color);
 padding: 16px;
 font-size: 16px;
 border: none;
@@ -382,7 +381,6 @@ z-index: 1;
 .lang_switcher-content a {
 padding: 12px 16px;
 text-align: center;
-/* text-decoration: none; */
 display: block;
 border: solid 1px #161616;
 }
