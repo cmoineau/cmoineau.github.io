@@ -5,7 +5,7 @@
 html{
     font-family: Jost;
     --bg: white;
-    --bg-box: white;
+    --bg-box: #e7e2fa;
     --highlight: #f5cece;
     --color-text: #24292e;
     --bg-nav: #24292e;
@@ -130,7 +130,6 @@ nav a:hover {
     background-size: 100% 100%;
     color: var(--a-hover-color);
 }
-
 
 nav li{
     margin-top: 0.2em;
@@ -352,37 +351,34 @@ div.post{
 
 /* Dropdown Button */
 .langbtn {
-background-color: transparent;
-color: var(--a-color);
-padding: 16px;
-font-size: 16px;
-border: none;
-margin-left: auto;
-cursor: pointer;
+    background-color: transparent;
+    color: var(--a-color);
+    padding: 16px;
+    font-size: 0.8em;
+    border: none;
+    cursor: pointer;
 }
 
 .lang_switcher {
-position: fixed;
-display: inline-block;
-right: 1em;
-top: 0.5em}
+    display: inline-block;
+} 
 
 /* Dropdown Content (Hidden by Default) */
 .lang_switcher-content {
-display: none;
-position: absolute;
-left: 0em;
-background-color: var(--bg-nav);
-min-width: 160px;
-z-index: 1;
+    position: absolute;
+    display: none;
+    background-color: var(--bg-nav);
+    width: 9.3em;
+    min-width: 160px;
+    z-index: 1;
 }
 
 /* Links inside the dropdown */
 .lang_switcher-content a {
-padding: 12px 16px;
-text-align: center;
-display: block;
-border: solid 1px #161616;
+    padding: 12px 16px;
+    text-align: center;
+    display: block;
+    border: solid 1px #161616;
 }
   
 .lang_switcher:hover .lang_switcher-content {
@@ -396,4 +392,22 @@ border: solid 1px #161616;
 @keyframes fadeout {
     0% { opacity: 100%;}
     100% { opacity: 0%}
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+    transition: 650ms !important;
+    transition-delay: 0 !important;
+}
+
+.checkbox {
+    display: none;
+}
+
+.label {
+	cursor: pointer;
+    position: rea;
+    color: var(--a-color);
 }

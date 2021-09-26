@@ -1,0 +1,56 @@
+<li>
+    <input type="checkbox" class="checkbox" id="switch" id="theme" />
+        <label class="label" for="switch">
+            <i id="moon" class="fa fa-moon-o" aria-hidden="true"></i>
+            <i id="sun" class="fa fa-sun-o" aria-hidden="true"></i>
+        </label>
+</li>
+
+<script type="text/javascript">
+        let trans = () => {
+            document.documentElement.classList.add('transition');
+            window.setTimeout(() => {
+                document.documentElement.classList.remove('transition')
+            }, 1000)
+        }
+
+        var checkbox = document.getElementById('switch');
+        var sun = document.getElementById('sun');
+        var moon = document.getElementById('moon');
+
+        checkbox.addEventListener('change', function() {
+            if(this.checked) {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'dark')
+                localStorage.setItem("data-theme", 1);
+                sun.style.display="none";
+                moon.style.display="contents";
+            } else {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'light')
+                localStorage.setItem("data-theme", 0);
+                sun.style.display="contents";
+                moon.style.display="none";
+            }
+        })
+
+        if(!("data-theme" in localStorage)){
+            localStorage.setItem("data-theme", 1);
+            document.documentElement.setAttribute('data-theme', 'dark');
+            checkbox.checked = true;
+            sun.style.display="none";
+            moon.style.display="contents";
+        }else{
+            if (localStorage.getItem('data-theme') != 0){
+                document.documentElement.setAttribute('data-theme', 'dark');
+                checkbox.checked = true;
+                sun.style.display="none";
+                moon.style.display="contents";
+            }else{
+                document.documentElement.setAttribute('data-theme', 'light');
+                checkbox.checked = false;
+                sun.style.display="contents";
+                moon.style.display="none";
+            }
+        }
+</script>
