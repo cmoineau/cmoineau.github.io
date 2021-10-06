@@ -241,9 +241,9 @@ div.post{
 }
 
 @keyframes blink {
-50% {
-    border-color: transparent
-}
+    50% {
+        border-color: transparent
+    }
 }
 
 .articles{
@@ -398,8 +398,8 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-    transition: 650ms !important;
-    transition-delay: 0 !important;
+    transition: 450ms;
+    transition-delay: 0;
 }
 
 .checkbox {
