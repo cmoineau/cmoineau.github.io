@@ -5,7 +5,7 @@
 html{
     font-family: Jost;
     --bg: white;
-    --bg-box: #e7e2fa;
+    --bg-box: none;
     --highlight: #f5cece;
     --color-text: #24292e;
     --bg-nav: #24292e;
@@ -398,8 +398,11 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-    transition: 450ms;
-    transition-delay: 0;
+    transition-delay: 0;   
+    transition: 0.5s ease;
+    -moz-transition: 0.5s; /* Firefox 4 */
+    -webkit-transition: 0.5s; /* Safari and Chrome */
+    -o-transition: 0.5s; /* Opera */
 }
 
 .checkbox {
