@@ -4,16 +4,17 @@
    }
 html{
     font-family: Jost;
-    --bg: white;
+    --bg: rgb(221, 215, 250);
     --bg-box: none;
     --highlight: #f5cece;
     --color-text: #24292e;
     --bg-nav: #24292e;
     --shadow: none;
     --a-color: #be3523;
-    --a-grad1: #af3b2c;
+    --a-grad1: #b3483a;
     --a-grad2: #c02712;
-    
+    --pp-bg: #24292e;
+    --pp-border: #be3523;
 }
 html[data-theme='dark']{
     font-family: Jost;
@@ -26,6 +27,8 @@ html[data-theme='dark']{
     --a-color: #00e59b;
     --a-grad1: #10996e;
     --a-grad2: #097450;
+    --pp-bg: #464646;
+    --pp-border: white;
 }
 ::selection{
     background-color: var(--highlight);
@@ -186,6 +189,18 @@ div.post{
 
 #presentation{
     padding: 5px;
+}
+
+.profile_picture{
+    float:right;
+    width: 9em;
+    height: 9.5em;
+    margin-left: 30px;
+    margin-right: 15%;
+    border-radius: 100%;
+    border: 2px solid var(--pp-border);
+    box-shadow: 2px 3px 6px var(--shadow);
+    background-color: var(--pp-bg);
 }
 
 .box {
