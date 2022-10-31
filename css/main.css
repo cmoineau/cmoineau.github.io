@@ -4,17 +4,17 @@
    }
 html{
     font-family: Jost;
-    --bg: rgb(221, 215, 250);
+    --bg: #E6E6A6;
     --bg-box: none;
     --highlight: #f5cece;
-    --color-text: #24292e;
-    --bg-nav: #24292e;
+    --color-text: #22272c;
+    --bg-nav: #22272c;
     --shadow: none;
-    --a-color: #be3523;
-    --a-grad1: #b3483a;
-    --a-grad2: #c02712;
-    --pp-bg: #24292e;
-    --pp-border: #be3523;
+    --a-color: #fc3200;
+    --a-grad1: #d42b01;
+    --a-grad2: #d42b01;
+    --pp-bg: #22272c;
+    --pp-border: #ad5808;
 }
 html[data-theme='dark']{
     font-family: Jost;
@@ -42,6 +42,7 @@ a {
     background-size: 0.0em 0.0em;
     background-position: 0 100%;
     transition: background-size 0.25s ease-in;
+    font-weight: bold;
 }
 a:hover{
     text-emphasis: none;
@@ -283,9 +284,9 @@ div.post{
 
 .post_image{
     position:absolute;
-    opacity:0.4;
+    opacity:0.5;
+    width:25em;
     height:15em;
-    width: 25em;
     z-index: 1;
     box-shadow: 2px 0px 6px black;
     transition: transform ease-in-out 0.3s;
@@ -306,13 +307,13 @@ div.post{
 .post_title{
     text-align: center;
     color: var(--color-text);
-    text-shadow: 1px 1px 1px black;
+    /* text-shadow: 1px 1px 1px black; */
     font-weight: bold;
     font-size: 1.1em;
 }
 .post_description{
     color: var(--color-text);
-    text-shadow: 1px 1px 1px black;
+    /* text-shadow: 1px 1px 1px black; */
     margin-left: auto;
     display: flex;
     flex-direction: column;
