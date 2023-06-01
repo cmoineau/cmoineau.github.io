@@ -1,0 +1,29 @@
+.scroll_top{
+    position: fixed; 
+    bottom: 3.5em; 
+    right: 1em;
+    box-shadow: none;
+    background: transparent;
+}
+
+.scroll_top a{
+    font-size: 3em;
+    cursor: pointer;
+    color: var(--color-text);
+    box-shadow: none;
+    background-image: none;
+}
+
+@keyframes bounce{
+    from {transform: translateY(0);}
+    to   {transform: translateY(-20px);}
+}
+.scroll_top:hover a{
+    border: none;
+    background: transparent;
+}
+
+.scroll_top:hover{
+    box-shadow: none;
+    animation: bounce 0.35s ease infinite alternate;
+}

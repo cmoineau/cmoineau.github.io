@@ -1,0 +1,9 @@
+.checkbox {
+    display: none;
+}
+
+.label {
+	cursor: pointer;
+    position: rea;
+    color: var(--a-color);
+}
