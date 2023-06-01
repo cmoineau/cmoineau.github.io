@@ -4,7 +4,7 @@
    }
 html{
     font-family: Jost;
-    --bg: #E6E6A6;
+    --bg: white;
     --bg-box: none;
     --highlight: #f5cece;
     --color-text: #22272c;
@@ -14,7 +14,7 @@ html{
     --a-grad1: #d42b01;
     --a-grad2: #d42b01;
     --pp-bg: #22272c;
-    --pp-border: #ad5808;
+    --pp-border: #d42b01;
 }
 html[data-theme='dark']{
     font-family: Jost;
@@ -212,9 +212,11 @@ div.post{
     border-radius: 2px;
     transition: transform ease-in-out 0.3s;
 }
+/*
 .box:hover {
     transform: scale(1.01);
 }
+*/
 
 .fun_fact{
     display: flex;
