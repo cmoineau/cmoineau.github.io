@@ -1,36 +1,76 @@
 @font-face {
     font-family: Jost;
     src: url("/font/Jost-400-Book.otf");
-   }
-html{
-    font-family: Jost;
-    --bg: white;
-    --bg-box: none;
-    --highlight: #f5cece;
-    --color-text: #22272c;
-    --bg-nav: #22272c;
-    --shadow: none;
-    --a-color: #fc3200;
-    --a-grad1: #d42b01;
-    --a-grad2: #d42b01;
-    --pp-bg: #22272c;
-    --pp-border: #d42b01;
 }
-html[data-theme='dark']{
+
+html {
     font-family: Jost;
-    --bg: #303030;
-    --highlight: #00a16e;
-    --bg-box: #3d3d3d;
-    --color-text: #dddddd;
-    --bg-nav: #232222;
-    --shadow: black;
-    --a-color: #00e59b;
-    --a-grad1: #10996e;
-    --a-grad2: #097450;
-    --pp-bg: #464646;
-    --pp-border: white;
+    /* GRUVBOX LIGHT - REFINED */
+    --bg: #f9f5d7;
+    --bg-box: #f2eac7;
+    --highlight: #076678;
+    --color-text: #282828;
+    --bg-nav: rgba(251, 241, 199, 0.8);
+    --nav-text: #3c3836;
+    --nav-accent: #076678;
+    --nav-border: #d5c4a1;
+    --nav-blur: blur(10px);
+    --shadow: rgba(60, 56, 54, 0.1);
+
+    --a-color: #076678;
+    /* Base Link: Matches your title blue */
+    --a-grad1: #458588;
+    /* Hover Start: Gruvbox Blue (Faded/Pastel) */
+    --a-grad2: #83a598;
+    /* Hover End: Gruvbox Blue (Light/Pastel) */
+
+    --pp-bg: #ebdbb2;
+    --pp-border: #076678;
+
+    --hero-box-title: #076678;
+    --hero-box-shadow: 4px 4px 0px #d5c4a1;
+    --bg-hero-box: #f2eac7;
 }
-::selection{
+
+html[data-theme='dark'] {
+    /* DARK MODE: Focus on "Cyberpunk/Terminal" depth */
+    --bg: #1d2021;
+    /* Gruvbox dark0_hard - deeper and more modern */
+    --highlight: #8ec07c;
+    /* Soft Aqua - easier on the eyes than bright green */
+    --bg-box: #282828;
+    /* Slightly lighter than background */
+    --color-text: #dfbf8e;
+    /* Warm white/tan */
+    /* DARK MODE: Sleek & Deep */
+    --bg-nav: rgba(29, 32, 33, 0.85);
+    /* Gruvbox dark0_hard with transparency */
+    --nav-text: #dfbf8e;
+    /* Soft Tan */
+    --nav-accent: #8ec07c;
+    /* Soft Aqua/Green */
+    --nav-border: #3c3836;
+    /* Gruvbox dark1 */
+    --nav-blur: blur(12px);
+    /* Almost black for depth */
+    --shadow: rgba(0, 0, 0, 0.6);
+
+    --a-color: #fe8019;
+    /* Classic Gruvbox Orange */
+    --a-grad1: #d65d0e;
+    --a-grad2: #fe8019;
+
+    --pp-bg: #3c3836;
+    --pp-border: #8ec07c;
+
+    --bg-hero-box: rgba(40, 40, 40, 0.7);
+    /* Dark semi-transparent */
+    --hero-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    --hero-box-title: #8ec07c;
+    /* Soft Aqua title */
+}
+
+::selection {
     background-color: var(--highlight);
 }
 
@@ -44,34 +84,39 @@ a {
     transition: background-size 0.25s ease-in;
     font-weight: bold;
 }
-a:hover{
+
+a:hover {
     text-emphasis: none;
     background-size: 100% 0.1em;
 }
+
 h1 {
     font-size: 3em;
     text-align: center;
     text-shadow: 2px 0px 6px var(--shadow);
 }
+
 h2 {
     font-size: 2em;
     text-shadow: 2px 0px 6px var(--shadow);
     text-align: center;
 }
+
 h3 {
     font-size: 1.8em;
     text-shadow: 2px 0px 6px var(--shadow);
     border-bottom: 1px solid;
 }
+
 h4 {
     font-size: 1.6em;
     text-shadow: 2px 0px 6px var(--shadow);
     margin-left: 2em;
 }
 
-/* Ugly way to remove the bg color change for the banners 
+/* Ugly way to remove the bg color change for the banners
 TODO : Find a better alternative ... */
-h2 a{
+h2 a {
     background: none;
 }
 
@@ -82,12 +127,13 @@ p {
     text-align: justify;
     text-shadow: 2px 0px 6px var(--shadow);
 }
-li{
+
+li {
     text-shadow: 2px 0px 6px var(--shadow);
     font-size: 1.3em;
 }
 
-ul li ul li{
+ul li ul li {
     font-size: 1em;
 }
 
@@ -96,46 +142,54 @@ body {
     background-color: var(--bg);
     color: var(--color-text);
 }
-body ul{
+
+body ul {
     margin-bottom: 20px;
 }
-nav{
-    font-family: Jost;
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+
+nav {
     background-color: var(--bg-nav);
+    backdrop-filter: var(--nav-blur);
+    -webkit-backdrop-filter: var(--nav-blur);
+    border-bottom: 1px solid var(--nav-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.8em 2em;
 }
 
-nav ul, footer ul {
+nav ul,
+footer ul {
     list-style: none;
     font-weight: bold;
 }
 
-nav ul li, footer ul li {
+nav ul li,
+footer ul li {
     display: inline-block;
     margin-right: 1em;
 }
+
 nav a {
-    background-image: linear-gradient(120deg, var(--a-grad1) 0%, var(--a-grad2) 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.1em;
-    background-position: 0 100%;
-    transition: background-size 0.25s ease-in;
+    color: var(--nav-text);
     text-decoration: none;
-    color: var(--a-color);
-    font-size: 1.1em;
-    padding: 5px 15px;
-}
-nav a:hover {
-    text-emphasis: none;
-    background-size: 100% 100%;
-    color: var(--a-hover-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin: 0 1.2em;
 }
 
-nav li{
+nav a:hover {
+    color: var(--nav-accent);
+}
+
+/* The active link styling (e.g., "Accueil") */
+nav a.active {
+    color: var(--nav-accent);
+    border-bottom: 2px solid var(--nav-accent);
+    padding-bottom: 4px;
+}
+
+nav li {
     margin-top: 0.2em;
     text-shadow: 2px 0px 6px var(--shadow);
 }
@@ -148,22 +202,26 @@ footer {
     border-top: 1px solid;
 }
 
-footer li{
+footer li {
     font-size: 1em;
     color: var(--text-color);
 }
-footer a{
+
+footer a {
     color: var(--text-color);
 }
+
 figure {
     text-align: center;
     font-style: italic;
     font-size: 1.3em;
 }
-figure img{
+
+figure img {
     transition: transform ease-in-out 1s;
 }
-figure:hover img{
+
+figure:hover img {
     transform: scale(2);
 }
 
@@ -173,27 +231,28 @@ figure:hover img{
     display: block;
 }
 
-div.blurb{
+div.blurb {
     margin: 0px auto;
     width: 80%;
 }
-div.post{
+
+div.post {
     margin: 0px auto;
     width: 60%;
 }
 
-.flex-container{
+.flex-container {
     display: flex;
     width: 100%;
     height: 100%;
 }
 
-#presentation{
+#presentation {
     padding: 5px;
 }
 
-.profile_picture{
-    float:right;
+.profile_picture {
+    float: right;
     width: 8.96em;
     height: 9em;
     margin-left: 30px;
@@ -205,44 +264,57 @@ div.post{
 }
 
 .box {
-    padding: 2em; 
+    padding: 2em;
     background-color: var(--bg-box);
-    box-shadow: 2px 3px 6px var(--shadow);
+    border: 1px solid var(--pp-bg);
+    /* Subtle border using a palette color */
+    box-shadow: 4px 4px 0px var(--shadow);
+    /* "Hard" shadow instead of "Blurry" shadow */
     margin-bottom: 2em;
     border-radius: 2px;
     transition: transform ease-in-out 0.3s;
 }
+
+.box {
+    border: 1px solid var(--pp-bg);
+    box-shadow: 4px 4px 0px var(--shadow);
+}
+
 /*
 .box:hover {
     transform: scale(1.01);
 }
 */
 
-.fun_fact{
+.fun_fact {
     display: flex;
     flex-wrap: row;
-    padding: 2em; 
+    padding: 2em;
     background-color: var(--bg-box);
     box-shadow: 2px 3px 6px var(--shadow);
     margin-bottom: 2em;
     border-radius: 2px;
     transition: transform ease-in-out 0.3s;
 }
+
 .fun_fact:hover {
     transform: scale(1.01);
 }
-.bulb{
+
+.bulb {
     margin: auto;
     font-size: 1em;
 }
-.fun_fact .bulb{
+
+.fun_fact .bulb {
     font-size: 2em;
     padding-right: 1em;
 }
-.fun_fact:hover .bulb{
+
+.fun_fact:hover .bulb {
     text-shadow: 0px 0px 6px yellow;
 }
- 
+
 .main_title {
     width: 7em;
     animation: typing 2s steps(15), blink 1s infinite alternate;
@@ -251,9 +323,9 @@ div.post{
     border-right: 3px solid;
     text-align: left;
 }
-  
+
 @keyframes typing {
-    0%{
+    0% {
         width: 0%;
     }
 }
@@ -264,56 +336,58 @@ div.post{
     }
 }
 
-.articles{
+.articles {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    margin-left:auto;
+    margin-left: auto;
 }
 
-.article{
-    position:relative; 
-    height:15em;
+.article {
+    position: relative;
+    height: 15em;
     width: 25em;
     padding: 1em;
-    margin:auto;
+    margin: auto;
 }
 
-.article_container{
-    position:relative; 
+.article_container {
+    position: relative;
 }
 
-.post_image{
-    position:absolute;
-    opacity:0.5;
-    width:25em;
-    height:15em;
+.post_image {
+    position: absolute;
+    opacity: 0.5;
+    width: 25em;
+    height: 15em;
     z-index: 1;
     box-shadow: 2px 0px 6px black;
     transition: transform ease-in-out 0.3s;
 }
 
-.article_container:hover .post_image{
+.article_container:hover .post_image {
     transform: scale(1.1);
 }
 
-.post_text{
+.post_text {
     z-index: 2;
-    position:absolute;
+    position: absolute;
     margin: 0 auto;
     width: 100%;
     margin-top: 10%;
-    font-size:150%;
+    font-size: 150%;
 }
-.post_title{
+
+.post_title {
     text-align: center;
     color: var(--color-text);
     /* text-shadow: 1px 1px 1px black; */
     font-weight: bold;
     font-size: 1.1em;
 }
-.post_description{
+
+.post_description {
     color: var(--color-text);
     /* text-shadow: 1px 1px 1px black; */
     margin-left: auto;
@@ -322,17 +396,94 @@ div.post{
     font-size: 0.9em;
     text-align: center;
 }
-.description{
-    margin-left: 5%; 
-    margin-right: 5%; 
-    margin-bottom: 1em; 
-    border-bottom: 1px solid; 
+
+.description {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1em;
+    border-bottom: 1px solid;
     border-top: 1px solid;
     display: flex;
     flex-direction: column;
 }
 
-.description div{
+.description div {
     margin: auto;
 }
 
+.hero-container {
+    padding: 4em 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-bio-box {
+    background-color: var(--bg-hero-box);
+    padding: 1.5em 2em;
+    border-radius: 8px;
+    border: 1px solid var(--pp-bg);
+    border-left: 5px solid var(--highlight);
+    margin-top: 1.5em;
+    max-width: 60ch;
+    box-shadow: var(--hero-box-shadow);
+    transition: all 0.3s ease;
+}
+
+.hero-bio-box a {
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+
+.hero-bio-box h2 {
+    color: var(--hero-box-title);
+    font-weight: bold;
+    border-bottom: 2px solid var(--hero-box-title);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.hero-text p {
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile_picture_new {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px var(--pp-bg);
+    border: 2px solid var(--pp-border);
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .main_title {
+        margin: 0 auto;
+    }
+}
