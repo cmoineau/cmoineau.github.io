@@ -1,29 +1,36 @@
-.scroll_top{
-    position: fixed; 
-    bottom: 3.5em; 
+.scroll_top {
+    position: fixed;
+    bottom: 10em;
     right: 1em;
+    z-index: 9999;
     box-shadow: none;
     background: transparent;
 }
 
-.scroll_top a{
+.scroll_top a {
     font-size: 3em;
     cursor: pointer;
-    color: var(--color-text);
+    color: var(--highlight);
     box-shadow: none;
     background-image: none;
 }
 
-@keyframes bounce{
-    from {transform: translateY(0);}
-    to   {transform: translateY(-20px);}
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
 }
-.scroll_top:hover a{
+
+.scroll_top:hover a {
     border: none;
     background: transparent;
 }
 
-.scroll_top:hover{
+.scroll_top:hover {
     box-shadow: none;
     animation: bounce 0.35s ease infinite alternate;
 }

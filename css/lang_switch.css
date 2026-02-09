@@ -1,55 +1,80 @@
-/* Dropdown Button */
+.lang_switcher {
+    position: relative;
+    display: inline-block;
+}
+
 .langbtn {
     background-color: transparent;
-    color: var(--a-color);
-    padding: 16px;
-    font-size: 0.8em;
-    border: none;
+    color: var(--nav-text);
+    padding: 10px 15px;
+    font-size: 0.9em;
+    font-family: 'Jost', sans-serif;
+    border: 1px solid transparent;
+    border-radius: 8px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
 }
 
-.lang_switcher {
-    display: inline-block;
-} 
+.langbtn:hover {
+    color: var(--nav-accent);
+    background: rgba(0, 0, 0, 0.05);
+}
 
-/* Dropdown Content (Hidden by Default) */
 .lang_switcher-content {
     position: absolute;
-    display: none;
+    right: 0;
+    top: 110%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+
     background-color: var(--bg-nav);
-    width: 9.3em;
+    backdrop-filter: var(--nav-blur);
     min-width: 160px;
-    z-index: 1;
+    border-radius: 8px;
+    border: 1px solid var(--nav-border);
+    box-shadow: 0 10px 25px var(--shadow);
+
+    overflow: hidden;
+    padding: 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+
+    left: 0;
+    padding: 0;
 }
 
-/* Links inside the dropdown */
 .lang_switcher-content a {
-    padding: 12px 16px;
-    text-align: center;
+    color: var(--nav-text);
+    text-decoration: none;
     display: block;
-    border: solid 1px #161616;
-}
-  
-.lang_switcher:hover .lang_switcher-content {
-    display: block;
-}
-@keyframes fadein {
-    0% { opacity: 0%;}
-    100% { opacity: 100%}
-    
-}
-@keyframes fadeout {
-    0% { opacity: 100%;}
-    100% { opacity: 0%}
+    width: 100%;
+    margin: 0;
+    padding: 12px 20px;
+
+    box-sizing: border-box;
+    font-size: 0.9em;
+    text-align: left;
+    border: none;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-    transition-delay: 0;   
-    transition: 0.5s ease;
-    -moz-transition: 0.5s; /* Firefox 4 */
-    -webkit-transition: 0.5s; /* Safari and Chrome */
-    -o-transition: 0.5s; /* Opera */
+.lang_switcher-content a:hover {
+    /* background-color: var(--highlight); */
+    color: var(--highlight);
+}
+
+.lang_switcher:hover .lang_switcher-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+li.lang_switcher {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
 }

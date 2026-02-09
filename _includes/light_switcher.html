@@ -1,56 +1,54 @@
-<li>
+<li class="theme-switch-wrapper">
     <input type="checkbox" class="checkbox" id="switch" />
-        <label class="label" for="switch">
-            <i id="moon" class="fa fa-moon-o" aria-hidden="true"></i>
-            <i id="sun" class="fa fa-sun-o" aria-hidden="true"></i>
-        </label>
+    <label class="label" for="switch">
+        <i class="fa fa-sun-o" id="sun"></i>
+        <i class="fa fa-moon-o" id="moon"></i>
+        <div class="ball"></div>
+    </label>
 </li>
 
 <script>
-        let trans = () => {
-            document.documentElement.classList.add('transition');
-            window.setTimeout(() => {
-                document.documentElement.classList.remove('transition')
-            }, 1000)
-        }
+    let trans = () => {
+        document.documentElement.classList.add('transition');
+        window.setTimeout(() => {
+            document.documentElement.classList.remove('transition')
+        }, 1000)
+    }
 
-        var checkbox = document.getElementById('switch');
-        var sun = document.getElementById('sun');
-        var moon = document.getElementById('moon');
+    const checkbox = document.getElementById('switch');
+    const htmlElement = document.documentElement;
 
-        checkbox.addEventListener('change', function() {
-            if(this.checked) {
-                trans()
-                document.documentElement.setAttribute('data-theme', 'dark')
-                localStorage.setItem("data-theme", 1);
-                sun.style.display="none";
-                moon.style.display="contents";
-            } else {
-                trans()
-                document.documentElement.setAttribute('data-theme', 'light')
-                localStorage.setItem("data-theme", 0);
-                sun.style.display="contents";
-                moon.style.display="none";
-            }
-        })
+    // Function to set theme
+    const setTheme = (theme) => {
+        htmlElement.classList.add('transition');
+        htmlElement.setAttribute('data-theme', theme);
+        localStorage.setItem("data-theme", theme === 'dark' ? 1 : 0);
 
-        if(!("data-theme" in localStorage)){
-            localStorage.setItem("data-theme", 1);
-            document.documentElement.setAttribute('data-theme', 'dark');
+        // Cleanup transition class
+        window.setTimeout(() => {
+            htmlElement.classList.remove('transition');
+        }, 1000);
+    };
+
+    // Toggle Listener
+    checkbox.addEventListener('change', function () {
+        setTheme(this.checked ? 'dark' : 'light');
+    });
+
+    // Initialization logic
+    const currentTheme = localStorage.getItem('data-theme');
+
+    if (currentTheme === null) {
+        // Default to dark if no preference
+        setTheme('dark');
+        checkbox.checked = true;
+    } else {
+        if (currentTheme == "1") {
+            htmlElement.setAttribute('data-theme', 'dark');
             checkbox.checked = true;
-            sun.style.display="none";
-            moon.style.display="contents";
-        }else{
-            if (localStorage.getItem('data-theme') != 0){
-                document.documentElement.setAttribute('data-theme', 'dark');
-                checkbox.checked = true;
-                sun.style.display="none";
-                moon.style.display="contents";
-            }else{
-                document.documentElement.setAttribute('data-theme', 'light');
-                checkbox.checked = false;
-                sun.style.display="contents";
-                moon.style.display="none";
-            }
+        } else {
+            htmlElement.setAttribute('data-theme', 'light');
+            checkbox.checked = false;
         }
+    }
 </script>

@@ -1,26 +1,30 @@
 <footer>
-    <ul>
-        <li>
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-             <a href="mailto:moineaucyril@gmail.com">
-                 email</a>
-        </li>
-        <!-- <li>
-            <i class="fa fa-file-text" aria-hidden="true"></i>
-            <a href="https://raw.githubusercontent.com/cmoineau/MyCV/master/resume.pdf"> Resume</a>
-        </li> -->
-        <li>
-            <i class="fa fa-github fa-lg" aria-hidden="true"></i>
-            <a href="https://github.com/cmoineau"> GitHub</a>
-        </li>
-        <li>
-            <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
-            <a href="https://www.linkedin.com/in/cmoineau"> LinkedIn</a>
-        </li>
-        <li>
-            <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>
-            <a href="https://scholar.google.com/citations?user=_YlaxooAAAAJ&hl"> Google Scholar</a>
-        </li>
-        <li id="lastchange" style="float : right; font-size: 0.8em; padding-right: 1em;"></li>
-    </ul>
+    <div class="footer-content">
+        <ul class="social-links">
+            <li>
+                <a href="mailto:moineaucyril@gmail.com">
+                    <i class="fa fa-envelope"></i> <span>Email</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/cmoineau">
+                    <i class="fa fa-github"></i> <span>GitHub</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/cmoineau">
+                    <i class="fa fa-linkedin-square"></i> <span>LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?user=_YlaxooAAAAJ&hl">
+                    <i class="fa fa-graduation-cap"></i> <span>Scholar</span>
+                </a>
+            </li>
+        </ul>
+        <div class="footer-meta">
+            <span id="lastchange"></span>
+            <p>&copy; {{ "now" | date: "%Y" }} Cyril Moineau</p>
+        </div>
+    </div>
 </footer>

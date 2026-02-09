@@ -1,33 +1,22 @@
 <li class="lang_switcher">
-    <button class="langbtn"><i class="fa fa-language fa-lg" aria-hidden="true"></i>
-    {% if page.lang == "fr" %}
-    &nbsp;Changer de langue
-    {% endif %}
-    {% if page.lang == "en" %}
-    &nbsp;Switch language
-    {% endif %}
-    
+    <button class="langbtn" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-language fa-lg"></i>
+        <span>
+            {% if page.lang == "fr" %} Changer de langue {% else %} Switch language {% endif %}
+        </span>
+        <i class="fa fa-angle-down" style="font-size: 0.8em; opacity: 0.6;"></i>
     </button>
+
     <div class="lang_switcher-content">
-        {% assign pages=site.pages | where:"ref", page.ref%}
-        {% for page in pages %}
-            {% if page.lang == "en" %}
-                {% assign language="English" %}
+        {% assign all_items = site.pages | concat: site.posts | where:"ref", page.ref %}
+        {% for item in all_items %}
+        <a href="{{ item.url | relative_url }}">
+            {% if item.lang == "en" %}
+            <span style="margin-right: 8px;">🇬🇧</span> English
+            {% elsif item.lang == "fr" %}
+            <span style="margin-right: 8px;">🇫🇷</span> Français
             {% endif %}
-            {% if page.lang == "fr" %}
-                {% assign language="Français" %}
-            {% endif %}
-            <a href="{{ page.url }}">{{ language }}</a>
-        {% endfor %}
-        {% assign posts=site.posts | where:"ref", page.ref%}
-        {% for post in posts %}
-            {% if post.lang == "en" %}
-                {% assign language="English" %}
-            {% endif %}
-            {% if post.lang == "fr" %}
-                {% assign language="Français" %}
-            {% endif %}
-            <a href="{{ post.url }}">{{ language }}</a>
+        </a>
         {% endfor %}
     </div>
-</li> 
+</li>

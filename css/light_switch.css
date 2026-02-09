@@ -1,9 +1,93 @@
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
 .checkbox {
     display: none;
 }
 
 .label {
-	cursor: pointer;
-    position: rea;
-    color: var(--a-color);
+    background-color: #d5c4a1;
+    display: block;
+    position: relative;
+    border-radius: 50px;
+    height: 26px;
+    width: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.label i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+#sun {
+    left: 6px;
+    color: #b57614;
+}
+
+#moon {
+    right: 6px;
+    color: #3c3836;
+}
+
+.label .ball {
+    background-color: #fbf1c7;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    height: 22px;
+    width: 22px;
+    z-index: 2;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), background-color 0.3s ease;
+}
+
+html[data-theme='dark'] .label {
+    background-color: #3c3836;
+}
+
+html[data-theme='dark'] .label .ball {
+    background-color: var(--highlight);
+    transform: translateX(24px);
+}
+
+html[data-theme='dark'] #moon {
+    opacity: 1;
+}
+
+html[data-theme='dark'] #sun {
+    opacity: 0.5;
+}
+
+html[data-theme='light'] #sun {
+    opacity: 1;
+}
+
+html[data-theme='light'] #moon {
+    opacity: 0.5;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
 }
