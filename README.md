@@ -43,3 +43,5 @@ bundle exec jekyll serve --host=localhost --trace
 
 ## 🔗 References
 - Font : https://indestructibletype.com/Jost.html
+- DevIcons: https://devicon.dev/
+- FontAwsome: https://fontawesome.com/v4/icons/
