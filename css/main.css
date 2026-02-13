@@ -574,3 +574,98 @@ div.post {
     color: var(--highlight);
     text-decoration: underline;
 }
+
+.skills-section {
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--nav-border);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: var(--bg-nav);
+    /* Uses your glassmorphism background */
+    backdrop-filter: var(--nav-blur);
+    border: 1px solid var(--nav-border);
+    border-radius: 16px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: var(--highlight);
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.3em;
+    color: var(--color-text);
+}
+
+/* List Style */
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.skill-item img {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+}
+
+/* Tags/Pills Style for the 3rd card */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--nav-border);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.skill-tag.highlight {
+    border-color: var(--highlight);
+    color: var(--highlight);
+}
+
+.skill-tag.sub {
+    font-size: 0.75em;
+    opacity: 0.8;
+}
