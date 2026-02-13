@@ -1,0 +1,21 @@
+<div class="talk-item"
+    style="display: flex; gap: 20px; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px dashed var(--nav-border);">
+    <div class="talk-date" style="min-width: 100px; font-size: 0.9em; font-weight: bold; color: var(--highlight);">
+        {{ include.date }}
+    </div>
+    <div class="talk-details">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+            <span
+                style="font-size: 0.7em; padding: 2px 6px; border-radius: 4px; background: var(--highlight); color: white; text-transform: uppercase;">
+                {{ include.type }}
+            </span>
+            <h3 style="margin: 0; font-size: 1.1em;">{{ include.title }}</h3>
+        </div>
+        <p style="margin: 5px 0; font-size: 0.9em; opacity: 0.8;">
+            <i class="fa fa-map-marker"></i> <strong>{{ include.event }}</strong> | {{ include.location }}
+        </p>
+        <div class="talk-links" style="margin-top: 10px; display: flex; gap: 12px; font-size: 0.85em;">
+            {{ include.links }}
+        </div>
+    </div>
+</div>

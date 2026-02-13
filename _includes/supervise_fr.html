@@ -1,10 +1,22 @@
-<div class="box" style="margin-left: auto; margin-right: auto; flex-flow: column;">
+<div class="mentorship-card"
+    style="border-left: 4px solid var(--highlight); padding: 15px 20px; margin-bottom: 25px; background: rgba(0,0,0,0.02); border-radius: 0 8px 8px 0;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+        <h4 style="margin: 0; font-size: 1.2em; color: var(--color-text);">
+            <i class="fa fa-user" style="color: var(--highlight); margin-right: 8px;"></i>
+            {{ include.student }}
+        </h4>
+        <span style="font-size: 0.85em; opacity: 0.7; font-weight: bold;">
+            <i class="fa fa-calendar"></i> {{ include.date }}
+        </span>
+    </div>
 
-    <ul style="list-style-type: none;">
-        <li><i class="fa fa-user" aria-hidden="true"></i> <b>Étudiant:</b> {{include.student}}</li>
-        <li><i class="fa fa-graduation-cap" aria-hidden="true"></i> <b>Diplôme:</b> {{include.degree}}</li>
-        <li><i class="fa fa-commenting" aria-hidden="true"></i> <b>Sujet:</b> {{include.subject}}</li>
-        <li><i class="fa fa-calendar" aria-hidden="true"></i> <b>Date:</b> {{include.date}}</li>
-        <li><i class="fa fa-users" aria-hidden="true"></i> <b>Encadrant:</b> {{include.supervisors}}</li>
-    </ul>
+    <p style="margin: 10px 0 5px 0; font-style: italic; color: var(--highlight);">
+        <strong>Sujet :</strong> {{ include.subject }}
+    </p>
+
+    <div style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
+        <i class="fa fa-users" style="margin-right: 5px;"></i>
+        <strong>Encadrant :</strong>
+        {{ include.supervisors | replace: "Cyril Moineau", "<u>Cyril Moineau</u>" }}
+    </div>
 </div>

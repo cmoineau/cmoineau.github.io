@@ -6,57 +6,133 @@ ref: research
 permalink: /research/fr
 ---
 <div class="blurb">
+
     <h1>Activité de recherche</h1>
 
     <h2>Publications</h2>
 
-    <ul>
-        <li>Lucas Maisonnave, Cyril Moineau, Olivier Bichler, Fabrice Rastello.
-            Applying maximum entropy principle on quantized neural networks correlates with high accuracy.
-            AccML 2024 - 6th Workshop on Accelerated Machine Learning, Jan 2024, Munich, Germany.
-            [<a href="https://hal.science/hal-04409740/">html</a> | <a
-                href="https://accml.dcs.gla.ac.uk/papers/2024/6th_AccML_paper_6.pdf">pdf</a> ]
-        </li>
-        <li>José Lucas De Melo Costa, Cyril Moineau, Thibault Allenet, Inna Kucher.
-            Applying maximum entropy principle on quantized neural networks correlates with high accuracy.
-            AccML 2024 - 6th Workshop on Accelerated Machine Learning, Jan 2024, Munich, Germany.
-            [<a href="https://accml.dcs.gla.ac.uk/papers/2024/6th_AccML_paper_17.pdf">pdf</a>]
-        </li>
-    </ul>
+    {% capture links1 %}
+    [<a href="https://hal.science/hal-04409740/">html</a> |
+    <a href="https://accml.dcs.gla.ac.uk/papers/2024/6th_AccML_paper_6.pdf">pdf</a>]
+    {% endcapture %}
+
+    {% include pub_item.html
+    year="2024"
+    title="Applying maximum entropy principle on quantized neural networks correlates with high accuracy"
+    authors="Lucas Maisonnave, Cyril Moineau, Olivier Bichler, Fabrice Rastello"
+    venue="AccML 2024 - 6th Workshop on Accelerated Machine Learning"
+    location="Munich, Allemagne"
+    links=links1
+    %}
+
+    {% capture links2 %}
+    [<a href="https://accml.dcs.gla.ac.uk/papers/2024/6th_AccML_paper_17.pdf">pdf</a>]
+    {% endcapture %}
+
+    {% include pub_item.html
+    year="2024"
+    title="Applying maximum entropy principle on quantized neural networks correlates with high accuracy"
+    authors="José Lucas De Melo Costa, Cyril Moineau, Thibault Allenet, Inna Kucher"
+    venue="AccML 2024 - 6th Workshop on Accelerated Machine Learning"
+    location="Munich, Allemagne"
+    links=links2
+    %}
 
     <h2>Activité d'encadrement</h2>
 
-    <h3>Doctorant</h3>
-    <div class=articles>
+    <div class="supervision-group">
+        <h2 style="border-bottom: 1px solid var(--nav-border); padding-bottom: 10px;">
+            <i class="fa fa-graduation-cap"></i> Doctorant
+        </h2>
         {% include supervise_fr.html
         student='<a href="https://www.linkedin.com/in/lucas-maisonnave-ba8b041a2/">Lucas Maisonnave</a>'
-        degree='Doctorant'
         subject='Codage avec entropie maximale dans les réseaux de neurones profonds'
-        date='April 2023 - October 2025'
-        supervisors='<a href="https://www.linkedin.com/in/olivierbichler/">Olivier Bichler</a>, <a
-            href="https://www.linkedin.com/in/cmoineau/">Cyril Moineau</a>, <a
-            href="https://team.inria.fr/corse/team-members/fabrice-rastello/">Fabrice Rastello</a>'
+        date='Avr 2023 - Oct 2025'
+        supervisors='Olivier Bichler, Cyril Moineau, Fabrice Rastello'
         %}
     </div>
-    <h3>Étudiant en Master</h3>
-    <div class=articles>
+
+    <div class="supervision-group" style="margin-top: 40px;">
+        <h2 style="border-bottom: 1px solid var(--nav-border); padding-bottom: 10px;">
+            <i class="fa fa-book"></i> Master
+        </h2>
         {% include supervise_fr.html
         student='<a href="https://www.linkedin.com/in/florian-robert-ia/">Florian Robert</a>'
-        degree='Étudiant en Master'
         subject='Déploiement de réseaux de neurones sur processeur Qualcomm Snap Dragon'
-        date='Mars 2024 - Septembre 2024'
-        supervisors='<a href="https://www.linkedin.com/in/cmoineau/">Cyril Moineau</a>, <a
-            href="https://www.linkedin.com/in/vincent-templier/">Vincent Templier</a>'
+        date='Mar 2024 - Sep 2024'
+        supervisors='Cyril Moineau, Vincent Templier'
         %}
 
         {% include supervise_fr.html
         student='<a href="https://www.linkedin.com/in/jose-melo-costa/">José Lucas De Melo Costa</a>'
-        degree='Étudiant en Master'
         subject='Étude de l\'embarquabilité des transformers'
-        date='Avril 2023 - Octobre 2023'
-        supervisors='<a href="https://www.linkedin.com/in/cmoineau/">Cyril Moineau</a>, <a
-            href="https://www.linkedin.com/in/inna-kucher-phd-14528169/">Inna Kucher</a>'
+        date='Avr 2023 - Oct 2023'
+        supervisors='Cyril Moineau, Inna Kucher'
         %}
     </div>
+
+
+    <h1>Conférences & Présentations</h1>
+
+    {% capture gosim25_link %}
+    <a href="https://www.youtube.com/watch?v=4RdT_Al5hZY"><i class="fa fa-video-camera"></i> Enregistrement</a>
+    {% endcapture %}
+
+    {% capture pepria25_link %}
+    <a href="https://www.youtube.com/watch?v=4RdT_Al5hZY"><i class="fa fa-video-camera"></i> Enregistrement</a>
+    <a href="https://www.youtube.com/watch?v=k4QkVs-fweY"><i class="fa fa-users"></i> Interview</a>
+    {% endcapture %}
+
+    {% capture cresitt23_link %}
+    <a href="https://cresitt.com/wp-content/uploads/2023/10/05-Sem-IA-CEAList_compressed.pdf"><i
+            class="fa fa-desktop"></i> Présentation</a>
+    {% endcapture %}
+
+    {% include talk_item.html
+    date="Fev 2026"
+    type="Conférence"
+    title="A comprehensive and traceable library for deploying standalone deep neural networks "
+    event="ERTS 2026"
+    location="Toulouse, France"
+    %}
+
+    {% include talk_item.html
+    date="Mai 2025"
+    type="Spothlight"
+    title="Aidge"
+    event="Gosim"
+    location="Paris, France"
+    links=gosim25_link
+    %}
+
+    {% include talk_item.html
+    date="Mar 2025"
+    type="Workshop"
+    title="Aidge, plateforme ouverte de déploiement en embarqué"
+    event="PEPR IA Days"
+    location="Palaiseau, France"
+    links=pepria25_link
+    %}
+
+    {% include talk_item.html
+    date="Mar 2025"
+    type="Booth"
+    title="Eclipse Fundation: Présentation Eclipse Aidge"
+    event="Embedded World"
+    location="Nuremberg, Germany"
+    %}
+
+
+    {% include talk_item.html
+    date="Oct 2023"
+    type="Workshop"
+    title="DeepGreen our une plateforme indépendante et souveraine dédiée à l'IA embarquée"
+    event="CRESITT"
+    location="Orléans, France"
+    links=cresitt23_link
+    %}
+
+
+
 
 </div><!-- /.blurb -->

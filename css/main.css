@@ -5,29 +5,29 @@
 
 html {
     font-family: Jost;
-    --bg: #f9f5d7;
-    --bg-box: #f2eac7;
-    --highlight: #076678;
-    --color-text: #282828;
+    --bg: #fbf1c7;
+    --highlight: #458588;
+    --bg-box: #f2e5bc;
+    --color-text: #3c3836;
 
-    --bg-nav: rgba(251, 241, 199, 0.8);
+    --bg-nav: rgba(251, 241, 199, 0.85);
     --nav-text: #3c3836;
-    --nav-accent: #076678;
+    --nav-accent: #458588;
     --nav-border: #d5c4a1;
-    --nav-blur: blur(10px);
+    --nav-blur: blur(12px);
 
     --shadow: rgba(60, 56, 54, 0.1);
 
-    --a-color: #076678;
-    --a-grad1: #458588;
-    --a-grad2: #83a598;
+    --a-color: #af3a03;
+    --a-grad1: #af3a03;
+    --a-grad2: #d65d0e;
 
     --pp-bg: #ebdbb2;
-    --pp-border: #076678;
+    --pp-border: #458588;
 
-    --hero-box-title: #076678;
+    --bg-hero-box: rgba(242, 229, 188, 0.7);
     --hero-box-shadow: 4px 4px 0px #d5c4a1;
-    --bg-hero-box: #f2eac7;
+    --hero-box-title: #076678;
 }
 
 html[data-theme='dark'] {
@@ -506,4 +506,71 @@ div.post {
     .main_title {
         margin: 0 auto;
     }
+}
+
+
+.publications-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pub-item {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--nav-border);
+}
+
+.pub-year {
+    font-weight: bold;
+    color: var(--highlight);
+    font-size: 1.2em;
+    min-width: 60px;
+}
+
+.pub-title {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: var(--color-text);
+}
+
+.pub-authors {
+    margin: 0;
+    font-size: 0.95em;
+    opacity: 0.9;
+}
+
+.pub-venue {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: var(--highlight);
+}
+
+.pub-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-small {
+    font-size: 0.8em;
+    padding: 4px 10px;
+    border: 1px solid var(--highlight);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: all 0.2s ease;
+}
+
+.btn-small:hover {
+    background-color: var(--highlight);
+    color: white;
+}
+
+/* Highlight your name */
+.pub-authors strong {
+    color: var(--highlight);
+    text-decoration: underline;
 }

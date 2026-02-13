@@ -1,0 +1,17 @@
+<div class="pub-item"
+    style="display: flex; gap: 20px; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid var(--nav-border);">
+    <div class="pub-year" style="font-weight: bold; color: var(--highlight); font-size: 1.2em; min-width: 60px;">
+        {{ include.year }}
+    </div>
+    <div class="pub-details">
+        <h3 class="pub-title" style="margin: 0 0 5px 0; font-size: 1.1em;">{{ include.title }}</h3>
+        <p class="pub-authors" style="margin: 0; font-size: 0.95em; opacity: 0.9;">
+            {{ include.authors | replace: "Cyril Moineau", "<strong>Cyril Moineau</strong>" }}
+        </p>
+        <p class="pub-venue" style="margin: 5px 0; font-size: 0.9em; color: var(--highlight);">
+            <em>{{ include.venue }}</em>, {{ include.location }}
+        </p>
+        <div class="pub-links" style="margin-top: 10px; display: flex; gap: 10px;">
+            {{ include.links }} </div>
+    </div>
+</div>
