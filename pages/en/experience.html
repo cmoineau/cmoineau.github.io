@@ -5,129 +5,320 @@ lang: en
 ref: work
 permalink: /experiences
 ---
-	<div class="blurb">
-		<h1>My work experiences</h1>
-		<p>If you want to see my academic career you can click <a href="/education">here</a>.</p>
-		<h2 style="text-align: left">Summary :</h2>
-		<ul>
-			<li><a href="#cea">CEA list</a></li>
-			<li><a href="#irisa">Internship in the team SHAMAN of the IRISA 2019-2020</a></li>
-			<li><a href="#NCTU">Internship at the NCTU 2019-2019</a></li>
-			<li><a href="#Metropole">Internship at Orléans Métropole 2018-2018</a></li>
-		</ul>
+<div class="blurb">
+	<h1>My work experiences</h1>
 
-		<div class="box">
-			<div class="bulb"><h2 id="cea">CEA list</h2></div>
-			<img class="center" src="/_static/cea.jpg" alt="CEA Logo" style="width: 8em; height: 8em; box-shadow: 2px 0px 6px black;">
-	
-			{% include we_info_en.html 
-				date='November 2020 - Now' 
-				company='<a href="http://www-list.cea.fr/en/">CEA</a>' 
-				location='Paris, France' 
-				skill='Python, C++, Cuda, TensorRT, Deep Neural Network' 
+
+	<div class="experience-timeline">
+
+		<div class="experience-card card-work" id="cea">
+			<span class="type-badge badge-work">Experience</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Research Engineer</h2>
+					<h3 style="color: var(--highlight); margin:0">CEA, Embedded AI Laboratory</h3>
+				</div>
+				<img src="/_static/cea.jpg" class="company-logo" alt="CEA Logo">
+			</div>
+
+			{% include we_info.html
+			date='November 2020 - Present'
+			location='Paris-Saclay, France'
 			%}
 
-			<h3>Description of the company :</h3>
-			<p>
-				Atomic Energy Commission (CEA) is one of the principal numeric actor in the France and Europe.
-				It aims to do research and transfer its knowledge to the industry.
-				Systems and Technologies Integration Laboratory (List) is an insitut of the CEA Tech that specializes in smart digital system research.
-			</p>
-			<h3>Descritpion of my work :</h3>
-			<p>
-				I work as one of the developer of N2D2 (for 'Neural Network Design & Deployment'), an open source framework for Deep Neural Network (DNN) simulation and full DNN-based applications building.
-				The project is available on <a href="https://github.com/CEA-LIST/N2D2">GitHub</a>.
-			</p>
-		</div>
-		
-		<div class="box">
-			<div class="bulb"><h2 id="irisa">Internship in the team SHAMAN of the IRISA 2020</h2></div>
-			<img class="center" src="/_static/irisa.jpg" alt="IRISA Logo" style="width: 14em; height: 4em; box-shadow: 2px 0px 6px black;">
-			{% include we_info_en.html 
-				date='November 2019 - July 2020' 
-				duration='6 months' 
-				company='<a href="http://www.irisa.fr/">IRISA</a>' 
-				location='Lannion, France' 
-				skill='Python, Research, Redaction, Fuzzy Logic, Symbolic AI'
-			%}
-		
-			<h3>Description of the internship :</h3>
-			<p>
-				As part of my final year internship, I worked at <a href="http://www.irisa.fr/">IRISA</a>'s laboratory in the team <a href="http://www-shaman.irisa.fr/">SHAMAN</a> under the supervision of <a href="http://people.irisa.fr/Gregory.Smits/">Grégory SMITS</a>.
-				The goal of the internship was to improve a method to generate linguistic summaries of a big database.
-				A linguistic summary is a set of fuzzy properties such as "most crow are black".
-				To generate such a summary, the classic approach requires to go through the whole database, which results in a linear complexity depending of the size of the database. 
-				The complexity is also exponential depending on the size of the vocabulary. 
-			</p>
-			<p>
-				The team <a href="http://www-shaman.irisa.fr/">SHAMAN</a> had written two papers for a method that uses metadata which are stored in the database management system.
-				While their method has a perfect precision for atomic properties, it has some flaw for conjonctive properties (for example: "Most crow are black and tall").
-				First, I conducted a bibliographic study in order to understand what caused this flaw. 
-				Among the several solutions that I suggested, the used of multidimensionnal histogram was chosen. 
-				From this point onwards, I implemented three multidimensionnal histograms (<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.45.75">MHIST</a>, 
-				<a href="https://www.researchgate.net/publication/2459804_Approximating_Multi-Dimensional_Aggregate_Range_Queries_Over_Real_Attributes">GENHIST</a> et 
-				<a href="https://www.microsoft.com/en-us/research/publication/stholes-a-multidimensional-workload-aware-histogram/">STHOLES</a>) using Python (3.6.9) and I compared them with one another. 
-				In order to make it easy to carry on with my work, I created a dockerized API using <a href="https://www.docker.com/">Docker</a> and <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> before ending my internship.
-				The code developed during this project is available on <a href="https://github.com/cmoineau/Histogramme_Multidimensionnel">GitHub</a>.
-			</p>
+			<div class="exp-content">
+				<p>
+					Lead developer and architect for the <a href="https://eclipse.dev/aidge/">Aidge Eclipse platform</a>
+					(successor to <a href="github.com/CEA-LIST/N2D2">N2D2</a>), a
+					comprehensive framework for optimizing and deploying Deep Neural Networks (DNN) on constrained
+					embedded targets.
+				</p>
 
-			<h3>Main Takeaways :</h3>
-			<p>
-				This internship has allowed me to improve my scientific papers reading and analyzing skills.
-				Due to the COVID-19 pandemy, I had to work mostly from home. This gave me the opportunity to develop my autonomy and to telework for the first time.
-				I have also discovered some underlying problematics of the reasearch world, such as the reproductiblity of the results of scientific papers.
-			</p>
+				<ul>
+					<li><strong>Framework Architecture:</strong> Orchestrated the full lifecycle of the Aidge/N2D2
+						ecosystem, including the development of core engines for quantization, code generation, and
+						cross-platform model deployment.</li>
+					<li><strong>High-Performance Computing:</strong> Developed custom high-performance kernels and
+						operators in <strong>C++</strong> and <strong>CUDA/cuDNN</strong> for object detection and
+						semantic segmentation, specifically optimized for autonomous driving time constraints.</li>
+					<li><strong>Embedded Deployment:</strong> Optimized and deployed models on diverse hardware
+						including <strong>NVIDIA Jetson Orin</strong> (via TensorRT), <strong>STM32</strong>, and
+						specialized neural accelerators (NeuroCorgi, PNeuro).</li>
+					<li><strong>Developer Ecosystem:</strong> Built a comprehensive <strong>Python SDK using
+							PyBind11</strong>, enabling seamless interoperability between C++ backends and the research
+						ecosystem (PyTorch, ONNX, NumPy).</li>
+					<li><strong>Engineering:</strong> Modernized the development workflow by implementing
+						<strong>GitLab CI/CD</strong> pipelines and <strong>Docker</strong> environments, significantly
+						improving framework stability and release velocity.
+					</li>
+					<li><strong>Technical Mentorship:</strong> Directing the research of PhD and Master's students on
+						cutting-edge topics including <strong>LLM quantization (LLaMA)</strong> and <strong>Vision
+							Transformer</strong> optimization.</li>
+				</ul>
+			</div>
+
+			<div class="skill-pills">
+				<span class="skill-pill">C++</span>
+				<span class="skill-pill">CUDA</span>
+				<span class="skill-pill">Python</span>
+				<span class="skill-pill">PyBind11</span>
+				<span class="skill-pill">TensorRT</span>
+				<span class="skill-pill">GitLab CI</span>
+				<span class="skill-pill">Embedded AI</span>
+			</div>
 		</div>
-		<div class="box">
-			<div class="bulb"><h2 id="NCTU">Internship at the NCTU 2019</h2></div>
-			<img class="center" src="/_static/NCTU.jpg" alt="NCTU Logo" style="width: 8em; height: 8em; border-radius: 50%; box-shadow: 2px 0px 6px black;">
-			
-			{% include we_info_en.html 
-				date='June 2019 - August 2019' 
-				duration='2 months' 
-				company='<a href="https://www.nctu.edu.tw/en/">National Chiao Tung University</a>' 
-				location='Hsinchu, Taïwan' 
-				skill='Python, Keras, CNN, English'
+
+		<div class="experience-card card-work" id="irisa">
+			<span class="type-badge badge-work">Experience</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Research Intern</h2>
+					<h3 style="color: var(--highlight); margin:0">Shaman Team, IRISA</h3>
+				</div>
+				<img src="/_static/irisa.jpg" class="company-logo" alt="IRISA Logo">
+			</div>
+			{% include we_info.html
+			date='February 2020 - July 2020'
+			location='Lannion, France'
 			%}
 
-			<h3>Description of the internship :</h3>
-			<p>
-				During summer 2019, I spent 2 months at the <a href="https://www.nctu.edu.tw/en/">National Chiao Tung University</a> (NCTU) Taiwan in the <a href="http://soc.ee.nctu.edu.tw/">Intelligent Electronics and System-On-Chip</a> (IESOC) laboratory.
-			</p>
+			<div class="exp-content">
+				<p>
+					Final year research internship focused on optimizing the generation of <strong>linguistic
+						summaries</strong> from massive databases using fuzzy logic and advanced data structures.
+				</p>
 
-			<p>
-				During these 2 months, I have worked on detecting emotion using ECG (Electrocardiogram) and PPG (Photoplethysmogram) signals. For this I used a Convolutional Neuronnal Network (CNN) with the library <a href="https://keras.io/">Keras</a> (v2.24). This also made me work on issues such as peak detection and real time implementation. Indeed, at the end of the internship I had to implement my CNN on the <a href="https://developer.nvidia.com/embedded/jetson-nano-developer-kit">JetSon Nano board</a>. 
-			</p>
-			
-			<h3>Main Takeaways :</h3>
-			<p>
-				This internship was a very good first research experience. I have been able to understand the difficulties related to working in a research laboratory. Even if the thematic was not in the scope of what I have done at school, I was really eager to learn. These two months confirmed my desire to do research.
-			</p>
+				<ul>
+					<li><strong>Algorithmic Optimization:</strong> Addressed the exponential complexity of generating
+						conjunctive fuzzy properties (e.g., "Most crows are black AND tall") by moving away from linear
+						database scans.</li>
+					<li><strong>Research & Implementation:</strong> Conducted a bibliographic study on multidimensional
+						data representation and implemented three complex histogram methods (<strong>MHIST, GENHIST, and
+							STHOLES</strong>) in Python to mitigate the "curse of dimensionality."</li>
+					<li><strong>Infrastructure & Reproducibility:</strong> Designed and deployed a <strong>dockerized
+							REST API</strong> using <strong>Flask</strong> to wrap the research algorithms, ensuring
+						portability and reproducibility of the results.
+						team.</li>
+				</ul>
+			</div>
+
+			<div class="skill-pills">
+				<span class="skill-pill">Python</span>
+				<span class="skill-pill">Docker</span>
+				<span class="skill-pill">Flask</span>
+				<span class="skill-pill">Fuzzy Logic</span>
+				<span class="skill-pill">Data Modeling</span>
+				<span class="skill-pill">REST API</span>
+			</div>
 		</div>
-		<div class="box">
-			<div class="bulb"><h2 id="Metropole">Orléans Métropole 2018</h2></div>
-			<img class="center" src="/_static/orleans_metropole.jpg" alt="Orleans Metropole Logo" style="width: 8em; height: 8em; box-shadow: 2px 0px 6px black;">
-			
-			{% include we_info_en.html 
-				date='July 2018 - August 2018' 
-				duration='2 months' 
-				company='<a href="http://www.orleans-metropole.fr/">Orléans Métropole</a>' 
-				location='Orléans, France' 
-				skill='Shell Script, Network, Centreon, Linux'
+
+		<div class="experience-card card-edu" id="msif-section">
+			<span class="type-badge badge-edu">Education</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Master's Degree in Computer Science Research</h2>
+					<h3 style="color: var(--highlight); margin:0">University of Rennes 1</h3>
+				</div>
+				<img src="/_static/logo_ur1.png" class="company-logo" alt="Rennes 1 Logo">
+			</div>
+			{% include we_info.html
+			date='2019 - 2020'
+			location='Rennes, France'
 			%}
 
-			<h3>Description of the internship :</h3>
-			<p>I spend 2 months during summer 2018 at the <a href="http://www.orleans-metropole.fr/">Orléans Métropole</a> at the Information Systems Division (ISD). This summer, I worked on two different topics.
-			</p>
-			<ol>
-				<li> Establishement of a supervision using the <a href="https://www.centreon.com/en/solutions/centreon/">OS Centreon</a>. I arrived during the fusion between the services of every ISD of the metropole. In this contexte, the ISD of Orléans decided to upgrade their supervision services. During this internship I have been able to witness a real network. I have learned many things about network and virtualization.
-				</li>
-				<li> Management of the Active Directory (AD). The AD of the metropole had a lot of users who were supposed to be gone. My work was to found these users and to remove them. This project was really interresting since I had to create a way to detect users who aren't supposed to have an active directory with the information given by the AD. For this I used Power Shell script.
-				</li>
-			</ol>
-			<h3>Main Takeaways :</h3>
-			<p>
-				This was my first technical internship. I have learnt a lot, and I was given responsabilities. Most particularly for the cleaning of the AD, where a mistake could have lead to the supression of a worker's account.
-			</p>
+			<div class="exp-content">
+				<p>Specialized in <strong>Data Science</strong> and <strong>Research Methodology</strong>. This
+					dual-degree track allowed me to explore advanced theoretical topics while completing my engineering
+					cycle.</p>
+				<details class="course-accordion">
+					<summary><i class="fa fa-list"></i> View Key Research Courses</summary>
+					<ul>
+						<li>Data Mining & Visualization</li>
+						<li>Probabilistic Modeling</li>
+						<li>Scientific Publication Writing</li>
+					</ul>
+				</details>
+			</div>
 		</div>
-	</div><!-- /.blurb -->
+
+		<div class="experience-card card-edu" id="enssat-section">
+			<span class="type-badge badge-edu">Education</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Engineering Degree in Computer Science (AI)</h2>
+					<h3 style="color: var(--highlight); margin:0">ENSSAT Lannion</h3>
+				</div>
+				<img src="/_static/logo_enssat.png" class="company-logo" alt="ENSSAT Logo">
+			</div>
+			{% include we_info.html
+			date='2017 - 2020'
+			location='Lannion, France'
+			%}
+
+			<div class="exp-content">
+				<p>Comprehensive training in <strong>Software Engineering</strong> with a specialization in
+					<strong>Artificial Intelligence</strong>. Acquired a versatile tool-set spanning from low-level
+					systems to high-level machine learning.
+				</p>
+				<details class="course-accordion">
+					<summary><i class="fa fa-list"></i> View Core Curriculum</summary>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.9em;">
+						<div>
+							<strong>AI & Data:</strong>
+							<ul style="margin:0">
+								<li>Machine Learning</li>
+								<li>Advanced Databases</li>
+								<li>Language Processing</li>
+							</ul>
+						</div>
+						<div>
+							<strong>Systems & Software:</strong>
+							<ul style="margin:0">
+								<li>OS & Real-Time</li>
+								<li>C / C++ / Java</li>
+								<li>Cyber Security</li>
+							</ul>
+						</div>
+					</div>
+				</details>
+			</div>
+		</div>
+
+
+		<div class="experience-card card-work" id="nctu">
+			<span class="type-badge badge-work">Experience</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Research Intern</h2>
+					<h3 style="color: var(--highlight); margin:0">National Chiao Tung University</h3>
+				</div>
+				<img src="/_static/NCTU.jpg" class="company-logo" style="border-radius: 50%;" alt="NCTU Logo">
+			</div>
+
+			{% include we_info.html
+			date='July 2019 - August 2019'
+			location='Hsinchu, Taiwan'
+			%}
+
+			<div class="exp-content">
+				<p>
+					International research internship at the <strong>Intelligent Electronics and System-On-Chip (IESOC)
+						laboratory</strong>, focusing on the intersection of biomedical signal processing and edge
+					computing.
+				</p>
+
+				<ul>
+					<li><strong>Signal Processing:</strong> Developed a Python-based pipeline to process raw <strong>ECG
+							(Electrocardiogram)</strong> and <strong>PPG (Photoplethysmogram)</strong> signals,
+						implementing peak detection algorithms to extract robust features for affective computing.</li>
+					<li><strong>Deep Learning Development:</strong> Designed and trained a <strong>Convolutional Neural
+							Network (CNN)</strong> using <strong>Keras</strong> to classify human emotional states based
+						on physiological responses.</li>
+					<li><strong>Edge AI Deployment:</strong> Successfully ported and optimized the trained model for
+						real-time inference on the <strong>NVIDIA Jetson Nano</strong>.</li>
+				</ul>
+			</div>
+
+			<div class="skill-pills">
+				<span class="skill-pill">Python</span>
+				<span class="skill-pill">Keras</span>
+				<span class="skill-pill">NVIDIA Jetson Nano</span>
+				<span class="skill-pill">CNN</span>
+				<span class="skill-pill">Signal Processing</span>
+				<span class="skill-pill">Embedded AI</span>
+			</div>
+		</div>
+		<div class="experience-card card-work" id="metropole">
+			<span class="type-badge badge-work">Experience</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">IT Systems Intern</h2>
+					<h3 style="color: var(--highlight); margin:0">Orléans Métropole</h3>
+				</div>
+				<img src="/_static/orleans_metropole.jpg" class="company-logo" alt="Orléans Métropole Logo">
+			</div>
+
+			{% include we_info.html
+			date='July 2018 - August 2018'
+			duration='2 months'
+			location='Orléans, France'
+			%}
+
+			<div class="exp-content">
+				<ul>
+					<li><strong>Systems Supervision:</strong> Contributed to the upgrade of network supervision
+						services
+						using <strong>Centreon</strong> during a major ISD merger.</li>
+					<li><strong>Automation:</strong> Developed <strong>PowerShell</strong> scripts to audit and
+						manage
+						the Active Directory, identifying and removing inactive user accounts.</li>
+					<li><strong>Responsibility:</strong> Managed critical infrastructure tasks where high precision
+						was
+						required to maintain service continuity for workers.</li>
+				</ul>
+			</div>
+
+			<div class="skill-pills">
+				<span class="skill-pill">PowerShell</span>
+				<span class="skill-pill">Shell Script</span>
+				<span class="skill-pill">Linux</span>
+				<span class="skill-pill">Networking</span>
+			</div>
+		</div>
+
+		<div class="experience-card card-edu" id="pothier">
+			<span class="type-badge badge-edu">Education</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Preparatory Classes (CPGE)</h2>
+					<h3 style="color: var(--highlight); margin:0">Lycée Pothier</h3>
+				</div>
+				<img src="/_static/pothier.jpg" class="company-logo" alt="Lycée Pothier Logo">
+			</div>
+
+			{% include we_info.html
+			date='2015 - 2017'
+			location='Orléans, France'
+			%}
+
+			<div class="exp-content">
+				<p>Intensive Mathematics and Physics program (MPSI/MP) preparing for competitive entrance exams to
+					French "Grandes Écoles". This period developed high-level analytical rigor and a
+					strong foundation in fundamental sciences.</p>
+
+				<details class="course-accordion">
+					<summary><i class="fa fa-list"></i> View Core Curriculum</summary>
+					<div
+						style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9em; margin-top: 10px;">
+						<div>
+							<strong>Mathematics:</strong>
+							<ul style="margin:0">
+								<li>Linear & Euclidean Algebra</li>
+								<li>Differential Calculus</li>
+								<li>Probability & Statistics</li>
+							</ul>
+						</div>
+						<div>
+							<strong>Physics & Chemistry:</strong>
+							<ul style="margin:0">
+								<li>Electromagnetism & Optics</li>
+								<li>Thermodynamics</li>
+								<li>Quantum Modeling</li>
+							</ul>
+						</div>
+						<div>
+							<strong>Computer Science:</strong>
+							<ul style="margin:0">
+								<li>Recursive Programming</li>
+								<li>Introduction to SQL</li>
+								<li>Algorithmic Modeling</li>
+							</ul>
+						</div>
+					</div>
+				</details>
+			</div>
+		</div>
+
+	</div>
+
+</div><!-- /.blurb -->

@@ -1,0 +1,19 @@
+<div class="we-metadata"
+    style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px; font-size: 0.9em; color: var(--color-text); opacity: 0.8;">
+    <span title="Date Range">
+        <i class="fa fa-calendar" aria-hidden="true" style="color: var(--highlight); margin-right: 5px;"></i>
+        {{ include.date }}
+    </span>
+
+    {% if include.duration %}
+    <span title="Duration">
+        <i class="fa fa-clock-o" aria-hidden="true" style="color: var(--highlight); margin-right: 5px;"></i>
+        {{ include.duration }}
+    </span>
+    {% endif %}
+
+    <span title="Location">
+        <i class="fa fa-map-marker" aria-hidden="true" style="color: var(--highlight); margin-right: 5px;"></i>
+        {{ include.location }}
+    </span>
+</div>

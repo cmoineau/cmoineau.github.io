@@ -1,144 +1,300 @@
 ---
 layout: fr
-title: Experiences
+title: Expériences
 lang: fr
 ref: work
 permalink: /experiences/fr
 ---
-	<div class="blurb">
-		<h1>Mon expérience professionnelle</h1>
-		<p>Si vous voulez voir les études que j'ai réalisé, vous pouvez cliquer <a href="/education/fr">ici</a>.</p>
+<div class="blurb">
+	<h1>Mon parcours professionnel</h1>
 
-		<h2 style="text-align: left">Sommaire :</h2>
-		<ul class="summary">
-			<li><a href="#cea">CEA list</a></li>
-			<li><a href="#irisa">Stage dans l'équipe SHAMAN de l'IRISA 2020</a></li>
-			<li><a href="#NCTU">Stage à la NCTU 2019</a></li>
-			<li><a href="#Metropole">Orléans Métropole 2018</a></li>
-		</ul>
+	<div class="experience-timeline">
 
-		<div class="box">
-			<div class="bulb"><h2 id="cea">CEA LIST</h2></div>
-			<img class="center" src="/_static/cea.jpg" alt="Logo CEA" style="width: 8em; height: 8em; box-shadow: 2px 0px 6px black;">
-			{% include we_info_fr.html 
-				date='November 2020 - Maintenant' 
-				company='<a href="http://www-list.cea.fr/">CEA</a>' 
-				location='Paris, France' 
-				skill='Python, C++, Cuda, TensorRT, Réseaux de Neuronnes profonds'
+		<div class="experience-card card-work" id="cea">
+			<span class="type-badge badge-work">Expérience</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Ingénieur Chercheur</h2>
+					<h3 style="color: var(--highlight); margin:0">CEA, Laboratoire d'Intelligence Artificielle Embarquée
+					</h3>
+				</div>
+				<img src="/_static/cea.jpg" class="company-logo" alt="Logo CEA">
+			</div>
+
+			{% include we_info.html
+			date='Novembre 2020 - Présent'
+			location='Paris-Saclay, France'
 			%}
-		
-			<h3>Description de l'entreprise :</h3>
-			<p>
-				Le Commissariat de l'énergie atomique (CEA) est un acteur majeur du numérique français et européen. 
-				Il a pour objectif de faire de la recherche et de transmettre le savoir vers le milieu industriel.
-				Le Laboratoire d'Intégration des Systèmes et des Technologies (LIST) est l'un des trois insituts du CEA Tech, il est spécialisé dans la recherche sur les systèmes numériques intelligents.
-			</p>
-			<h3>Description du poste :</h3>
-			<p>
-				Je travail en tant que dévelopeur pour N2D2 (Neural Network Design & Deployment), un projet open source permettant l'apprentissage et la l'inférence de réseau de neuronnes profond ainsi que leurs déploiements sur matériel embarqué.
-				Le projet est disponible sur <a href="https://github.com/CEA-LIST/N2D2">GitHub</a>.
-				I work as one of the developer of N2D2 (for 'Neural Network Design & Deployment'), an open source CAD framework for Deep Neural Network (DNN) simulation and full DNN-based applications building.
-				The project is available on <a href="https://github.com/CEA-LIST/N2D2">GitHub</a>.
-			</p>
+
+			<div class="exp-content">
+				<p>
+					Développeur principal et architecte logiciel de la <a href="https://eclipse.dev/aidge/">plateforme
+						Eclipse Aidge</a>
+					(successeur de <a href="github.com/CEA-LIST/N2D2">N2D2</a>), un framework complet dédié à
+					l'optimisation,
+					la quantification et au déploiement de réseaux de neurones profonds (DNN) sur cibles embarquées
+					contraintes.
+				</p>
+
+				<ul>
+					<li><strong>Architecture du Framework :</strong> Orchestration du cycle de vie complet de
+						l'écosystème Aidge/N2D2, incluant le développement des moteurs de quantification, de génération
+						de code et du déploiement multiplateforme.</li>
+					<li><strong>Calcul Haute Performance :</strong> Développement de noyaux (kernels) et d'opérateurs
+						personnalisés en <strong>C++</strong> et <strong>CUDA/cuDNN</strong> pour la détection d'objets
+						et la segmentation sémantique, optimisés pour les contraintes temps réel de la conduite
+						autonome.</li>
+					<li><strong>Déploiement Embarqué :</strong> Optimisation et déploiement de modèles sur divers
+						matériels dont <strong>NVIDIA Jetson Orin</strong> (via TensorRT), <strong>STM32</strong>, et
+						accélérateurs neuronaux spécialisés (NeuroCorgi, PNeuro).</li>
+					<li><strong>Écosystème Développeur :</strong> Création d'un <strong>SDK Python via
+							PyBind11</strong>, permettant une interopérabilité fluide entre les backends C++ et les
+						outils de recherche (PyTorch, ONNX, NumPy).</li>
+					<li><strong>Ingénierie Logicielle :</strong> Modernisation du workflow de développement par la mise
+						en place de pipelines <strong>GitLab CI/CD</strong> et d'environnements <strong>Docker</strong>,
+						améliorant la stabilité du framework et la vélocité des versions.</li>
+					<li><strong>Encadrement Technique :</strong> Supervision de doctorants et d'étudiants en Master sur
+						des sujets de pointe tels que la <strong>quantification de LLM (LLaMA)</strong> et
+						l'optimisation de <strong>Vision Transformers</strong>.</li>
+				</ul>
+			</div>
+
+			<div class="skill-pills">
+				<span class="skill-pill">C++</span>
+				<span class="skill-pill">CUDA</span>
+				<span class="skill-pill">Python</span>
+				<span class="skill-pill">PyBind11</span>
+				<span class="skill-pill">TensorRT</span>
+				<span class="skill-pill">GitLab CI</span>
+				<span class="skill-pill">IA Embarquée</span>
+			</div>
 		</div>
 
-	
-	<div class="box">
-		<div class="bulb"><h2 id="irisa">Stage dans l'équipe SHAMAN de l'IRISA 2020</h2></div>
-		<img class="center" src="/_static/irisa.jpg" alt="Logo IRISA" style="width: 14em; height: 4em; box-shadow: 2px 0px 6px black;">
-			
-		{% include we_info_fr.html 
-			date='Novembre 2019 - Juillet 2020' 
-			duration='8 mois'
-			company='<a href="http://www.irisa.fr/">IRISA</a>'
-			location='Lannion, France' 
-			skill='Python, Recherche, Rédaction, Logique Floue, IA Symbolique, Flask, Docker'
-		%}
+		<div class="experience-card card-work" id="irisa">
+			<span class="type-badge badge-work">Expérience</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Stagiaire de recherche (Fin d'études)</h2>
+					<h3 style="color: var(--highlight); margin:0">Équipe Shaman, IRISA</h3>
+				</div>
+				<img src="/_static/irisa.jpg" class="company-logo" alt="Logo IRISA">
+			</div>
 
-		<h3>Description du poste :</h3>
-		<p>
+			{% include we_info.html
+			date='Février 2020 - Juillet 2020'
+			location='Lannion, France'
+			%}
 
-			Dans le cadre de mon stage de fin d'étude, j'ai travaillé dans les laboratoires de <a href="http://www.irisa.fr/">l'Institut de Recherche en Informatique et Systèmes Aléatoires</a> (IRISA), au sein de l'équipe <a href="http://www-shaman.irisa.fr/">SHAMAN</a>.
-			L'objectif de ce stage était d'améliorer une méthode de génération de résumés linguistiques d'une base de données massive. 
-			Un résumé linguistique correspond à un ensemble de propriétés floues, par exemple : "La plupart des corbeaux sont noirs". 
-			Pour générer ce genre de résumé, les approches classiques ont une complexité linéaire en fonction de la taille de la 
-			base de données et exponentielle en fonction de la taille du vocabulaire. L'équipe <a href="http://www-shaman.irisa.fr/">SHAMAN</a> a proposé de s'appuyer sur 
-			des méta-données stockées par les Systèmes de Gestion de Base de Données pour éviter le parcours séquentiel de la base de 
-			données. Leur méthode est parfaite dans le cas où les propriétés à étudier sont atomiques, mais perfectible dans le cas d'une 
-			conjonction de propriétés (par exemple: "La plupart des corbeaux sont noirs <b>et</b> grands").
-		</p>
-		<p>
+			<div class="exp-content">
+				<p>
+					Stage de recherche de fin d'études axé sur l'optimisation de la génération de <strong>résumés
+						linguistiques</strong>
+					à partir de bases de données massives en utilisant la logique floue.
+				</p>
 
-			Dans un premier temps, j'ai réalisé une étude bibliographique afin d'étudier la cause des erreurs d'estimation et j'ai proposé plusieurs solutions.
-			Lors de mon stage; l'utilisation d'histogrammes multidimensionnels ayant été la solution retenue. 
-			Ensuite, j'ai travaillé sur l'implémentation de 3 histogrammes multidimensionnels (<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.45.75">MHIST</a>, 
-			<a href="https://www.researchgate.net/publication/2459804_Approximating_Multi-Dimensional_Aggregate_Range_Queries_Over_Real_Attributes">GENHIST</a> et 
-			<a href="https://www.microsoft.com/en-us/research/publication/stholes-a-multidimensional-workload-aware-histogram/">STHOLES</a>) 
-			en Python (3.6.9). 
-			Enfin, j'ai utilisé <a href="https://www.docker.com/">Docker</a> et <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> afin de créer une API dockerisée pour qu'il soit plus facile de reprendre le travail que j'ai réalisé en stage.
-			Le code développé pendant le stage est disponible sur <a href="https://github.com/cmoineau/Histogramme_Multidimensionnel">GitHub</a>.
-		</p>
+				<ul>
+					<li><strong>Optimisation Algorithmique :</strong> Traitement de la complexité exponentielle liée à
+						la génération de propriétés floues conjonctives en substituant les parcours linéaires de base de
+						données par des structures optimisées.</li>
+					<li><strong>Recherche & Implémentation :</strong> Étude bibliographique sur la représentation de
+						données multidimensionnelles et implémentation sous Python de trois méthodes d'histogrammes
+						complexes (<strong>MHIST, GENHIST et STHOLES</strong>) pour pallier le "fléau de la dimension".
+					</li>
+					<li><strong>Infrastructure & Reproductibilité :</strong> Conception et déploiement d'une <strong>API
+							REST dockerisée</strong> via <strong>Flask</strong> pour encapsuler les algorithmes de
+						recherche, garantissant la portabilité et la reproductibilité des résultats.</li>
+				</ul>
+			</div>
 
-		<h3>Expérience acquise :</h3>
-		<p>
-			Ce stage m'a permis d'améliorer mes capacités de lecture et de synthèse d'articles scientifiques. 
-			Il s'est déroulé majoritairement à distance à cause de l'épidémie de COVID-19. 
-			Ces conditions de travail m'ont permis de développer mon autonomie et de découvrir le monde du télé-travail. 
-			J'ai aussi découvert de nouvelles problèmatiques inhérentes au travail de chercheur telles que la reproductibilité des résultats d'un article scientifique. 
-		</p>
+			<div class="skill-pills">
+				<span class="skill-pill">Python</span>
+				<span class="skill-pill">Docker</span>
+				<span class="skill-pill">Flask</span>
+				<span class="skill-pill">Logique Floue</span>
+				<span class="skill-pill">Modélisation de données</span>
+				<span class="skill-pill">API REST</span>
+			</div>
+		</div>
+
+		<div class="experience-card card-edu" id="msif-section">
+			<span class="type-badge badge-edu">Formation</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Master de Recherche en Informatique</h2>
+					<h3 style="color: var(--highlight); margin:0">Université de Rennes 1</h3>
+				</div>
+				<img src="/_static/logo_ur1.png" class="company-logo" alt="Logo Rennes 1">
+			</div>
+			{% include we_info.html
+			date='2019 - 2020'
+			location='Rennes, France'
+			%}
+
+			<div class="exp-content">
+				<p>Spécialisation en <strong>Science des Données</strong> et <strong>Méthodologie de la
+						Recherche</strong>. Ce double cursus m'a permis d'explorer des sujets théoriques avancés
+					parallèlement à mon cycle ingénieur.</p>
+				<details class="course-accordion">
+					<summary><i class="fa fa-list"></i> Voir les cours principaux</summary>
+					<ul>
+						<li>Data Mining & Visualisation</li>
+						<li>Modélisation Probabiliste</li>
+						<li>Rédaction de Publications Scientifiques</li>
+					</ul>
+				</details>
+			</div>
+		</div>
+
+		<div class="experience-card card-edu" id="enssat-section">
+			<span class="type-badge badge-edu">Formation</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Diplôme d'Ingénieur en Informatique (IA)</h2>
+					<h3 style="color: var(--highlight); margin:0">ENSSAT Lannion</h3>
+				</div>
+				<img src="/_static/logo_enssat.png" class="company-logo" alt="Logo ENSSAT">
+			</div>
+			{% include we_info.html
+			date='2017 - 2020'
+			location='Lannion, France'
+			%}
+
+			<div class="exp-content">
+				<p>Formation complète en <strong>Génie Logiciel</strong> avec une spécialisation en <strong>Intelligence
+						Artificielle</strong>. Acquisition d'un socle technique polyvalent, du système bas niveau au
+					machine learning de haut niveau.</p>
+				<details class="course-accordion">
+					<summary><i class="fa fa-list"></i> Voir le programme principal</summary>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.9em;">
+						<div>
+							<strong>IA & Data :</strong>
+							<ul style="margin:0">
+								<li>Apprentissage Automatique</li>
+								<li>Bases de Données Avancées</li>
+								<li>Traitement du Langage</li>
+							</ul>
+						</div>
+						<div>
+							<strong>Systèmes & Logiciels :</strong>
+							<ul style="margin:0">
+								<li>OS & Temps Réel</li>
+								<li>C / C++ / Java</li>
+								<li>Cybersécurité</li>
+							</ul>
+						</div>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="experience-card card-work" id="nctu">
+			<span class="type-badge badge-work">Expérience</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Stagiaire de recherche</h2>
+					<h3 style="color: var(--highlight); margin:0">National Chiao Tung University</h3>
+				</div>
+				<img src="/_static/NCTU.jpg" class="company-logo" style="border-radius: 50%;" alt="Logo NCTU">
+			</div>
+
+			{% include we_info.html
+			date='Juillet 2019 - Août 2019'
+			location='Hsinchu, Taiwan'
+			%}
+
+			<div class="exp-content">
+				<p>Stage de recherche international au laboratoire <strong>IESOC (Intelligent Electronics and
+						System-On-Chip)</strong>, axé sur le traitement de signaux biomédicaux et l'Edge Computing.</p>
+				<ul>
+					<li><strong>Traitement du Signal :</strong> Développement d'une pipeline Python pour traiter des
+						signaux bruts <strong>ECG</strong> et <strong>PPG</strong> (électro/photopléthysmogramme) et
+						extraction de caractéristiques.</li>
+					<li><strong>Deep Learning :</strong> Conception et entraînement d'un <strong>Réseau de Neurones
+							Convolutif (CNN)</strong> via <strong>Keras</strong> pour classifier des états émotionnels.
+					</li>
+					<li><strong>Déploiement Edge AI :</strong> Portage et optimisation du modèle pour l'inférence temps
+						réel sur <strong>NVIDIA Jetson Nano</strong>.</li>
+				</ul>
+			</div>
+			<div class="skill-pills">
+				<span class="skill-pill">Python</span>
+				<span class="skill-pill">Keras</span>
+				<span class="skill-pill">Jetson Nano</span>
+				<span class="skill-pill">CNN</span>
+				<span class="skill-pill">Signal</span>
+			</div>
+		</div>
+
+		<div class="experience-card card-work" id="metropole">
+			<span class="type-badge badge-work">Expérience</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Stagiaire Systèmes d'Information</h2>
+					<h3 style="color: var(--highlight); margin:0">Orléans Métropole</h3>
+				</div>
+				<img src="/_static/orleans_metropole.jpg" class="company-logo" alt="Logo Orléans Métropole">
+			</div>
+
+			{% include we_info.html
+			date='Juillet 2018 - Août 2018'
+			location='Orléans, France'
+			%}
+
+			<div class="exp-content">
+				<ul>
+					<li><strong>Supervision Système :</strong> Contribution à la mise à jour des services de supervision
+						réseau via <strong>Centreon</strong>.</li>
+					<li><strong>Automatisation :</strong> Développement de scripts <strong>PowerShell</strong> pour
+						l'audit et la gestion de l'Active Directory (nettoyage des comptes inactifs).</li>
+					<li><strong>Responsabilité :</strong> Gestion de tâches d'infrastructure critiques nécessitant une
+						grande précision pour garantir la continuité de service.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="experience-card card-edu" id="pothier">
+			<span class="type-badge badge-edu">Formation</span>
+			<div class="exp-header">
+				<div>
+					<h2 style="margin:0">Classes Préparatoires (CPGE)</h2>
+					<h3 style="color: var(--highlight); margin:0">Lycée Pothier</h3>
+				</div>
+				<img src="/_static/pothier.jpg" class="company-logo" alt="Logo Lycée Pothier">
+			</div>
+
+			{% include we_info.html
+			date='2015 - 2017'
+			location='Orléans, France'
+			%}
+
+			<div class="exp-content">
+				<p>Filière intensive Mathématiques et Physique (MPSI/MP) préparant aux concours des Grandes Écoles
+					d'ingénieurs françaises. Formation à la rigueur analytique et aux sciences fondamentales.</p>
+
+				<details class="course-accordion">
+					<summary><i class="fa fa-list"></i> Voir le programme</summary>
+					<div
+						style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9em; margin-top: 10px;">
+						<div>
+							<strong>Mathématiques :</strong>
+							<ul style="margin:0">
+								<li>Algèbre Linéaire & Euclidienne</li>
+								<li>Calcul Différentiel</li>
+								<li>Probabilités & Statistiques</li>
+							</ul>
+						</div>
+						<div>
+							<strong>Physique-Chimie :</strong>
+							<ul style="margin:0">
+								<li>Électromagnétisme & Optique</li>
+								<li>Thermodynamique</li>
+								<li>Modélisation Quantique</li>
+							</ul>
+						</div>
+					</div>
+				</details>
+			</div>
+		</div>
+
 	</div>
-	<div class="box">
-		<div class="bulb"><h2 id="NCTU">Stage à la NCTU 2019</h2></div>
-		<img class="center" src="/_static/NCTU.jpg" alt="Logo NCTU" style="width: 8em; height: 8em; border-radius: 50%; box-shadow: 2px 0px 6px black;">
-		{% include we_info_fr.html 
-			date='Juin 2019 - Août 2019' 
-			duration='2 mois'
-			company='<a href="https://www.nctu.edu.tw/en/">National Chiao Tung University</a>'
-			location='Hsinchu, Taïwan' 
-			skill='Python, Keras, Anglais'
-		%}
-
-		<h3>Description du poste :</h3>
-		<p>
-			Pendant l'été 2019, j'ai passé 2 mois à la <a href="https://www.nctu.edu.tw/en/">National Chiao Tung University</a> (NCTU) à Taïwan dans le laboratoire <a href="http://soc.ee.nctu.edu.tw/">Intelligent Electronics and System-On-Chip</a> (IESOC).
-		</p>
-
-		<p>
-			Tout au long de ces 2 mois, j'ai travaillé sur la détection d'émotions en utilisant les signaux ECG (électrocardiogramme) et PPG (photoplethysmogramme). Pour cela, j'ai utilisé un CNN (Réseau de neurones par convolution) avec la librairie <a href="https://keras.io/">Keras</a> (v2.24). J'ai aussi pu travailler sur des problèmatiques telles que la détection de pics et l'implémentation d'un système temps réel. En effet, l'objectif final du stage était d'implémenter le CNN sur la carte <a href="https://developer.nvidia.com/embedded/jetson-nano-developer-kit">JetSon Nano</a> de NVIDIA. 
-		</p>
-
-		<h3>Expérience acquise :</h3>
-		<p>
-			Ce stage a été riche en expériences et fut une découverte du monde de la recherche très positive. 
-			J'ai pu comprendre les difficultés de travailler dans un laboratoire de recherche. 
-			Même si la thématique du stage ne tombait pas dans celle que j'ai pu aborder lors de mes études, j'étais avide d'apprendre et d'appréhender ce sujet. 
-			Ces deux mois ont confirmé mon désir de faire de la recherche.
-		</p>
-	</div>		
-	<div class="box">
-		<div class="bulb"><h2 id="Metropole">Stage à Orléans Métropole 2018</h2></div>
-		<img class="center" src="/_static/orleans_metropole.jpg" alt="Logo Orléans Métropole" style="width: 8em; height: 8em; box-shadow: 2px 0px 6px black;">
-		
-		{% include we_info_fr.html 
-			date='Juillet 2018 - Août 2018' 
-			duration='2 mois'
-			company='<a href="http://www.orleans-metropole.fr/">Orléans Métropole</a>'
-			location='Orléans, France' 
-			skill='Shell Script, Réseaux, Linux'
-		%}
-
-		<h3>Description du poste :</h3>
-		<p>J'ai passé 2 mois lors de l'été 2018 à la <a href="http://www.orleans-metropole.fr/">Métropole d'Orléans</a> dans la direction des systèmes d'information (DSI). Pendant cet été, j'ai pu travailler sur les deux sujets suivants.
-		</p>
-		<ol>
-			<li>La mise en place d'un service de supervision en utilisant l'OS <a href="https://www.centreon.com/en/solutions/centreon/">Centreon</a>. Je suis arrivé au moment de la fusion des services de DSI de chaque commune. Dans ce contexte, la DSI d'Orléans a décidé de mettre à jour son système de supervision. Pendant mon stage, j'ai pu observer un vrai réseau et développer mes connaissances sur les réseaux et la virtualisation.</li>
-			<li>Gestion de l'Active Directory (AD). L'AD était composé d'utilisateurs qui n'avaient pas été supprimés. Ce projet était très intéressant puisque je devais trouver un faisceau d'indices me permettant de discriminer les utilisateurs actifs des inactifs. Pour cela j'ai développé des scripts Power Shell.</li>
-		</ol>
-		<h3>Expérience acquise :</h3>
-		<p>
-			Ce fut mon premier stage technique, il m'a permis de découvrir beaucoup dans le domaine de la gestion de réseaux et de découvrir le monde du travail. 
-			On m'a par ailleurs donné de nombreuses responsabilités, notamment lors du nettoyage de l'Active Directory. 
-			Où la suppression d'un utilisateur actif aurait été pénalisante pour l'entreprise.  
-		</p>
-	</div>
-	</div><!-- /.blurb -->
+</div>
