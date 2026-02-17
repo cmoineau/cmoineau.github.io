@@ -47,7 +47,7 @@ permalink: /research/fr
         {% include supervise_fr.html
         student='<a href="https://www.linkedin.com/in/lucas-maisonnave-ba8b041a2/">Lucas Maisonnave</a>'
         subject='Codage avec entropie maximale dans les réseaux de neurones profonds'
-        date='Avr 2023 - Oct 2025'
+        date='Avr 2023 - Avr 2026'
         supervisors='Olivier Bichler, Cyril Moineau, Fabrice Rastello'
         %}
     </div>
@@ -88,6 +88,12 @@ permalink: /research/fr
             class="fa fa-desktop"></i> Présentation</a>
     {% endcapture %}
 
+    {% capture aidge_web_link %}
+    <a href="https://youtu.be/eaZYpd5VIkE?si=Ae0i1hd1gIB6QtgW&t=735"><i class="fa fa-video-camera"></i>
+        Enregistrement</a>
+    {% endcapture %}
+
+
     {% include talk_item.html
     date="Fev 2026"
     type="Conférence"
@@ -115,7 +121,16 @@ permalink: /research/fr
     %}
 
     {% include talk_item.html
-    date="Mar 2025"
+    date="Nov 2024"
+    type="Webinar"
+    title="Live demo of Aidge platform"
+    event="Aidge webinar"
+    location="Internet"
+    links=aidge_web_link
+    %}
+
+    {% include talk_item.html
+    date="Mar 2024"
     type="Booth"
     title="Eclipse Fundation: Présentation Eclipse Aidge"
     event="Embedded World"

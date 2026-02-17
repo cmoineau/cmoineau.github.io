@@ -85,6 +85,12 @@ permalink: /research
             class="fa fa-desktop"></i> Slides</a>
     {% endcapture %}
 
+    {% capture aidge_web_link %}
+    <a href="https://youtu.be/eaZYpd5VIkE?si=Ae0i1hd1gIB6QtgW&t=735"><i class="fa fa-video-camera"></i>
+        Recording</a>
+    {% endcapture %}
+
+
     {% include talk_item.html
     date="Feb 2026"
     type="Conference"
@@ -112,7 +118,16 @@ permalink: /research
     %}
 
     {% include talk_item.html
-    date="Mar 2025"
+    date="Nov 2024"
+    type="Webinar"
+    title="Live demo of Aidge platform"
+    event="Aidge webinar"
+    location="Internet"
+    links=aidge_web_link
+    %}
+
+    {% include talk_item.html
+    date="Mar 2024"
     type="Booth"
     title="Eclipse Fundation: Eclipse Aidge"
     event="Embedded World"
