@@ -1,0 +1,23 @@
+name: Links
+
+on:
+  deployment_status:
+  workflow_dispatch:
+  schedule:
+    - cron: "00 18 * * *"  # daily
+
+jobs:
+  linkChecker:
+    # only run for successful Pages deployments, or for manual/scheduled runs
+    if: github.event_name != 'deployment_status' || github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --verbose --no-progress
+            'https://cmoineau.github.io/sitemap.xml'
+          fail: true
