@@ -1,22 +1,30 @@
 name: Links
+
 on:
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types: [completed]
   workflow_dispatch:
   schedule:
-    - cron: "00 18 * * *"
+    - cron: "00 18 * * *"   # daily at 18:00 UTC
 
 jobs:
   linkChecker:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - uses: actions/checkout@v5
       - name: Link Checker
+        id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
           args: >
             --verbose --no-progress
             'https://cmoineau.github.io/sitemap.xml'
-          fail: true
+          fail: false
+          output: ./lychee/out.md
+      - name: Create Issue From File
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Link Checker Report
+          content-filepath: ./lychee/out.md
+          labels: report, automated
