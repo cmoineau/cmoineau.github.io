@@ -17,8 +17,7 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           args: >
-            --verbose --no-progress
-            'https://cmoineau.github.io/sitemap.xml'
+                args: --verbose --no-progress '**/*.html'
           fail: false
           output: ./lychee/out.md
       - name: Create Issue From File
